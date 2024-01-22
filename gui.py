@@ -99,15 +99,15 @@ schools = sorted(team_df['school'].unique())
 nn = NearestNeighbors(n_neighbors=n_comps+1).fit(df_transformed)
 
 ### APP ###
-padding_top=0
-st.markdown(f"""
-    <style>
-        .reportview-container .main .block-container{{
-            padding-top: {padding_top}rem;
-        }}
-    </style>""",
-    unsafe_allow_html=True,
-)
+#padding_top=0
+#st.markdown(f"""
+ #   <style>
+  #      .reportview-container .main .block-container{{
+   #         padding-top: {padding_top}rem;
+    #    }}
+    #</style>""",
+    #unsafe_allow_html=True,
+#)
 
 st.header('College Football: Most Statistically Similar FBS Teams 2004-2023')
 st.write("Select a school and a year to view the team's closest statistical comparisons")
