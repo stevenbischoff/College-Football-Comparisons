@@ -1,6 +1,6 @@
 import streamlit as st
-#from st_aggrid import AgGrid, GridOptionsBuilder, ColumnsAutoSizeMode
-#from st_aggrid.shared import GridUpdateMode
+from st_aggrid import AgGrid, GridOptionsBuilder, ColumnsAutoSizeMode
+from st_aggrid.shared import GridUpdateMode
 import pandas as pd
 import pickle
 from sklearn.neighbors import NearestNeighbors

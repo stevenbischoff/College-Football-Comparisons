@@ -1,0 +1,5 @@
+streamlit
+st_aggrid
+pandas
+sklearn
+scipy
