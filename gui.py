@@ -123,7 +123,7 @@ if (school != None) & (year != None):
                 )
             builder.configure_selection('single')
             builder.configure_default_column(resizable=False)
-            builder.configure_column('Rank', width=50)
+            builder.configure_column('Rank', headerName='', width=50)
             builder.configure_column('Season', width=130)
             builder.configure_column('SSS*', width=130)
             go = builder.build()
