@@ -101,7 +101,7 @@ nn = NearestNeighbors(n_neighbors=n_comps+1).fit(df_transformed)
 ### APP ###
 st.markdown("""
     <style>
-    [data-testid=column]:nth-of-type(1) [data-testid=stVerticalBlock]{
+    [data-testid=column][data-testid=stVerticalBlock]{
         gap: 0rem;
     }
     </style>
