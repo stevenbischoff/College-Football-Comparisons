@@ -40,7 +40,6 @@ def get_comp_results(team_id, n_comps=10):
     distances = results[0][0][1:]
     return df_transformed.index[indices], distances
 
-@st.cache_data
 def comps_to_display_df(comps, distances, n_comps=10):
     schools = comps.str[:-5]
     seasons = comps.str[-4:]
