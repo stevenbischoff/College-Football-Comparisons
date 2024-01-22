@@ -14,7 +14,7 @@ def load_max_distance():
         return float(f.read())
         
 @st.cache_data
-def load_team_df():
+def load_team_data():
     return pd.read_csv('static/fbs_teams_2004_2023.csv')
 
 @st.cache_data
