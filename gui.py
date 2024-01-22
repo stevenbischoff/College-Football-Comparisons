@@ -99,6 +99,7 @@ schools = sorted(team_df['school'].unique())
 nn = NearestNeighbors(n_neighbors=n_comps+1).fit(df_transformed)
 
 ### APP ###
+padding_top=0
 st.markdown(f"""
     <style>
         .reportview-container .main .block-container{{
