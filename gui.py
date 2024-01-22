@@ -33,13 +33,14 @@ def load_transformed_data():
     return pd.read_csv('static/transformed_team_stats_2004_2023.csv',
                        index_col='team_id')
 
+@st.cache_data
 def get_comp_results(team_id, n_comps=10):
     results = nn.kneighbors(df_transformed.loc[team_id].values.reshape(1,-1), n_comps+1, return_distance=True)
     indices = results[1][0][1:]
     distances = results[0][0][1:]
     return df_transformed.index[indices], distances
 
-
+@st.cache_data
 def comps_to_display_df(comps, distances, n_comps=10):
     schools = comps.str[:-5]
     seasons = comps.str[-4:]
@@ -47,7 +48,7 @@ def comps_to_display_df(comps, distances, n_comps=10):
     return pd.DataFrame({'Rank': range(1, n_comps+1), 'School': schools,
                          'Season': seasons, 'SSS*': sss.round(4)}, index=range(1, n_comps+1))
 
-
+@st.cache_data
 def get_similar_stats(team_id1, team_id2, n_stats=10, pctl_threshold=15):
     stat_diffs = (df_standardized.loc[team_id1, list(X_columns.keys())
         ] - df_standardized.loc[team_id2, list(X_columns.keys())]).abs().sort_values()
@@ -65,6 +66,7 @@ def get_similar_stats(team_id1, team_id2, n_stats=10, pctl_threshold=15):
                                                round(pctl2, 2)]
     return return_df
 
+@st.cache_data
 def get_different_stats(team_id1, team_id2, n_stats=5):
     stat_diffs = (df_standardized.loc[team_id1, list(X_columns.keys())
         ] - df_standardized.loc[team_id2, list(X_columns.keys())]).abs().sort_values()
