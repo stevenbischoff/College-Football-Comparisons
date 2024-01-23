@@ -118,7 +118,7 @@ class GUI:
 
         st.subheader('Comparison with {}'.format(team_id_comp))
         
-        go1 = {'columnDefs': [
+        go = {'columnDefs': [
                 {'field': 'Statistic*'},
                 {'headerName': self.team_id,
                  'children': [
@@ -144,12 +144,10 @@ class GUI:
                  ]}]}
         
         with st.expander('Similarities:'):
-            selection1 = AgGrid(similar_stats_df, fit_columns_on_grid_load=True, gridOptions=go1,
-                            enable_enterprise_modules=True, update_mode=GridUpdateMode.MODEL_CHANGED,
-                            rowSelection='single')              
+            AgGrid(similar_stats_df, fit_columns_on_grid_load=True, gridOptions=go)              
     
         with st.expander('Dissimilarities:'):
-            AgGrid(different_stats_df, fit_columns_on_grid_load=True, gridOptions=go1)
+            AgGrid(different_stats_df, fit_columns_on_grid_load=True, gridOptions=go)
         st.caption('*Statistics are per-game unless otherwise specified.')
         st.caption('**Pctl. columns give the percentile of the statistic in the entire dataset.')
         
@@ -204,7 +202,6 @@ class GUI:
         self.body()
         
         
-
 @st.cache_data
 def load_max_distance():
     with open('static/max_distance.txt', 'r') as f:
@@ -227,5 +224,7 @@ def load_standardized_data():
 def load_transformed_data():
     return pd.read_csv('static/transformed_team_stats_2004_2023.csv',
                        index_col='team_id')
-gui = GUI()
-gui.main()
+
+if __name__ == '__main__':
+    gui = GUI()
+    gui.main()
