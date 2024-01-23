@@ -24,6 +24,15 @@ class GUI:
         self.school = None
         self.year = None
 
+        if 'off_def' not in st.session_state:
+            st.session_state['off_def'] = 'Combined'
+            self.data_type = 'Combined'
+        elif 'off_def_radio' in st.session_state:
+            st.session_state['off_def'] = st.session_state['off_def_radio']
+            self.data_type = st.session_state['off_def_radio']
+        else:
+            self.data_type = 'Combined'
+            
         self.row_selected = False
         if 'selected_rows' in st.session_state:
             if len(st.session_state['selected_rows']) > 0:
@@ -112,6 +121,8 @@ class GUI:
                   value=st.session_state['n_similar_stats'], key='n_similar_stats_slider')
         st.slider(label='No. of dissimilar stats to display', min_value=1, max_value=20,
                   value=st.session_state['n_dissimilar_stats'], key='n_dissimilar_stats_slider')
+        st.radio(label='Compare combined offense and defense?', options=['Combined', 'Offense', 'Defense'],
+                 key='off_def_radio', index=self.off_def_radio_index)
         
     def display_comparisons(self):
         
@@ -211,12 +222,20 @@ class GUI:
         self.n_comps = st.session_state['n_comps']
 
         # load data
-        self.max_distance = load_max_distance()
+        self.max_distance = load_max_distance(st.session_state['off_def'])
         self.df_teams = load_team_data()
-        self.df_raw = load_raw_data()
-        self.df_standardized = load_standardized_data()
-        self.df_transformed = load_transformed_data()
-        self.X_columns = X_columns
+        self.df_raw = load_raw_data(st.session_state['off_def'])
+        self.df_standardized = load_standardized_data(st.session_state['off_def'])
+        self.df_transformed = load_transformed_data(st.session_state['off_def'])
+        if st.session_state['off_def'] == 'Combined':
+            self.X_columns = X_columns
+            self.off_def_radio_index = 0
+        elif st.session_state['off_def'] == 'Offense':
+            self.X_columns = {**o_normal_columns, **o_advanced_columns}
+            self.off_def_radio_index = 1
+        elif st.session_state['off_def'] == 'Defense':
+            self.X_columns = {**d_normal_columns, **d_advanced_columns}
+            self.off_def_radio_index = 2
 
         # Preparation
         self.team_ids = self.df_transformed.index.values
@@ -244,27 +263,49 @@ class GUI:
         
         
 @st.cache_data
-def load_max_distance():
-    with open('static/max_distance.txt', 'r') as f:
-        return float(f.read())
+def load_max_distance(data_type):
+    with open('static/max_distance.pkl', 'rb') as f:
+        distance_dict = pickle.load(f)
+        return distance_dict[data_type]
     
 @st.cache_data
 def load_team_data():
     return pd.read_csv('static/fbs_teams_2004_2023.csv')
 
 @st.cache_data
-def load_raw_data():
-    return pd.read_csv('static/raw_team_stats_2004_2023.csv',
-                       index_col='team_id')
+def load_raw_data(data_type):
+    if data_type == 'Combined':
+        return pd.read_csv('static/raw_team_stats_2004_2023.csv',
+                           index_col='team_id')
+    elif data_type == 'Offense':
+        return pd.read_csv('static/raw_offense_team_stats_2004_2023.csv',
+                           index_col='team_id')
+    if data_type == 'Defense':
+        return pd.read_csv('static/raw_defense_team_stats_2004_2023.csv',
+                           index_col='team_id')
 @st.cache_data
-def load_standardized_data():
-    return pd.read_csv('static/standardized_team_stats_2004_2023.csv',
-                       index_col='team_id')
+def load_standardized_data(data_type):
+    if data_type == 'Combined':
+        return pd.read_csv('static/standardized_team_stats_2004_2023.csv',
+                           index_col='team_id')
+    elif data_type == 'Offense':
+        return pd.read_csv('static/standardized_offense_team_stats_2004_2023.csv',
+                           index_col='team_id')
+    if data_type == 'Defense':
+        return pd.read_csv('static/standardized_defense_team_stats_2004_2023.csv',
+                           index_col='team_id')
 
 @st.cache_data
-def load_transformed_data():
-    return pd.read_csv('static/transformed_team_stats_2004_2023.csv',
-                       index_col='team_id')
+def load_transformed_data(data_type):
+    if data_type == 'Combined':
+        return pd.read_csv('static/transformed_team_stats_2004_2023.csv',
+                           index_col='team_id')
+    elif data_type == 'Offense':
+        return pd.read_csv('static/transformed_offense_team_stats_2004_2023.csv',
+                           index_col='team_id')
+    if data_type == 'Defense':
+        return pd.read_csv('static/transformed_defense_team_stats_2004_2023.csv',
+                           index_col='team_id')
 
 if __name__ == '__main__':
     gui = GUI()

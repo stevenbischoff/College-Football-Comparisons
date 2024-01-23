@@ -11,17 +11,17 @@ first_year = 2004
 last_year = 2023
 
 ### Teams
-team_df = pd.read_csv('data/fbs_teams_2004_2023.csv')
+team_df = pd.read_csv('static/fbs_teams_2004_2023.csv')
 
 ### Game Info
-games_df = pd.read_csv('data/game_info_2004_2023.csv', low_memory=False)
+games_df = pd.read_csv('static/game_info_2004_2023.csv', low_memory=False)
 games_df['home_team_id'] = games_df['home_team'] + ' ' + games_df['season'].astype(str)
 games_df['away_team_id'] = games_df['away_team'] + ' ' + games_df['season'].astype(str)
 
 ### Game Stats
 game_stats_df = pd.DataFrame()
 for year in range(first_year, last_year+1):
-    game_stats_df_year = pd.read_csv('data/team_game_stats_{}.csv'.format(year), low_memory=False)
+    game_stats_df_year = pd.read_csv('static/team_game_stats_{}.csv'.format(year), low_memory=False)
     last_reg_week = game_stats_df_year.loc[game_stats_df_year['season_type']=='regular', 'week'].max()
     game_stats_df_year.loc[game_stats_df_year['season_type']=='postseason', 'week'] += last_reg_week
     game_stats_df = pd.concat([game_stats_df, game_stats_df_year]).reset_index(drop=True)
@@ -95,7 +95,7 @@ opp_df['thirdDownPct_opp'] = opp_df['thirdDownConversions_opp/game']/opp_df['thi
 opp_df['fourthDownPct_opp'] = opp_df['fourthDownConversions_opp/game']/opp_df['fourthDownAttempts_opp/game']
 
 ### Season Stats
-season_df = pd.read_csv('data/team_season_stats_2004_2023.csv')
+season_df = pd.read_csv('static/team_season_stats_2004_2023.csv')
 
 season_df['team_id'] = season_df['team'] + ' ' + season_df['season'].astype(str)
 season_df = pd.pivot_table(season_df, index=['team_id'],
@@ -154,7 +154,7 @@ pg_df['thirdDownPct'] = pg_df['thirdDownConversions/game']/pg_df['thirdDowns/gam
 pg_df['fourthDownPct'] = pg_df['fourthDownConversions/game']/pg_df['fourthDowns/game']
 
 ### Advanced Stats
-advanced_stats_df = pd.read_csv('data/team_advanced_season_stats_2004_2023.csv')
+advanced_stats_df = pd.read_csv('static/team_advanced_season_stats_2004_2023.csv')
 
 advanced_stats_df['team_id'] = advanced_stats_df['team'] + ' ' + advanced_stats_df['season'].astype(str)
 advanced_stats_df = advanced_stats_df.set_index(['team_id'])
@@ -172,7 +172,13 @@ advanced_stats_df['d_plays/drive'] = advanced_stats_df['d_plays']/advanced_stats
 
 ### Join and store
 df_combined = pg_df.join(advanced_stats_df, how='inner').drop(columns=['team', 'season', 'conference'])
-df_combined = df_combined.join(opp_df, how='inner')[list(X_columns.keys())]
-
+df_combined = df_combined.join(opp_df, how='inner')
 print(df_combined.loc['Notre Dame 2012'])
-df_combined.to_csv('data/raw_team_stats_{}_{}.csv'.format(first_year, last_year))
+# All
+df_combined[list(X_columns.keys())].to_csv('static/raw_team_stats_{}_{}.csv'.format(first_year, last_year))
+# Offense
+df_combined[list(o_normal_columns.keys())+list(o_advanced_columns.keys())
+            ].to_csv('static/raw_offense_team_stats_{}_{}.csv'.format(first_year, last_year))
+# All
+df_combined[list(d_normal_columns.keys())+list(d_advanced_columns.keys())
+            ].to_csv('static/raw_defense_team_stats_{}_{}.csv'.format(first_year, last_year))
