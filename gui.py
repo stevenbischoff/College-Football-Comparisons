@@ -5,6 +5,7 @@ import pandas as pd
 import pickle
 from sklearn.neighbors import NearestNeighbors
 import scipy.stats as stats
+import copy
 
 from load_columns import *
 
@@ -23,11 +24,31 @@ class GUI:
         self.school = None
         self.year = None
 
-        self.n_comps = 10
+        self.row_selected = False
+        if 'selected_rows' in st.session_state:
+            if len(st.session_state['selected_rows']) > 0:
+                self.row_selected = True
+
+        if 'n_comps' not in st.session_state:
+            st.session_state['n_comps'] = 10
+        elif 'n_comps_slider' in st.session_state:
+            st.session_state['n_comps'] = st.session_state['n_comps_slider']
+
+        if 'n_similar_stats' not in st.session_state:
+            st.session_state['n_similar_stats'] = 10
+        elif 'n_similar_stats_slider' in st.session_state:
+            st.session_state['n_similar_stats'] = st.session_state['n_similar_stats_slider']
+
+        if 'n_dissimilar_stats' not in st.session_state:
+            st.session_state['n_dissimilar_stats'] = 5
+        elif 'n_dissimilar_stats_slider' in st.session_state:
+            st.session_state['n_dissimilar_stats'] = st.session_state['n_dissimilar_stats_slider']
+        
 
     #@st.cache_data
     def get_comp_results(self):
-        results = self.nn.kneighbors(self.df_transformed.loc[self.team_id].values.reshape(1,-1), self.n_comps+1, return_distance=True)
+        results = self.nn.kneighbors(self.df_transformed.loc[self.team_id].values.reshape(1,-1),
+                                     st.session_state['n_comps']+1, return_distance=True)
         indices = results[1][0][1:]
         distances = results[0][0][1:]
         return self.df_transformed.index[indices], distances
@@ -36,17 +57,17 @@ class GUI:
         schools = comps.str[:-5]
         seasons = comps.str[-4:]
         sss = 1 - distances/self.max_distance # Statistical Similarity Score
-        return pd.DataFrame({'Rank': range(1, self.n_comps+1), 'School': schools,
-                             'Season': seasons, 'SSS*': sss.round(4)}, index=range(1, self.n_comps+1))
+        return pd.DataFrame({'Rank': range(1, st.session_state['n_comps']+1), 'School': schools,
+                             'Season': seasons, 'SSS*': sss.round(4)}, index=range(1, st.session_state['n_comps']+1))
 
     #@st.cache_data
-    def get_similar_stats(self, team_id2, n_stats=10, pctl_threshold=15):
+    def get_similar_stats(self, team_id2, pctl_threshold=15):
         stat_diffs = (self.df_standardized.loc[self.team_id, list(self.X_columns.keys())
             ] - self.df_standardized.loc[team_id2, list(self.X_columns.keys())]).abs().sort_values()
         return_df = pd.DataFrame(columns=['Statistic*', self.team_id, 'pctl1',
                                           team_id2, 'pctl2'])
         
-        for stat in stat_diffs.index[:n_stats]:
+        for stat in stat_diffs.index[:st.session_state['n_similar_stats']]:
             pctl1 = stats.percentileofscore(self.df_raw[stat], self.df_raw.loc[self.team_id, stat])
             pctl2 = stats.percentileofscore(self.df_raw[stat], self.df_raw.loc[team_id2, stat])
             return_df.loc[len(return_df)] = [self.X_columns[stat],
@@ -57,12 +78,12 @@ class GUI:
         return return_df
 
     #@st.cache_data
-    def get_different_stats(self, team_id2, n_stats=5):
+    def get_different_stats(self, team_id2):
         stat_diffs = (self.df_standardized.loc[self.team_id, list(self.X_columns.keys())
             ] - self.df_standardized.loc[team_id2, list(self.X_columns.keys())]).abs().sort_values()
         return_df = pd.DataFrame(columns=['Statistic*', self.team_id, 'pctl1',
                                           team_id2, 'pctl2'])
-        for stat in stat_diffs.index[-n_stats:]:
+        for stat in stat_diffs.index[-st.session_state['n_dissimilar_stats']:]:
             pctl1 = stats.percentileofscore(self.df_raw[stat], self.df_raw.loc[self.team_id, stat])
             #if pctl1 < pctl_threshold or pctl1 > 100 - pctl_threshold:
             pctl2 = stats.percentileofscore(self.df_raw[stat], self.df_raw.loc[team_id2, stat])
@@ -84,7 +105,16 @@ class GUI:
         with mid_column:
             self.year = st.selectbox(label='Year', options=range(2004, 2024), index=None)
 
-    def body_left_column(self):
+    def advanced_options(self):
+        st.slider(label='No. of team comparisons to display', min_value=1, max_value=20,
+                  value=st.session_state['n_comps'], key='n_comps_slider')
+        st.slider(label='No. of similar stats to display', min_value=1, max_value=20,
+                  value=st.session_state['n_similar_stats'], key='n_similar_stats_slider')
+        st.slider(label='No. of dissimilar stats to display', min_value=1, max_value=20,
+                  value=st.session_state['n_dissimilar_stats'], key='n_dissimilar_stats_slider')
+        
+    def display_comparisons(self):
+        
         comps, distances = self.get_comp_results()
         display_df = self.comps_to_display_df(comps, distances)
                 
@@ -101,16 +131,21 @@ class GUI:
         builder.configure_column('SSS*', width=130)
         go = builder.build()
         
-        self.selection = AgGrid(display_df, fit_columns_on_grid_load=True,
-               enable_enterprise_modules=True, gridOptions=go, update_mode=GridUpdateMode.MODEL_CHANGED)
+        selection = AgGrid(display_df, fit_columns_on_grid_load=True,
+               enable_enterprise_modules=True, gridOptions=go, update_mode=GridUpdateMode.MODEL_CHANGED)       
+        if len(selection.selected_rows) > 0:
+            self.row_selected = True
+            st.session_state['selected_rows'] = selection.selected_rows
 
         st.caption('*SSS, or Statistical Similarity Score, is a measure from 0 to 1 of the statistical similarity between two teams.')
-
+        
+    def body_left_column(self):
+        self.display_comparisons()
         if st.checkbox('Show advanced options'):
-            st.write('PLACEHOLDER')
+            self.advanced_options()
 
     def body_right_column(self):
-        selected_row = self.selection.selected_rows[0]
+        selected_row = st.session_state['selected_rows'][0]
         team_id_comp = selected_row['School'] + ' ' + selected_row['Season']
 
         similar_stats_df = self.get_similar_stats(team_id_comp)
@@ -148,6 +183,7 @@ class GUI:
     
         with st.expander('Dissimilarities:'):
             AgGrid(different_stats_df, fit_columns_on_grid_load=True, gridOptions=go)
+            
         st.caption('*Statistics are per-game unless otherwise specified.')
         st.caption('**Pctl. columns give the percentile of the statistic in the entire dataset.')
         
@@ -156,18 +192,23 @@ class GUI:
 
         if (self.school != None) & (self.year != None):
             self.team_id = self.school + ' ' + str(self.year)
+            if 'saved_team_id' in st.session_state:
+                if self.team_id != st.session_state['saved_team_id']: # reset
+                    st.session_state['selected_rows'] = []
+                    self.row_selected = False
+            st.session_state['saved_team_id'] = self.team_id
             if self.team_id in self.team_ids:
                 with left_column:
                     self.body_left_column()  
                 with right_column:
-                    if len(self.selection.selected_rows) > 0:                
+                    if self.row_selected:                
                         self.body_right_column()
             else:
                 st.write('Sorry, comparisons for ' + self.team_id + ' are unavailable. Make another selection!')
             
     def main(self):
         # settings
-        self.n_comps = 10
+        self.n_comps = st.session_state['n_comps']
 
         # load data
         self.max_distance = load_max_distance()
@@ -181,7 +222,7 @@ class GUI:
         self.team_ids = self.df_transformed.index.values
         self.schools = sorted(self.df_teams['school'].unique())
 
-        self.nn = NearestNeighbors(n_neighbors=self.n_comps+1).fit(self.df_transformed)
+        self.nn = NearestNeighbors(n_neighbors=st.session_state['n_comps']+1).fit(self.df_transformed.values)
 
         ### APP ###
         st.markdown("""
