@@ -25,7 +25,7 @@ o_normal_columns = {
     'passingYards/attempt': 'Yards per Pass',
 }
 
-with open('data/o_normal_columns.pkl', 'wb') as f:
+with open('static/o_normal_columns.pkl', 'wb') as f:
     pickle.dump(o_normal_columns, f)
 
 o_advanced_columns = {
@@ -52,7 +52,7 @@ o_advanced_columns = {
     #'o_points_per_opportunity', # bad data <=2013
 }
 
-with open('data/o_advanced_columns.pkl', 'wb') as f:
+with open('static/o_advanced_columns.pkl', 'wb') as f:
     pickle.dump(o_advanced_columns, f)
 
 d_normal_columns = {
@@ -80,7 +80,7 @@ d_normal_columns = {
     'passingYards/attempt_opp': 'Opp. Yards per Pass',
 }
 
-with open('data/d_normal_columns.pkl', 'wb') as f:
+with open('static/d_normal_columns.pkl', 'wb') as f:
     pickle.dump(d_normal_columns, f)
 
 d_advanced_columns = {
@@ -107,7 +107,7 @@ d_advanced_columns = {
     #'d_points_per_opportunity', # bad data <=2013
 }
 
-with open('data/d_advanced_columns.pkl', 'wb') as f:
+with open('static/d_advanced_columns.pkl', 'wb') as f:
     pickle.dump(d_advanced_columns, f)
     
 other_columns = {
@@ -115,11 +115,11 @@ other_columns = {
     'penalties/game': 'Penalties'
 }
 
-with open('data/other_columns.pkl', 'wb') as f:
+with open('static/other_columns.pkl', 'wb') as f:
     pickle.dump(other_columns, f)
 
 X_columns = {**o_normal_columns, **o_advanced_columns,
              **d_normal_columns, **d_advanced_columns, **other_columns}
 
-with open('data/X_columns.pkl', 'wb') as f:
+with open('static/X_columns.pkl', 'wb') as f:
     pickle.dump(X_columns, f)

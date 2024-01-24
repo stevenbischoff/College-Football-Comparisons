@@ -1,6 +1,5 @@
 import pandas as pd
 from sklearn.impute import SimpleImputer
-
 from load_columns import *
 
 # LOOK AT: points_per_opportunity (negative values?)
@@ -30,7 +29,7 @@ game_stats_df['team_id'] = game_stats_df['team'] + ' ' + game_stats_df['season']
 game_stats_df = game_stats_df.set_index('team_id', drop=True)
 
 # Extract percent stats from string columns
-game_stats_df = game_stats_df[~game_stats_df['fourthDownEff'].isna()]
+game_stats_df = game_stats_df[~game_stats_df['fourthDownEff'].isna()] # dropping rows
 game_stats_df[['passingCompletions', 'passingAttempts']] = game_stats_df[
     'completionAttempts'].str.split('-', expand=True).astype('int')
 game_stats_df[['thirdDownConversions', 'thirdDownAttempts']] = game_stats_df[
@@ -51,7 +50,7 @@ for col in numeric_cols:
 
 numeric_cols.extend([col + suffix for col in numeric_cols])
 
-total_game_stats_df = total_game_stats_df.dropna(axis=1, thresh=(len(total_game_stats_df)-90)) # drop columns
+total_game_stats_df = total_game_stats_df.dropna(axis=1, thresh=(len(total_game_stats_df)-90)) # dropping columns
 total_game_stats_df['games'] = 1
 numeric_cols = list(total_game_stats_df.select_dtypes(include='number'))
 numeric_cols = [col for col in numeric_cols if col not in ['game_id','season','week']]
@@ -62,8 +61,8 @@ total_game_stats_df[numeric_cols] = si.fit_transform(total_game_stats_df[numeric
 
 # Sum over season stats
 sum_df = total_game_stats_df.sort_values('week').groupby(['team_id'])[numeric_cols].apply(
-    lambda x: x.expanding().sum()) # shift for stats up to but not including week
-sum_df.index = sum_df.index.droplevel(1) # FOR en685648 KERNEL!
+    lambda x: x.expanding().sum())
+sum_df.index = sum_df.index.droplevel(1)
 
 # Get end-of-season total stats
 last_week_list = []

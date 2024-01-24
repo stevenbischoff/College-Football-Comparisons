@@ -26,12 +26,8 @@ class GUI:
 
         if 'off_def' not in st.session_state:
             st.session_state['off_def'] = 'Combined'
-            self.data_type = 'Combined'
         elif 'off_def_radio' in st.session_state:
             st.session_state['off_def'] = st.session_state['off_def_radio']
-            self.data_type = st.session_state['off_def_radio']
-        else:
-            self.data_type = 'Combined'
             
         self.row_selected = False
         if 'selected_rows' in st.session_state:

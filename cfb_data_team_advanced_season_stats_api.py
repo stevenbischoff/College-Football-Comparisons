@@ -49,5 +49,5 @@ for col in defense.columns:
 df = pd.concat([pd.concat([df, offense], axis=1), defense], axis=1)
 df = df.drop(columns=['offense','defense'])
     
-df.to_csv('data/team_advanced_season_stats_{}_{}.csv'.format(first_year, last_year),
+df.to_csv('static/team_advanced_season_stats_{}_{}.csv'.format(first_year, last_year),
           index=False)

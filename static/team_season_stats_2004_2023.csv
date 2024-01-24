@@ -71382,6 +71382,7 @@ season,team,conference,stat_name,stat_value
 2023,Penn State,Big Ten,interceptionTDs,1
 2023,Ball State,Mid-American,fourthDowns,18
 2023,Oregon,Pac-12,thirdDownConversions,79
+2023,Washington,Pac-12,firstDowns,345
 2023,Buffalo,Mid-American,passCompletions,212
 2023,Washington State,Pac-12,kickReturnTDs,1
 2023,New Mexico,Mountain West,tacklesForLoss,47
@@ -71575,7 +71576,6 @@ season,team,conference,stat_name,stat_value
 2023,Western Michigan,Mid-American,penalties,85
 2023,Arizona State,Pac-12,netPassingYards,2524
 2023,Louisiana Monroe,Sun Belt,interceptionYards,154
-2023,Washington,Pac-12,firstDowns,328
 2023,Georgia Tech,ACC,interceptionTDs,0
 2023,Penn State,Big Ten,puntReturnTDs,2
 2023,Connecticut,FBS Independents,kickReturnYards,628
@@ -71653,6 +71653,7 @@ season,team,conference,stat_name,stat_value
 2023,Boise State,Mountain West,fourthDowns,11
 2023,Kansas State,Big 12,passesIntercepted,13
 2023,Air Force,Mountain West,fumblesRecovered,4
+2023,Michigan,Big Ten,rushingYards,2536
 2023,Ball State,Mid-American,possessionTime,23577
 2023,Southern Mississippi,Sun Belt,puntReturnYards,167
 2023,Duke,ACC,penalties,73
@@ -71706,7 +71707,6 @@ season,team,conference,stat_name,stat_value
 2023,UCF,Big 12,fumblesLost,7
 2023,LSU,SEC,firstDowns,334
 2023,Kent State,Mid-American,puntReturnTDs,0
-2023,Washington,Pac-12,kickReturns,33
 2023,Stanford,Pac-12,firstDowns,234
 2023,Louisiana,Sun Belt,rushingAttempts,469
 2023,Coastal Carolina,Sun Belt,rushingAttempts,465
@@ -71839,7 +71839,6 @@ season,team,conference,stat_name,stat_value
 2023,Kansas,Big 12,rushingYards,2678
 2023,Hawai'i,Mountain West,kickReturns,21
 2023,Illinois,Big Ten,fourthDownConversions,13
-2023,Michigan,Big Ten,passesIntercepted,16
 2023,Syracuse,ACC,turnovers,24
 2023,Texas A&M,SEC,tacklesForLoss,99
 2023,Stanford,Pac-12,tacklesForLoss,51
@@ -71897,7 +71896,6 @@ season,team,conference,stat_name,stat_value
 2023,South Alabama,Sun Belt,games,13
 2023,Virginia Tech,ACC,turnovers,15
 2023,Kent State,Mid-American,thirdDowns,172
-2023,Washington,Pac-12,passingTDs,37
 2023,Arkansas State,Sun Belt,fourthDownConversions,7
 2023,Missouri,SEC,thirdDowns,169
 2023,Michigan State,Big Ten,kickReturnYards,320
@@ -71941,6 +71939,7 @@ season,team,conference,stat_name,stat_value
 2023,Florida,SEC,tacklesForLoss,59
 2023,Rice,American Athletic,penalties,74
 2023,Alabama,SEC,sacks,40
+2023,Michigan,Big Ten,netPassingYards,3205
 2023,Purdue,Big Ten,fourthDowns,28
 2023,Wake Forest,ACC,kickReturnTDs,1
 2023,Tennessee,SEC,fumblesRecovered,6
@@ -71991,6 +71990,7 @@ season,team,conference,stat_name,stat_value
 2023,Penn State,Big Ten,rushingAttempts,515
 2023,Georgia Tech,ACC,puntReturnTDs,0
 2023,Hawai'i,Mountain West,kickReturnTDs,0
+2023,Washington,Pac-12,turnovers,20
 2023,Tennessee,SEC,rushingYards,2662
 2023,UT San Antonio,American Athletic,puntReturns,18
 2023,Arizona,Pac-12,passesIntercepted,9
@@ -72055,13 +72055,13 @@ season,team,conference,stat_name,stat_value
 2023,TCU,Big 12,passingTDs,27
 2023,Florida,SEC,kickReturnYards,331
 2023,Kansas,Big 12,tacklesForLoss,63
-2023,Washington,Pac-12,penalties,107
 2023,Michigan State,Big Ten,fourthDowns,20
 2023,Oklahoma,Big 12,penaltyYards,756
 2023,Northwestern,Big Ten,puntReturnYards,70
 2023,New Mexico State,Conference USA,kickReturnYards,337
 2023,BYU,Big 12,puntReturns,23
 2023,Charlotte,American Athletic,puntReturnTDs,1
+2023,Michigan,Big Ten,passesIntercepted,18
 2023,Western Kentucky,Conference USA,fourthDowns,26
 2023,Indiana,Big Ten,rushingYards,1456
 2023,Indiana,Big Ten,netPassingYards,2548
@@ -72071,7 +72071,6 @@ season,team,conference,stat_name,stat_value
 2023,Mississippi State,SEC,interceptionYards,61
 2023,Northern Illinois,Mid-American,rushingYards,2335
 2023,Virginia,ACC,kickReturnYards,389
-2023,Washington,Pac-12,fourthDownConversions,12
 2023,Kentucky,SEC,thirdDownConversions,52
 2023,Middle Tennessee,Conference USA,tacklesForLoss,70
 2023,Alabama,SEC,penalties,78
@@ -72107,7 +72106,6 @@ season,team,conference,stat_name,stat_value
 2023,West Virginia,Big 12,rushingTDs,32
 2023,Purdue,Big Ten,fumblesRecovered,8
 2023,Boston College,ACC,fumblesLost,5
-2023,Michigan,Big Ten,fourthDowns,21
 2023,Washington,Pac-12,rushingTDs,28
 2023,Louisiana,Sun Belt,puntReturnYards,102
 2023,Appalachian State,Sun Belt,puntReturns,2
@@ -72116,6 +72114,7 @@ season,team,conference,stat_name,stat_value
 2023,Minnesota,Big Ten,rushingTDs,13
 2023,Wyoming,Mountain West,turnovers,11
 2023,Oregon,Pac-12,firstDowns,369
+2023,Michigan,Big Ten,kickReturns,18
 2023,James Madison,Sun Belt,puntReturns,20
 2023,South Carolina,SEC,thirdDowns,161
 2023,North Texas,American Athletic,games,12
@@ -72169,7 +72168,6 @@ season,team,conference,stat_name,stat_value
 2023,Texas Tech,Big 12,kickReturnYards,841
 2023,Florida International,Conference USA,kickReturnTDs,0
 2023,Maryland,Big Ten,puntReturnTDs,0
-2023,Michigan,Big Ten,thirdDownConversions,73
 2023,Fresno State,Mountain West,fumblesLost,2
 2023,Ohio,Mid-American,interceptionTDs,1
 2023,Wisconsin,Big Ten,netPassingYards,2862
@@ -72308,7 +72306,6 @@ season,team,conference,stat_name,stat_value
 2023,California,Pac-12,kickReturns,25
 2023,UT San Antonio,American Athletic,passesIntercepted,10
 2023,California,Pac-12,puntReturns,11
-2023,Washington,Pac-12,netPassingYards,4900
 2023,Wyoming,Mountain West,fumblesLost,5
 2023,Oregon,Pac-12,totalYards,7440
 2023,Buffalo,Mid-American,possessionTime,21988
@@ -72351,7 +72348,6 @@ season,team,conference,stat_name,stat_value
 2023,Iowa State,Big 12,fourthDowns,16
 2023,California,Pac-12,thirdDowns,191
 2023,Eastern Michigan,Mid-American,passingTDs,10
-2023,Michigan,Big Ten,thirdDowns,163
 2023,Arizona,Pac-12,penaltyYards,689
 2023,Virginia Tech,ACC,netPassingYards,2619
 2023,Duke,ACC,games,13
@@ -72512,7 +72508,6 @@ season,team,conference,stat_name,stat_value
 2023,UNLV,Mountain West,fourthDowns,20
 2023,Nebraska,Big Ten,thirdDowns,154
 2023,Kentucky,SEC,totalYards,4411
-2023,Washington,Pac-12,thirdDownConversions,74
 2023,San Diego State,Mountain West,puntReturns,22
 2023,Virginia Tech,ACC,thirdDownConversions,61
 2023,UAB,American Athletic,thirdDownConversions,64
@@ -72523,6 +72518,7 @@ season,team,conference,stat_name,stat_value
 2023,Virginia,ACC,tacklesForLoss,57
 2023,Georgia,SEC,passCompletions,328
 2023,California,Pac-12,kickReturnYards,486
+2023,Michigan,Big Ten,penalties,45
 2023,Florida State,ACC,netPassingYards,3508
 2023,UCLA,Pac-12,games,13
 2023,Toledo,Mid-American,fourthDowns,22
@@ -72535,6 +72531,7 @@ season,team,conference,stat_name,stat_value
 2023,Toledo,Mid-American,tacklesForLoss,80
 2023,Indiana,Big Ten,thirdDowns,169
 2023,Bowling Green,Mid-American,penaltyYards,792
+2023,Michigan,Big Ten,thirdDowns,173
 2023,Florida Atlantic,American Athletic,totalYards,3969
 2023,Oregon,Pac-12,interceptions,5
 2023,UMass,FBS Independents,puntReturnYards,80
@@ -72552,7 +72549,6 @@ season,team,conference,stat_name,stat_value
 2023,Fresno State,Mountain West,penalties,57
 2023,Michigan State,Big Ten,fumblesRecovered,7
 2023,Eastern Michigan,Mid-American,kickReturnYards,729
-2023,Michigan,Big Ten,rushingYards,2233
 2023,Utah,Pac-12,firstDowns,244
 2023,Western Kentucky,Conference USA,tacklesForLoss,57
 2023,UCLA,Pac-12,puntReturns,19
@@ -72566,7 +72562,6 @@ season,team,conference,stat_name,stat_value
 2023,Tulane,American Athletic,rushingAttempts,527
 2023,Western Kentucky,Conference USA,turnovers,23
 2023,UCLA,Pac-12,puntReturnTDs,0
-2023,Michigan,Big Ten,passCompletions,250
 2023,Southern Mississippi,Sun Belt,thirdDownConversions,72
 2023,UCF,Big 12,thirdDowns,169
 2023,Northwestern,Big Ten,kickReturnTDs,0
@@ -72588,6 +72583,7 @@ season,team,conference,stat_name,stat_value
 2023,Jacksonville State,Conference USA,interceptionTDs,0
 2023,Western Michigan,Mid-American,thirdDownConversions,64
 2023,Utah State,Mountain West,passesIntercepted,10
+2023,Michigan,Big Ten,possessionTime,29002
 2023,Stanford,Pac-12,puntReturnTDs,0
 2023,Iowa,Big Ten,puntReturns,31
 2023,Wake Forest,ACC,firstDowns,239
@@ -72643,7 +72639,6 @@ season,team,conference,stat_name,stat_value
 2023,Northwestern,Big Ten,interceptionYards,101
 2023,Nevada,Mountain West,passesIntercepted,9
 2023,Washington State,Pac-12,tacklesForLoss,62
-2023,Washington,Pac-12,rushingYards,1730
 2023,Michigan,Big Ten,turnovers,8
 2023,Louisiana Monroe,Sun Belt,tacklesForLoss,73
 2023,Alabama,SEC,interceptions,6
@@ -72660,6 +72655,7 @@ season,team,conference,stat_name,stat_value
 2023,Duke,ACC,passingTDs,14
 2023,Stanford,Pac-12,fourthDownConversions,9
 2023,Buffalo,Mid-American,thirdDownConversions,63
+2023,Washington,Pac-12,thirdDownConversions,76
 2023,Texas,Big 12,thirdDowns,185
 2023,Kent State,Mid-American,firstDowns,180
 2023,Oregon,Pac-12,kickReturnYards,308
@@ -72686,7 +72682,6 @@ season,team,conference,stat_name,stat_value
 2023,UMass,FBS Independents,firstDowns,213
 2023,Tulsa,American Athletic,puntReturns,7
 2023,Purdue,Big Ten,firstDowns,245
-2023,Michigan,Big Ten,kickReturnYards,224
 2023,Texas State,Sun Belt,fumblesRecovered,10
 2023,Middle Tennessee,Conference USA,totalYards,4693
 2023,Cincinnati,Big 12,rushingAttempts,517
@@ -72736,7 +72731,6 @@ season,team,conference,stat_name,stat_value
 2023,New Mexico State,Conference USA,passCompletions,235
 2023,Washington State,Pac-12,kickReturnYards,456
 2023,Ohio State,Big Ten,penalties,74
-2023,Michigan,Big Ten,penaltyYards,367
 2023,Minnesota,Big Ten,tacklesForLoss,49
 2023,Virginia Tech,ACC,kickReturnYards,716
 2023,Memphis,American Athletic,rushingTDs,31
@@ -72797,6 +72791,7 @@ season,team,conference,stat_name,stat_value
 2023,Marshall,Sun Belt,sacks,33
 2023,Virginia Tech,ACC,rushingTDs,20
 2023,Clemson,ACC,fourthDowns,27
+2023,Washington,Pac-12,possessionTime,27149
 2023,UCF,Big 12,passesIntercepted,12
 2023,Sam Houston State,Conference USA,penaltyYards,506
 2023,Arkansas,SEC,turnovers,18
@@ -72816,7 +72811,6 @@ season,team,conference,stat_name,stat_value
 2023,Georgia Tech,ACC,interceptions,17
 2023,Coastal Carolina,Sun Belt,thirdDowns,172
 2023,Mississippi State,SEC,games,12
-2023,Michigan,Big Ten,rushingAttempts,525
 2023,Auburn,SEC,firstDowns,241
 2023,Northwestern,Big Ten,puntReturns,11
 2023,Boston College,ACC,games,13
@@ -72857,6 +72851,7 @@ season,team,conference,stat_name,stat_value
 2023,New Mexico,Mountain West,turnovers,15
 2023,Western Michigan,Mid-American,totalYards,4374
 2023,Troy,Sun Belt,firstDowns,298
+2023,Michigan,Big Ten,passAttempts,361
 2023,TCU,Big 12,puntReturnYards,152
 2023,Northwestern,Big Ten,turnovers,9
 2023,Texas A&M,SEC,thirdDowns,175
@@ -72897,7 +72892,6 @@ season,team,conference,stat_name,stat_value
 2023,Louisiana,Sun Belt,puntReturnTDs,0
 2023,Tulsa,American Athletic,sacks,21
 2023,SMU,American Athletic,kickReturns,25
-2023,Michigan,Big Ten,totalYards,5298
 2023,Notre Dame,FBS Independents,puntReturnTDs,1
 2023,Alabama,SEC,interceptionTDs,1
 2023,Toledo,Mid-American,firstDowns,284
@@ -72959,7 +72953,6 @@ season,team,conference,stat_name,stat_value
 2023,Virginia Tech,ACC,interceptionTDs,0
 2023,Arkansas,SEC,fumblesLost,10
 2023,Central Michigan,Mid-American,rushingAttempts,456
-2023,Washington,Pac-12,passAttempts,524
 2023,South Carolina,SEC,fumblesLost,5
 2023,New Mexico,Mountain West,sacks,15
 2023,NC State,ACC,puntReturns,17
@@ -73163,6 +73156,7 @@ season,team,conference,stat_name,stat_value
 2023,Duke,ACC,turnovers,15
 2023,Miami (OH),Mid-American,penalties,66
 2023,Oklahoma,Big 12,sacks,23
+2023,Michigan,Big Ten,totalYards,5741
 2023,UAB,American Athletic,kickReturnTDs,0
 2023,Toledo,Mid-American,fumblesRecovered,7
 2023,Alabama,SEC,fourthDownConversions,5
@@ -73260,7 +73254,6 @@ season,team,conference,stat_name,stat_value
 2023,Georgia Southern,Sun Belt,rushingYards,1522
 2023,Appalachian State,Sun Belt,penalties,61
 2023,Louisiana Tech,Conference USA,passCompletions,269
-2023,Michigan,Big Ten,penalties,40
 2023,Vanderbilt,SEC,netPassingYards,2680
 2023,Ball State,Mid-American,firstDowns,217
 2023,Nevada,Mountain West,fourthDowns,23
@@ -73283,6 +73276,7 @@ season,team,conference,stat_name,stat_value
 2023,Southern Mississippi,Sun Belt,penaltyYards,578
 2023,Kentucky,SEC,kickReturnYards,678
 2023,Northern Illinois,Mid-American,kickReturnTDs,0
+2023,Washington,Pac-12,penalties,112
 2023,Clemson,ACC,kickReturns,12
 2023,Marshall,Sun Belt,penalties,85
 2023,Central Michigan,Mid-American,fumblesLost,4
@@ -73300,6 +73294,7 @@ season,team,conference,stat_name,stat_value
 2023,Hawai'i,Mountain West,puntReturns,15
 2023,SMU,American Athletic,thirdDownConversions,84
 2023,Kentucky,SEC,passCompletions,211
+2023,Washington,Pac-12,thirdDowns,174
 2023,Oklahoma,Big 12,fourthDowns,19
 2023,Alabama,SEC,thirdDownConversions,82
 2023,Connecticut,FBS Independents,netPassingYards,2284
@@ -73359,6 +73354,7 @@ season,team,conference,stat_name,stat_value
 2023,Toledo,Mid-American,puntReturns,20
 2023,Penn State,Big Ten,kickReturns,16
 2023,Coastal Carolina,Sun Belt,rushingYards,2010
+2023,Washington,Pac-12,netPassingYards,5155
 2023,Texas Tech,Big 12,passCompletions,284
 2023,California,Pac-12,sacks,25
 2023,SMU,American Athletic,puntReturnTDs,1
@@ -73477,7 +73473,6 @@ season,team,conference,stat_name,stat_value
 2023,Utah,Pac-12,sacks,36
 2023,Central Michigan,Mid-American,puntReturns,16
 2023,Florida Atlantic,American Athletic,kickReturnYards,449
-2023,Washington,Pac-12,possessionTime,25305
 2023,Army,FBS Independents,sacks,17
 2023,Wisconsin,Big Ten,rushingAttempts,454
 2023,Arkansas State,Sun Belt,turnovers,13
@@ -73562,6 +73557,7 @@ season,team,conference,stat_name,stat_value
 2023,Colorado,Pac-12,interceptionTDs,1
 2023,Toledo,Mid-American,games,14
 2023,Tulane,American Athletic,passCompletions,229
+2023,Washington,Pac-12,penaltyYards,1029
 2023,California,Pac-12,firstDowns,278
 2023,Eastern Michigan,Mid-American,fumblesLost,6
 2023,Virginia,ACC,passesIntercepted,8
@@ -73575,6 +73571,7 @@ season,team,conference,stat_name,stat_value
 2023,North Texas,American Athletic,kickReturnYards,720
 2023,Wyoming,Mountain West,passAttempts,304
 2023,Iowa State,Big 12,interceptionTDs,1
+2023,Washington,Pac-12,rushingYards,1776
 2023,Georgia State,Sun Belt,rushingAttempts,513
 2023,Colorado,Pac-12,passingTDs,29
 2023,Hawai'i,Mountain West,turnovers,23
@@ -73644,6 +73641,7 @@ season,team,conference,stat_name,stat_value
 2023,UT San Antonio,American Athletic,penalties,73
 2023,Pittsburgh,ACC,kickReturnTDs,1
 2023,Kent State,Mid-American,kickReturnTDs,0
+2023,Michigan,Big Ten,penaltyYards,412
 2023,Boise State,Mountain West,interceptions,13
 2023,Louisiana Tech,Conference USA,interceptionYards,49
 2023,TCU,Big 12,netPassingYards,3746
@@ -73665,6 +73663,7 @@ season,team,conference,stat_name,stat_value
 2023,Marshall,Sun Belt,fumblesRecovered,5
 2023,Navy,American Athletic,puntReturnYards,176
 2023,Cincinnati,Big 12,passCompletions,218
+2023,Washington,Pac-12,passAttempts,575
 2023,South Carolina,SEC,kickReturnYards,352
 2023,Syracuse,ACC,passingTDs,17
 2023,Syracuse,ACC,thirdDownConversions,70
@@ -73679,6 +73678,7 @@ season,team,conference,stat_name,stat_value
 2023,Mississippi State,SEC,turnovers,14
 2023,James Madison,Sun Belt,interceptions,11
 2023,Michigan State,Big Ten,puntReturnTDs,0
+2023,Washington,Pac-12,passCompletions,376
 2023,Purdue,Big Ten,fumblesLost,8
 2023,Appalachian State,Sun Belt,passingTDs,34
 2023,North Texas,American Athletic,kickReturns,37
@@ -73701,6 +73701,7 @@ season,team,conference,stat_name,stat_value
 2023,Mississippi State,SEC,rushingAttempts,401
 2023,New Mexico,Mountain West,rushingTDs,26
 2023,Liberty,Conference USA,passAttempts,303
+2023,Washington,Pac-12,totalYards,6931
 2023,North Carolina,ACC,passCompletions,292
 2023,James Madison,Sun Belt,puntReturnTDs,1
 2023,Western Kentucky,Conference USA,puntReturns,11
@@ -73744,7 +73745,6 @@ season,team,conference,stat_name,stat_value
 2023,Colorado,Pac-12,puntReturnTDs,0
 2023,Florida Atlantic,American Athletic,netPassingYards,2586
 2023,UT San Antonio,American Athletic,fumblesRecovered,7
-2023,Michigan,Big Ten,firstDowns,281
 2023,Temple,American Athletic,puntReturnYards,76
 2023,Marshall,Sun Belt,fourthDownConversions,6
 2023,Tennessee,SEC,thirdDownConversions,74
@@ -73865,7 +73865,6 @@ season,team,conference,stat_name,stat_value
 2023,Central Michigan,Mid-American,thirdDowns,167
 2023,Charlotte,American Athletic,games,12
 2023,Wake Forest,ACC,rushingAttempts,468
-2023,Washington,Pac-12,totalYards,6630
 2023,Louisiana,Sun Belt,passAttempts,367
 2023,Vanderbilt,SEC,fourthDownConversions,8
 2023,Central Michigan,Mid-American,totalYards,4130
@@ -73882,7 +73881,6 @@ season,team,conference,stat_name,stat_value
 2023,Utah State,Mountain West,penalties,97
 2023,Alabama,SEC,netPassingYards,3086
 2023,Indiana,Big Ten,interceptionYards,98
-2023,Michigan,Big Ten,interceptionYards,338
 2023,Georgia Tech,ACC,passCompletions,231
 2023,Florida International,Conference USA,fourthDownConversions,16
 2023,Purdue,Big Ten,passingTDs,15
@@ -73928,7 +73926,6 @@ season,team,conference,stat_name,stat_value
 2023,UTEP,Conference USA,totalYards,4344
 2023,Texas,Big 12,penalties,92
 2023,Ohio,Mid-American,totalYards,4524
-2023,Washington,Pac-12,fourthDowns,17
 2023,BYU,Big 12,tacklesForLoss,50
 2023,Oklahoma State,Big 12,kickReturnTDs,0
 2023,Liberty,Conference USA,kickReturnTDs,0
@@ -74002,6 +73999,7 @@ season,team,conference,stat_name,stat_value
 2023,Central Michigan,Mid-American,penalties,80
 2023,South Carolina,SEC,sacks,22
 2023,Rice,American Athletic,kickReturnYards,548
+2023,Washington,Pac-12,passingTDs,38
 2023,Texas,Big 12,fumblesRecovered,8
 2023,Ohio State,Big Ten,passingTDs,26
 2023,Notre Dame,FBS Independents,rushingTDs,28
@@ -74053,6 +74051,7 @@ season,team,conference,stat_name,stat_value
 2023,Arizona,Pac-12,netPassingYards,4008
 2023,Utah,Pac-12,kickReturnTDs,0
 2023,Miami,ACC,puntReturnYards,79
+2023,Washington,Pac-12,fourthDownConversions,14
 2023,Arizona State,Pac-12,turnovers,20
 2023,UAB,American Athletic,firstDowns,284
 2023,Houston,Big 12,kickReturns,29
@@ -74142,9 +74141,9 @@ season,team,conference,stat_name,stat_value
 2023,Texas,Big 12,sacks,29
 2023,South Alabama,Sun Belt,interceptions,11
 2023,Nebraska,Big Ten,netPassingYards,1631
-2023,Michigan,Big Ten,netPassingYards,3065
 2023,Sam Houston State,Conference USA,passCompletions,282
 2023,UT San Antonio,American Athletic,netPassingYards,3248
+2023,Washington,Pac-12,fourthDowns,22
 2023,James Madison,Sun Belt,totalYards,5446
 2023,Buffalo,Mid-American,sacks,17
 2023,Arkansas State,Sun Belt,totalYards,4857
@@ -74331,6 +74330,7 @@ season,team,conference,stat_name,stat_value
 2023,Indiana,Big Ten,firstDowns,236
 2023,Liberty,Conference USA,interceptionYards,181
 2023,Texas,Big 12,puntReturnYards,393
+2023,Michigan,Big Ten,kickReturnYards,251
 2023,UCLA,Pac-12,kickReturnTDs,0
 2023,Wisconsin,Big Ten,passAttempts,469
 2023,NC State,ACC,puntReturnYards,171
@@ -74411,6 +74411,7 @@ season,team,conference,stat_name,stat_value
 2023,LSU,SEC,kickReturns,22
 2023,Akron,Mid-American,puntReturnTDs,0
 2023,Duke,ACC,passesIntercepted,10
+2023,Michigan,Big Ten,rushingAttempts,563
 2023,Wyoming,Mountain West,fourthDownConversions,6
 2023,Temple,American Athletic,penalties,54
 2023,Southern Mississippi,Sun Belt,kickReturnYards,879
@@ -74433,6 +74434,7 @@ season,team,conference,stat_name,stat_value
 2023,Southern Mississippi,Sun Belt,firstDowns,243
 2023,Coastal Carolina,Sun Belt,penalties,73
 2023,Colorado State,Mountain West,games,12
+2023,Michigan,Big Ten,firstDowns,297
 2023,Ohio,Mid-American,puntReturnYards,41
 2023,Wyoming,Mountain West,puntReturnYards,33
 2023,Kentucky,SEC,turnovers,20
@@ -74446,7 +74448,6 @@ season,team,conference,stat_name,stat_value
 2023,Southern Mississippi,Sun Belt,games,12
 2023,Tennessee,SEC,puntReturnTDs,1
 2023,Middle Tennessee,Conference USA,puntReturns,11
-2023,Washington,Pac-12,kickReturnYards,686
 2023,James Madison,Sun Belt,fourthDownConversions,8
 2023,Colorado,Pac-12,interceptionYards,74
 2023,Navy,American Athletic,firstDowns,174
@@ -74530,6 +74531,7 @@ season,team,conference,stat_name,stat_value
 2023,Oklahoma State,Big 12,fumblesRecovered,10
 2023,Tulsa,American Athletic,thirdDowns,195
 2023,Texas Tech,Big 12,passingTDs,24
+2023,Michigan,Big Ten,passCompletions,260
 2023,Kansas,Big 12,thirdDowns,145
 2023,Rutgers,Big Ten,kickReturnYards,165
 2023,UNLV,Mountain West,puntReturns,20
@@ -74585,6 +74587,7 @@ season,team,conference,stat_name,stat_value
 2023,Texas Tech,Big 12,fourthDownConversions,24
 2023,Boston College,ACC,sacks,12
 2023,Cincinnati,Big 12,thirdDowns,176
+2023,Michigan,Big Ten,interceptionYards,419
 2023,Texas,Big 12,fourthDowns,31
 2023,Louisiana Monroe,Sun Belt,puntReturnYards,96
 2023,TCU,Big 12,tacklesForLoss,60
@@ -74651,10 +74654,8 @@ season,team,conference,stat_name,stat_value
 2023,Utah State,Mountain West,rushingAttempts,496
 2023,Oregon,Pac-12,thirdDowns,155
 2023,Stanford,Pac-12,penalties,75
-2023,Michigan,Big Ten,possessionTime,27246
 2023,Army,FBS Independents,rushingAttempts,573
 2023,Virginia Tech,ACC,thirdDowns,175
-2023,Washington,Pac-12,puntReturns,18
 2023,Miami,ACC,netPassingYards,3354
 2023,Utah State,Mountain West,passCompletions,269
 2023,UMass,FBS Independents,passAttempts,348
@@ -74713,6 +74714,7 @@ season,team,conference,stat_name,stat_value
 2023,Buffalo,Mid-American,firstDowns,206
 2023,Oklahoma,Big 12,kickReturnTDs,0
 2023,Nebraska,Big Ten,kickReturnYards,335
+2023,Washington,Pac-12,kickReturns,34
 2023,New Mexico State,Conference USA,interceptions,10
 2023,Jacksonville State,Conference USA,netPassingYards,2223
 2023,Utah State,Mountain West,totalYards,5702
@@ -74722,7 +74724,6 @@ season,team,conference,stat_name,stat_value
 2023,Texas Tech,Big 12,rushingTDs,17
 2023,Michigan State,Big Ten,sacks,30
 2023,Miami (OH),Mid-American,games,14
-2023,Michigan,Big Ten,kickReturns,16
 2023,Iowa State,Big 12,passAttempts,381
 2023,Sam Houston State,Conference USA,thirdDownConversions,65
 2023,Louisiana Tech,Conference USA,rushingAttempts,381
@@ -74793,7 +74794,6 @@ season,team,conference,stat_name,stat_value
 2023,New Mexico State,Conference USA,penalties,93
 2023,USC,Pac-12,kickReturnYards,552
 2023,UTEP,Conference USA,puntReturnTDs,1
-2023,Washington,Pac-12,thirdDowns,160
 2023,Ohio State,Big Ten,puntReturns,17
 2023,West Virginia,Big 12,possessionTime,25362
 2023,Southern Mississippi,Sun Belt,kickReturns,40
@@ -74804,7 +74804,6 @@ season,team,conference,stat_name,stat_value
 2023,California,Pac-12,interceptionYards,68
 2023,Miami (OH),Mid-American,puntReturnTDs,0
 2023,Texas Tech,Big 12,interceptionYards,121
-2023,Washington,Pac-12,interceptions,10
 2023,Cincinnati,Big 12,interceptionYards,100
 2023,Arizona,Pac-12,kickReturns,12
 2023,Rice,American Athletic,kickReturnTDs,0
@@ -74814,7 +74813,6 @@ season,team,conference,stat_name,stat_value
 2023,Penn State,Big Ten,firstDowns,292
 2023,Toledo,Mid-American,thirdDownConversions,79
 2023,Charlotte,American Athletic,penaltyYards,703
-2023,Washington,Pac-12,turnovers,18
 2023,UTEP,Conference USA,fumblesRecovered,6
 2023,Ohio State,Big Ten,kickReturns,13
 2023,Navy,American Athletic,passingTDs,10
@@ -74823,6 +74821,7 @@ season,team,conference,stat_name,stat_value
 2023,Memphis,American Athletic,kickReturnYards,566
 2023,Purdue,Big Ten,penaltyYards,691
 2023,Western Kentucky,Conference USA,thirdDowns,191
+2023,Washington,Pac-12,kickReturnYards,703
 2023,Temple,American Athletic,games,12
 2023,Old Dominion,Sun Belt,rushingAttempts,474
 2023,UT San Antonio,American Athletic,totalYards,5481
@@ -74888,6 +74887,7 @@ season,team,conference,stat_name,stat_value
 2023,Nebraska,Big Ten,totalYards,3753
 2023,Northern Illinois,Mid-American,totalYards,4802
 2023,San Diego State,Mountain West,netPassingYards,2061
+2023,Michigan,Big Ten,fourthDowns,22
 2023,Army,FBS Independents,turnovers,22
 2023,Virginia Tech,ACC,fourthDowns,26
 2023,Wisconsin,Big Ten,tacklesForLoss,78
@@ -74970,6 +74970,7 @@ season,team,conference,stat_name,stat_value
 2023,New Mexico,Mountain West,games,12
 2023,Tulsa,American Athletic,penalties,61
 2023,Kansas State,Big 12,thirdDownConversions,90
+2023,Michigan,Big Ten,thirdDownConversions,74
 2023,Ohio,Mid-American,fourthDownConversions,8
 2023,Louisiana,Sun Belt,thirdDownConversions,68
 2023,Colorado State,Mountain West,penalties,91
@@ -74991,6 +74992,7 @@ season,team,conference,stat_name,stat_value
 2023,North Texas,American Athletic,firstDowns,297
 2023,Ole Miss,SEC,puntReturnTDs,1
 2023,Louisiana Monroe,Sun Belt,fourthDowns,26
+2023,Washington,Pac-12,rushingAttempts,411
 2023,Mississippi State,SEC,rushingTDs,12
 2023,UNLV,Mountain West,rushingTDs,39
 2023,Ole Miss,SEC,fumblesRecovered,5
@@ -75079,10 +75081,12 @@ season,team,conference,stat_name,stat_value
 2023,Missouri,SEC,fourthDowns,15
 2023,BYU,Big 12,games,12
 2023,Wake Forest,ACC,fumblesLost,10
+2023,Washington,Pac-12,puntReturns,19
 2023,Vanderbilt,SEC,passAttempts,390
 2023,Rutgers,Big Ten,penaltyYards,587
 2023,Miami (OH),Mid-American,thirdDownConversions,60
 2023,Troy,Sun Belt,interceptions,6
+2023,Washington,Pac-12,interceptions,12
 2023,Utah State,Mountain West,fourthDowns,32
 2023,Louisiana,Sun Belt,puntReturns,19
 2023,Wisconsin,Big Ten,rushingYards,2095
@@ -75092,9 +75096,9 @@ season,team,conference,stat_name,stat_value
 2023,Texas Tech,Big 12,sacks,28
 2023,Pittsburgh,ACC,puntReturnYards,108
 2023,Minnesota,Big Ten,fumblesLost,6
-2023,Washington,Pac-12,penaltyYards,999
 2023,Colorado State,Mountain West,rushingTDs,10
 2023,Texas A&M,SEC,penaltyYards,591
+2023,Michigan,Big Ten,rushingTDs,40
 2023,Oklahoma,Big 12,fumblesLost,11
 2023,Wake Forest,ACC,thirdDownConversions,55
 2023,South Alabama,Sun Belt,sacks,26
@@ -75238,7 +75242,6 @@ season,team,conference,stat_name,stat_value
 2023,Washington State,Pac-12,firstDowns,272
 2023,Maryland,Big Ten,tacklesForLoss,65
 2023,South Alabama,Sun Belt,penaltyYards,750
-2023,Michigan,Big Ten,passAttempts,342
 2023,Wake Forest,ACC,interceptionTDs,0
 2023,Florida International,Conference USA,passingTDs,12
 2023,Tennessee,SEC,puntReturns,23
@@ -75246,7 +75249,6 @@ season,team,conference,stat_name,stat_value
 2023,Nevada,Mountain West,thirdDownConversions,52
 2023,Syracuse,ACC,netPassingYards,2237
 2023,Appalachian State,Sun Belt,thirdDownConversions,79
-2023,Michigan,Big Ten,rushingTDs,36
 2023,Louisville,ACC,passingTDs,22
 2023,West Virginia,Big 12,puntReturnTDs,1
 2023,South Carolina,SEC,passesIntercepted,10
@@ -75291,7 +75293,6 @@ season,team,conference,stat_name,stat_value
 2023,Louisville,ACC,interceptionTDs,0
 2023,Arizona,Pac-12,tacklesForLoss,74
 2023,Kent State,Mid-American,fourthDowns,26
-2023,Washington,Pac-12,rushingAttempts,391
 2023,TCU,Big 12,fumblesLost,4
 2023,Penn State,Big Ten,penaltyYards,563
 2023,Nevada,Mountain West,sacks,15
@@ -75312,7 +75313,6 @@ season,team,conference,stat_name,stat_value
 2023,Navy,American Athletic,possessionTime,22507
 2023,Virginia Tech,ACC,passingTDs,23
 2023,Clemson,ACC,interceptions,9
-2023,Washington,Pac-12,passCompletions,349
 2023,Oklahoma,Big 12,puntReturnYards,137
 2023,Virginia,ACC,fumblesRecovered,6
 2023,Wake Forest,ACC,interceptions,12
