@@ -6,14 +6,16 @@ from load_columns import *
 # In the similar/dissimilar charts, don't display stats with significant imputation
 pd.options.mode.chained_assignment = None
 
-first_year = 2004
+first_year = 2014 # 2014 is first year advanced stats are good. 2004 otherwise (except ToP)
 last_year = 2023
 
 ### Teams
 team_df = pd.read_csv('static/fbs_teams_2004_2023.csv')
+team_df = team_df[team_df['season'] >= first_year].reset_index(drop=True)
 
 ### Game Info
 games_df = pd.read_csv('static/game_info_2004_2023.csv', low_memory=False)
+games_df = games_df[games_df['season'] >= first_year].reset_index(drop=True)
 games_df['home_team_id'] = games_df['home_team'] + ' ' + games_df['season'].astype(str)
 games_df['away_team_id'] = games_df['away_team'] + ' ' + games_df['season'].astype(str)
 
@@ -90,11 +92,25 @@ opp_df['rushingYardsPct_opp'] = opp_df['rushingYards_opp/game']/opp_df['totalYar
 opp_df['completionPct_opp'] = opp_df['passingCompletions_opp/game']/opp_df['passingAttempts_opp/game']
 opp_df['rushingYards/attempt_opp'] = opp_df['rushingYards_opp/game']/opp_df['rushingAttempts_opp/game']
 opp_df['passingYards/attempt_opp'] = opp_df['netPassingYards_opp/game']/opp_df['passingAttempts_opp/game']
+opp_df['passingYards/completion_opp'] = opp_df['netPassingYards_opp/game']/opp_df['passingCompletions_opp/game']
 opp_df['thirdDownPct_opp'] = opp_df['thirdDownConversions_opp/game']/opp_df['thirdDownAttempts_opp/game']
 opp_df['fourthDownPct_opp'] = opp_df['fourthDownConversions_opp/game']/opp_df['fourthDownAttempts_opp/game']
 
-### Season Stats
+##### Drives #####
+# To fix possessionTime 2004-2011
+
+"""drives_df = pd.read_csv('static/drives_2004_2011.csv')
+
+drives_df['offense_team_id'] = drives_df['offense'] + ' ' + drives_df['season'].astype(str)
+drives_df['defense_team_id'] = drives_df['defense'] + ' ' + drives_df['season'].astype(str)
+
+team_ToP_means = pd.DataFrame(drives_df.groupby('offense_team_id')['duration'].sum(
+    )/drives_df.groupby(['offense_team_id'])['game_id'].unique().str.len())
+print(team_ToP_means)"""
+
+##### Season Stats #####
 season_df = pd.read_csv('static/team_season_stats_2004_2023.csv')
+season_df = season_df[season_df['season'] >= first_year].reset_index(drop=True)
 
 season_df['team_id'] = season_df['team'] + ' ' + season_df['season'].astype(str)
 season_df = pd.pivot_table(season_df, index=['team_id'],
@@ -106,7 +122,7 @@ season_df = season_df.dropna(subset='rushingAttempts')
 season_df = season_df[season_df['games']<17] # Florida A&M 2004 is weird
 season_df = season_df[season_df['firstDowns']>0] # 2008 Western Kentucky
 season_df = season_df[season_df['possessionTime'] > 6000] # 2007 Western Kentucky
-season_df = season_df[season_df['games']>6] # 2020 short COVID seasons
+season_df = season_df[season_df['games']>6] # All 2020 short COVID seasons
 
 # Get points and wins data from Game Info
 season_df['points'] = None
@@ -143,17 +159,29 @@ season_df[['passingTDs','passingTDs/game','penalties','penalties/game']] = si1.f
 # Get per-game stats
 pg_df = season_df[[col for col in season_df.columns if '/game' in col]]
 
+# Get possessionTime from drives data
+"""pg_df = pd.merge(pg_df, team_ToP_means, how='left', left_index=True, right_index=True)
+pg_df.loc[pg_df.index.str[-4:].astype(int)<= 2011, 'possessionTime/game'] = pg_df.loc[
+    pg_df.index.str[-4:].astype(int)<= 2011, 0]
+# Get Possession Time to a rate
+pg_df['possessionTime/game'] /= 3600
+pg_df = pg_df.drop(columns=0)"""
+
 # Calculate some additional stats
 pg_df['rushingPct'] = pg_df['rushingAttempts/game']/(pg_df['rushingAttempts/game'] + pg_df['passAttempts/game'])
 pg_df['rushingYardsPct'] = pg_df['rushingYards/game']/pg_df['totalYards/game']
 pg_df['completionPct'] = pg_df['passCompletions/game']/pg_df['passAttempts/game']
 pg_df['rushingYards/attempt'] = pg_df['rushingYards/game']/pg_df['rushingAttempts/game']
 pg_df['passingYards/attempt'] = pg_df['netPassingYards/game']/pg_df['passAttempts/game']
+pg_df['passingYards/completion'] = pg_df['netPassingYards/game']/pg_df['passCompletions/game']
 pg_df['thirdDownPct'] = pg_df['thirdDownConversions/game']/pg_df['thirdDowns/game']
 pg_df['fourthDownPct'] = pg_df['fourthDownConversions/game']/pg_df['fourthDowns/game']
 
-### Advanced Stats
+pg_df['possessionTime/game'] /= 3600
+
+##### Advanced Stats #####
 advanced_stats_df = pd.read_csv('static/team_advanced_season_stats_2004_2023.csv')
+advanced_stats_df = advanced_stats_df[advanced_stats_df['season'] >= first_year].reset_index(drop=True)
 
 advanced_stats_df['team_id'] = advanced_stats_df['team'] + ' ' + advanced_stats_df['season'].astype(str)
 advanced_stats_df = advanced_stats_df.set_index(['team_id'])
@@ -163,7 +191,10 @@ advanced_stats_df = advanced_stats_df.loc[advanced_stats_df.index.isin(team_df['
 
 # some teams have advanced stats from few games in earlier seasons
 # minimum plays was 45*8 = 360
-advanced_stats_df = advanced_stats_df[advanced_stats_df['o_plays']>advanced_stats_df['o_plays'].min()*6.67]
+# !!!!!!!!
+#advanced_stats_df = advanced_stats_df[advanced_stats_df['o_plays']>advanced_stats_df['o_plays'].min()*6.67]
+# Use only if going back to 2004
+# !!!!!!!!
 
 # Calculate some additional stats
 advanced_stats_df['o_plays/drive'] = advanced_stats_df['o_plays']/advanced_stats_df['o_drives']
@@ -172,12 +203,18 @@ advanced_stats_df['d_plays/drive'] = advanced_stats_df['d_plays']/advanced_stats
 ### Join and store
 df_combined = pg_df.join(advanced_stats_df, how='inner').drop(columns=['team', 'season', 'conference'])
 df_combined = df_combined.join(opp_df, how='inner')
-print(df_combined.loc['Notre Dame 2012'])
+
 # All
 df_combined[list(X_columns.keys())].to_csv('static/raw_team_stats_{}_{}.csv'.format(first_year, last_year))
+df_combined[list({**o_normal_columns, **d_normal_columns, **other_columns}.keys())
+            ].to_csv('static/raw_no_adv_team_stats_{}_{}.csv'.format(first_year, last_year))
 # Offense
-df_combined[list(o_normal_columns.keys())+list(o_advanced_columns.keys())
+df_combined[list({**o_normal_columns, **o_advanced_columns}.keys())
             ].to_csv('static/raw_offense_team_stats_{}_{}.csv'.format(first_year, last_year))
-# All
-df_combined[list(d_normal_columns.keys())+list(d_advanced_columns.keys())
+df_combined[list(o_normal_columns.keys())
+            ].to_csv('static/raw_offense_no_adv_team_stats_{}_{}.csv'.format(first_year, last_year))
+# Defense
+df_combined[list({**d_normal_columns, **d_advanced_columns}.keys())
             ].to_csv('static/raw_defense_team_stats_{}_{}.csv'.format(first_year, last_year))
+df_combined[list(d_normal_columns.keys())
+            ].to_csv('static/raw_defense_no_adv_team_stats_{}_{}.csv'.format(first_year, last_year))

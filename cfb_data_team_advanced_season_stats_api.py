@@ -12,7 +12,9 @@ for year in range(first_year, last_year+1):
 
     api_instance = cfbd.StatsApi(cfbd.ApiClient(configuration))
     try:
-        api_teams = api_instance.get_advanced_team_season_stats(year=year)
+        api_teams = api_instance.get_advanced_team_season_stats(
+            year=year
+            )
     except ApiException as e:
         print("Exception when calling GameApi->get_games: %s\n" % e)
 
