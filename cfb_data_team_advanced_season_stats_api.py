@@ -4,7 +4,7 @@ from cfbd.rest import ApiException
 
 from config import *
 
-first_year = 2004
+first_year = 2014
 last_year = 2023
 df_list = []
 for year in range(first_year, last_year+1):

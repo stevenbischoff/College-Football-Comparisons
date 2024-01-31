@@ -1,0 +1,1297 @@
+team,year,games,wins,losses,ties,team_id
+Auburn,2014,13,8,5,0,Auburn 2014
+UAB,2014,12,6,6,0,UAB 2014
+South Alabama,2014,13,6,7,0,South Alabama 2014
+Arkansas,2014,13,7,6,0,Arkansas 2014
+Arizona State,2014,13,10,3,0,Arizona State 2014
+Arizona,2014,14,10,4,0,Arizona 2014
+San Diego State,2014,13,7,6,0,San Diego State 2014
+San José State,2014,12,3,9,0,San José State 2014
+Stanford,2014,13,8,5,0,Stanford 2014
+California,2014,12,5,7,0,California 2014
+UCLA,2014,13,10,3,0,UCLA 2014
+USC,2014,13,9,4,0,USC 2014
+Colorado State,2014,13,10,3,0,Colorado State 2014
+Colorado,2014,12,2,10,0,Colorado 2014
+Connecticut,2014,12,2,10,0,Connecticut 2014
+Florida State,2014,14,13,1,0,Florida State 2014
+Florida,2014,12,7,5,0,Florida 2014
+South Florida,2014,12,4,8,0,South Florida 2014
+Georgia Tech,2014,14,11,3,0,Georgia Tech 2014
+Georgia,2014,13,10,3,0,Georgia 2014
+Hawai'i,2014,13,4,9,0,Hawai'i 2014
+Iowa State,2014,12,2,10,0,Iowa State 2014
+Boise State,2014,14,12,2,0,Boise State 2014
+Idaho,2014,11,1,10,0,Idaho 2014
+Northwestern,2014,12,5,7,0,Northwestern 2014
+Indiana,2014,12,4,8,0,Indiana 2014
+Notre Dame,2014,13,8,5,0,Notre Dame 2014
+Kentucky,2014,12,5,7,0,Kentucky 2014
+Louisville,2014,13,9,4,0,Louisville 2014
+Western Kentucky,2014,13,8,5,0,Western Kentucky 2014
+LSU,2014,13,8,5,0,LSU 2014
+Boston College,2014,13,7,6,0,Boston College 2014
+UMass,2014,12,3,9,0,UMass 2014
+Maryland,2014,13,7,6,0,Maryland 2014
+Michigan State,2014,13,11,2,0,Michigan State 2014
+Michigan,2014,12,5,7,0,Michigan 2014
+Minnesota,2014,13,8,5,0,Minnesota 2014
+Missouri,2014,14,11,3,0,Missouri 2014
+Ole Miss,2014,13,9,4,0,Ole Miss 2014
+Duke,2014,13,9,4,0,Duke 2014
+East Carolina,2014,13,8,5,0,East Carolina 2014
+NC State,2014,13,8,5,0,NC State 2014
+North Carolina,2014,13,6,7,0,North Carolina 2014
+Wake Forest,2014,12,3,9,0,Wake Forest 2014
+Nebraska,2014,13,9,4,0,Nebraska 2014
+Rutgers,2014,13,8,5,0,Rutgers 2014
+New Mexico State,2014,12,2,10,0,New Mexico State 2014
+New Mexico,2014,12,4,8,0,New Mexico 2014
+Syracuse,2014,12,3,9,0,Syracuse 2014
+Bowling Green,2014,14,8,6,0,Bowling Green 2014
+Miami (OH),2014,12,2,10,0,Miami (OH) 2014
+Ohio State,2014,15,14,1,0,Ohio State 2014
+Ohio,2014,12,6,6,0,Ohio 2014
+Oklahoma State,2014,13,7,6,0,Oklahoma State 2014
+Oklahoma,2014,13,8,5,0,Oklahoma 2014
+Tulsa,2014,12,2,10,0,Tulsa 2014
+Oregon State,2014,12,5,7,0,Oregon State 2014
+Penn State,2014,13,7,6,0,Penn State 2014
+Temple,2014,12,6,6,0,Temple 2014
+Pittsburgh,2014,13,6,7,0,Pittsburgh 2014
+Clemson,2014,13,10,3,0,Clemson 2014
+Memphis,2014,13,10,3,0,Memphis 2014
+Vanderbilt,2014,12,3,9,0,Vanderbilt 2014
+Baylor,2014,13,11,2,0,Baylor 2014
+Rice,2014,13,8,5,0,Rice 2014
+Texas A&M,2014,13,8,5,0,Texas A&M 2014
+Houston,2014,13,8,5,0,Houston 2014
+North Texas,2014,12,4,8,0,North Texas 2014
+Texas,2014,13,6,7,0,Texas 2014
+BYU,2014,13,8,5,0,BYU 2014
+Utah,2014,13,9,4,0,Utah 2014
+Virginia,2014,12,5,7,0,Virginia 2014
+Virginia Tech,2014,13,7,6,0,Virginia Tech 2014
+Washington,2014,14,8,6,0,Washington 2014
+Washington State,2014,12,3,9,0,Washington State 2014
+Wisconsin,2014,14,11,3,0,Wisconsin 2014
+Marshall,2014,14,13,1,0,Marshall 2014
+West Virginia,2014,13,7,6,0,West Virginia 2014
+Fresno State,2014,14,6,8,0,Fresno State 2014
+Georgia Southern,2014,12,9,3,0,Georgia Southern 2014
+Old Dominion,2014,12,6,6,0,Old Dominion 2014
+Louisiana,2014,13,9,4,0,Louisiana 2014
+Texas State,2014,12,7,5,0,Texas State 2014
+Utah State,2014,14,10,4,0,Utah State 2014
+Alabama,2014,14,12,2,0,Alabama 2014
+Mississippi State,2014,13,10,3,0,Mississippi State 2014
+Army,2014,12,4,8,0,Army 2014
+Illinois,2014,13,6,7,0,Illinois 2014
+Air Force,2014,13,10,3,0,Air Force 2014
+Akron,2014,12,5,7,0,Akron 2014
+Appalachian State,2014,12,7,5,0,Appalachian State 2014
+Arkansas State,2014,13,7,6,0,Arkansas State 2014
+Ball State,2014,12,5,7,0,Ball State 2014
+Buffalo,2014,11,5,6,0,Buffalo 2014
+UCF,2014,13,9,4,0,UCF 2014
+Central Michigan,2014,13,7,6,0,Central Michigan 2014
+Cincinnati,2014,13,9,4,0,Cincinnati 2014
+Eastern Michigan,2014,12,2,10,0,Eastern Michigan 2014
+Florida Atlantic,2014,12,3,9,0,Florida Atlantic 2014
+Florida International,2014,12,4,8,0,Florida International 2014
+Georgia State,2014,12,1,11,0,Georgia State 2014
+Iowa,2014,13,7,6,0,Iowa 2014
+Kansas,2014,12,3,9,0,Kansas 2014
+Kansas State,2014,13,9,4,0,Kansas State 2014
+Kent State,2014,11,2,9,0,Kent State 2014
+Louisiana Tech,2014,14,9,5,0,Louisiana Tech 2014
+Miami,2014,13,6,7,0,Miami 2014
+Middle Tennessee,2014,12,6,6,0,Middle Tennessee 2014
+Navy,2014,13,8,5,0,Navy 2014
+Louisiana Monroe,2014,12,4,8,0,Louisiana Monroe 2014
+UNLV,2014,13,2,11,0,UNLV 2014
+Nevada,2014,13,7,6,0,Nevada 2014
+Northern Illinois,2014,14,11,3,0,Northern Illinois 2014
+Oregon,2014,15,13,2,0,Oregon 2014
+Purdue,2014,12,3,9,0,Purdue 2014
+SMU,2014,12,1,11,0,SMU 2014
+Southern Mississippi,2014,12,3,9,0,Southern Mississippi 2014
+South Carolina,2014,13,7,6,0,South Carolina 2014
+TCU,2014,13,12,1,0,TCU 2014
+Tennessee,2014,13,7,6,0,Tennessee 2014
+UT San Antonio,2014,12,4,8,0,UT San Antonio 2014
+UTEP,2014,13,7,6,0,UTEP 2014
+Texas Tech,2014,12,4,8,0,Texas Tech 2014
+Toledo,2014,13,9,4,0,Toledo 2014
+Troy,2014,12,3,9,0,Troy 2014
+Tulane,2014,12,3,9,0,Tulane 2014
+Western Michigan,2014,13,8,5,0,Western Michigan 2014
+Wyoming,2014,12,4,8,0,Wyoming 2014
+Auburn,2015,13,7,6,0,Auburn 2015
+South Alabama,2015,12,5,7,0,South Alabama 2015
+Arkansas,2015,13,8,5,0,Arkansas 2015
+Arizona State,2015,13,6,7,0,Arizona State 2015
+Arizona,2015,13,7,6,0,Arizona 2015
+San Diego State,2015,14,11,3,0,San Diego State 2015
+San José State,2015,13,6,7,0,San José State 2015
+Stanford,2015,14,12,2,0,Stanford 2015
+California,2015,13,8,5,0,California 2015
+UCLA,2015,13,8,5,0,UCLA 2015
+USC,2015,14,8,6,0,USC 2015
+Colorado State,2015,13,7,6,0,Colorado State 2015
+Colorado,2015,13,4,9,0,Colorado 2015
+Connecticut,2015,13,6,7,0,Connecticut 2015
+Florida State,2015,13,10,3,0,Florida State 2015
+Florida,2015,14,10,4,0,Florida 2015
+South Florida,2015,13,8,5,0,South Florida 2015
+Georgia Tech,2015,12,3,9,0,Georgia Tech 2015
+Georgia,2015,13,10,3,0,Georgia 2015
+Hawai'i,2015,13,3,10,0,Hawai'i 2015
+Iowa State,2015,12,3,9,0,Iowa State 2015
+Boise State,2015,13,9,4,0,Boise State 2015
+Idaho,2015,12,4,8,0,Idaho 2015
+Northwestern,2015,13,10,3,0,Northwestern 2015
+Indiana,2015,13,6,7,0,Indiana 2015
+Notre Dame,2015,13,10,3,0,Notre Dame 2015
+Kentucky,2015,12,5,7,0,Kentucky 2015
+Louisville,2015,13,8,5,0,Louisville 2015
+Western Kentucky,2015,14,12,2,0,Western Kentucky 2015
+LSU,2015,12,9,3,0,LSU 2015
+Boston College,2015,12,3,9,0,Boston College 2015
+UMass,2015,12,3,9,0,UMass 2015
+Maryland,2015,12,3,9,0,Maryland 2015
+Michigan State,2015,14,12,2,0,Michigan State 2015
+Michigan,2015,13,10,3,0,Michigan 2015
+Minnesota,2015,13,6,7,0,Minnesota 2015
+Missouri,2015,12,5,7,0,Missouri 2015
+Ole Miss,2015,13,10,3,0,Ole Miss 2015
+Duke,2015,13,8,5,0,Duke 2015
+East Carolina,2015,12,5,7,0,East Carolina 2015
+NC State,2015,13,7,6,0,NC State 2015
+North Carolina,2015,14,11,3,0,North Carolina 2015
+Wake Forest,2015,12,3,9,0,Wake Forest 2015
+Nebraska,2015,13,6,7,0,Nebraska 2015
+Rutgers,2015,12,4,8,0,Rutgers 2015
+New Mexico State,2015,12,3,9,0,New Mexico State 2015
+New Mexico,2015,13,7,6,0,New Mexico 2015
+Syracuse,2015,12,4,8,0,Syracuse 2015
+Bowling Green,2015,14,10,4,0,Bowling Green 2015
+Miami (OH),2015,12,3,9,0,Miami (OH) 2015
+Ohio State,2015,13,12,1,0,Ohio State 2015
+Ohio,2015,13,8,5,0,Ohio 2015
+Oklahoma State,2015,13,10,3,0,Oklahoma State 2015
+Oklahoma,2015,13,11,2,0,Oklahoma 2015
+Tulsa,2015,13,6,7,0,Tulsa 2015
+Oregon State,2015,12,2,10,0,Oregon State 2015
+Penn State,2015,13,7,6,0,Penn State 2015
+Temple,2015,14,10,4,0,Temple 2015
+Pittsburgh,2015,13,8,5,0,Pittsburgh 2015
+Clemson,2015,15,14,1,0,Clemson 2015
+Memphis,2015,13,9,4,0,Memphis 2015
+Vanderbilt,2015,12,4,8,0,Vanderbilt 2015
+Baylor,2015,13,10,3,0,Baylor 2015
+Rice,2015,12,5,7,0,Rice 2015
+Texas A&M,2015,13,8,5,0,Texas A&M 2015
+Houston,2015,14,13,1,0,Houston 2015
+North Texas,2015,12,1,11,0,North Texas 2015
+Texas,2015,12,5,7,0,Texas 2015
+BYU,2015,13,9,4,0,BYU 2015
+Utah,2015,13,10,3,0,Utah 2015
+Virginia,2015,12,4,8,0,Virginia 2015
+Virginia Tech,2015,13,7,6,0,Virginia Tech 2015
+Washington,2015,13,7,6,0,Washington 2015
+Washington State,2015,13,9,4,0,Washington State 2015
+Wisconsin,2015,13,10,3,0,Wisconsin 2015
+Marshall,2015,13,10,3,0,Marshall 2015
+West Virginia,2015,13,8,5,0,West Virginia 2015
+Fresno State,2015,12,3,9,0,Fresno State 2015
+Georgia Southern,2015,13,9,4,0,Georgia Southern 2015
+Old Dominion,2015,12,5,7,0,Old Dominion 2015
+Louisiana,2015,12,4,8,0,Louisiana 2015
+Texas State,2015,12,3,9,0,Texas State 2015
+Utah State,2015,13,6,7,0,Utah State 2015
+Alabama,2015,15,14,1,0,Alabama 2015
+Mississippi State,2015,13,9,4,0,Mississippi State 2015
+Army,2015,12,2,10,0,Army 2015
+Illinois,2015,12,5,7,0,Illinois 2015
+Air Force,2015,14,8,6,0,Air Force 2015
+Akron,2015,13,8,5,0,Akron 2015
+Appalachian State,2015,13,11,2,0,Appalachian State 2015
+Arkansas State,2015,13,9,4,0,Arkansas State 2015
+Ball State,2015,12,3,9,0,Ball State 2015
+Buffalo,2015,12,5,7,0,Buffalo 2015
+UCF,2015,12,0,12,0,UCF 2015
+Central Michigan,2015,13,7,6,0,Central Michigan 2015
+Cincinnati,2015,13,7,6,0,Cincinnati 2015
+Eastern Michigan,2015,12,1,11,0,Eastern Michigan 2015
+Florida Atlantic,2015,12,3,9,0,Florida Atlantic 2015
+Florida International,2015,12,5,7,0,Florida International 2015
+Georgia State,2015,13,6,7,0,Georgia State 2015
+Iowa,2015,14,12,2,0,Iowa 2015
+Kansas,2015,12,0,12,0,Kansas 2015
+Kansas State,2015,13,6,7,0,Kansas State 2015
+Kent State,2015,12,3,9,0,Kent State 2015
+Louisiana Tech,2015,13,9,4,0,Louisiana Tech 2015
+Miami,2015,13,8,5,0,Miami 2015
+Middle Tennessee,2015,13,7,6,0,Middle Tennessee 2015
+Navy,2015,13,11,2,0,Navy 2015
+Charlotte,2015,12,2,10,0,Charlotte 2015
+Louisiana Monroe,2015,13,2,11,0,Louisiana Monroe 2015
+UNLV,2015,12,3,9,0,UNLV 2015
+Nevada,2015,13,7,6,0,Nevada 2015
+Northern Illinois,2015,14,8,6,0,Northern Illinois 2015
+Oregon,2015,13,9,4,0,Oregon 2015
+Purdue,2015,12,2,10,0,Purdue 2015
+SMU,2015,12,2,10,0,SMU 2015
+Southern Mississippi,2015,14,9,5,0,Southern Mississippi 2015
+South Carolina,2015,12,3,9,0,South Carolina 2015
+TCU,2015,13,11,2,0,TCU 2015
+Tennessee,2015,13,9,4,0,Tennessee 2015
+UT San Antonio,2015,12,3,9,0,UT San Antonio 2015
+UTEP,2015,12,5,7,0,UTEP 2015
+Texas Tech,2015,13,7,6,0,Texas Tech 2015
+Toledo,2015,12,10,2,0,Toledo 2015
+Troy,2015,12,4,8,0,Troy 2015
+Tulane,2015,12,3,9,0,Tulane 2015
+Western Michigan,2015,13,8,5,0,Western Michigan 2015
+Wyoming,2015,12,2,10,0,Wyoming 2015
+Auburn,2016,13,8,5,0,Auburn 2016
+South Alabama,2016,13,6,7,0,South Alabama 2016
+Arkansas,2016,13,7,6,0,Arkansas 2016
+Arizona State,2016,12,5,7,0,Arizona State 2016
+Arizona,2016,12,3,9,0,Arizona 2016
+San Diego State,2016,14,11,3,0,San Diego State 2016
+San José State,2016,12,4,8,0,San José State 2016
+Stanford,2016,13,10,3,0,Stanford 2016
+California,2016,12,5,7,0,California 2016
+UCLA,2016,12,4,8,0,UCLA 2016
+USC,2016,13,10,3,0,USC 2016
+Colorado State,2016,13,7,6,0,Colorado State 2016
+Colorado,2016,14,10,4,0,Colorado 2016
+Connecticut,2016,12,3,9,0,Connecticut 2016
+Florida State,2016,13,10,3,0,Florida State 2016
+Florida,2016,13,9,4,0,Florida 2016
+South Florida,2016,13,11,2,0,South Florida 2016
+Georgia Tech,2016,13,9,4,0,Georgia Tech 2016
+Georgia,2016,13,8,5,0,Georgia 2016
+Hawai'i,2016,14,7,7,0,Hawai'i 2016
+Iowa State,2016,12,3,9,0,Iowa State 2016
+Boise State,2016,13,10,3,0,Boise State 2016
+Idaho,2016,13,9,4,0,Idaho 2016
+Northwestern,2016,13,7,6,0,Northwestern 2016
+Indiana,2016,13,6,7,0,Indiana 2016
+Notre Dame,2016,12,4,8,0,Notre Dame 2016
+Kentucky,2016,13,7,6,0,Kentucky 2016
+Louisville,2016,13,9,4,0,Louisville 2016
+Western Kentucky,2016,14,11,3,0,Western Kentucky 2016
+LSU,2016,12,8,4,0,LSU 2016
+Boston College,2016,13,7,6,0,Boston College 2016
+UMass,2016,12,2,10,0,UMass 2016
+Maryland,2016,13,6,7,0,Maryland 2016
+Michigan State,2016,12,3,9,0,Michigan State 2016
+Michigan,2016,13,10,3,0,Michigan 2016
+Minnesota,2016,13,9,4,0,Minnesota 2016
+Missouri,2016,12,4,8,0,Missouri 2016
+Ole Miss,2016,12,5,7,0,Ole Miss 2016
+Duke,2016,12,4,8,0,Duke 2016
+East Carolina,2016,12,3,9,0,East Carolina 2016
+NC State,2016,13,7,6,0,NC State 2016
+North Carolina,2016,13,8,5,0,North Carolina 2016
+Wake Forest,2016,13,7,6,0,Wake Forest 2016
+Nebraska,2016,13,9,4,0,Nebraska 2016
+Rutgers,2016,12,2,10,0,Rutgers 2016
+New Mexico State,2016,12,3,9,0,New Mexico State 2016
+New Mexico,2016,13,9,4,0,New Mexico 2016
+Syracuse,2016,12,4,8,0,Syracuse 2016
+Bowling Green,2016,12,4,8,0,Bowling Green 2016
+Miami (OH),2016,13,6,7,0,Miami (OH) 2016
+Ohio State,2016,13,11,2,0,Ohio State 2016
+Ohio,2016,14,8,6,0,Ohio 2016
+Oklahoma State,2016,13,10,3,0,Oklahoma State 2016
+Oklahoma,2016,13,11,2,0,Oklahoma 2016
+Tulsa,2016,13,10,3,0,Tulsa 2016
+Oregon State,2016,12,4,8,0,Oregon State 2016
+Penn State,2016,14,11,3,0,Penn State 2016
+Temple,2016,14,10,4,0,Temple 2016
+Pittsburgh,2016,13,8,5,0,Pittsburgh 2016
+Clemson,2016,15,14,1,0,Clemson 2016
+Memphis,2016,13,8,5,0,Memphis 2016
+Vanderbilt,2016,13,6,7,0,Vanderbilt 2016
+Baylor,2016,13,7,6,0,Baylor 2016
+Rice,2016,12,3,9,0,Rice 2016
+Texas A&M,2016,13,8,5,0,Texas A&M 2016
+Houston,2016,13,9,4,0,Houston 2016
+North Texas,2016,13,5,8,0,North Texas 2016
+Texas,2016,12,5,7,0,Texas 2016
+BYU,2016,13,9,4,0,BYU 2016
+Utah,2016,13,9,4,0,Utah 2016
+Virginia,2016,12,2,10,0,Virginia 2016
+Virginia Tech,2016,14,10,4,0,Virginia Tech 2016
+Washington,2016,14,12,2,0,Washington 2016
+Washington State,2016,13,8,5,0,Washington State 2016
+Wisconsin,2016,14,11,3,0,Wisconsin 2016
+Marshall,2016,12,3,9,0,Marshall 2016
+West Virginia,2016,13,10,3,0,West Virginia 2016
+Fresno State,2016,12,1,11,0,Fresno State 2016
+Georgia Southern,2016,12,5,7,0,Georgia Southern 2016
+Old Dominion,2016,13,10,3,0,Old Dominion 2016
+Louisiana,2016,13,6,7,0,Louisiana 2016
+Texas State,2016,12,2,10,0,Texas State 2016
+Utah State,2016,12,3,9,0,Utah State 2016
+Alabama,2016,15,14,1,0,Alabama 2016
+Mississippi State,2016,13,6,7,0,Mississippi State 2016
+Army,2016,13,8,5,0,Army 2016
+Illinois,2016,12,3,9,0,Illinois 2016
+Air Force,2016,13,10,3,0,Air Force 2016
+Akron,2016,12,5,7,0,Akron 2016
+Appalachian State,2016,13,10,3,0,Appalachian State 2016
+Arkansas State,2016,13,8,5,0,Arkansas State 2016
+Ball State,2016,12,4,8,0,Ball State 2016
+Buffalo,2016,12,2,10,0,Buffalo 2016
+UCF,2016,13,6,7,0,UCF 2016
+Central Michigan,2016,13,6,7,0,Central Michigan 2016
+Cincinnati,2016,12,4,8,0,Cincinnati 2016
+Eastern Michigan,2016,13,7,6,0,Eastern Michigan 2016
+Florida Atlantic,2016,12,3,9,0,Florida Atlantic 2016
+Florida International,2016,12,4,8,0,Florida International 2016
+Georgia State,2016,12,3,9,0,Georgia State 2016
+Iowa,2016,13,8,5,0,Iowa 2016
+Kansas,2016,12,2,10,0,Kansas 2016
+Kansas State,2016,13,9,4,0,Kansas State 2016
+Kent State,2016,12,3,9,0,Kent State 2016
+Louisiana Tech,2016,14,9,5,0,Louisiana Tech 2016
+Miami,2016,13,9,4,0,Miami 2016
+Middle Tennessee,2016,13,8,5,0,Middle Tennessee 2016
+Navy,2016,14,9,5,0,Navy 2016
+Charlotte,2016,12,4,8,0,Charlotte 2016
+Louisiana Monroe,2016,12,4,8,0,Louisiana Monroe 2016
+UNLV,2016,12,4,8,0,UNLV 2016
+Nevada,2016,12,5,7,0,Nevada 2016
+Northern Illinois,2016,12,5,7,0,Northern Illinois 2016
+Oregon,2016,12,4,8,0,Oregon 2016
+Purdue,2016,12,3,9,0,Purdue 2016
+SMU,2016,12,5,7,0,SMU 2016
+Southern Mississippi,2016,13,7,6,0,Southern Mississippi 2016
+South Carolina,2016,13,6,7,0,South Carolina 2016
+TCU,2016,13,6,7,0,TCU 2016
+Tennessee,2016,13,9,4,0,Tennessee 2016
+UT San Antonio,2016,13,6,7,0,UT San Antonio 2016
+UTEP,2016,12,4,8,0,UTEP 2016
+Texas Tech,2016,12,5,7,0,Texas Tech 2016
+Toledo,2016,13,9,4,0,Toledo 2016
+Troy,2016,13,10,3,0,Troy 2016
+Tulane,2016,12,4,8,0,Tulane 2016
+Western Michigan,2016,14,13,1,0,Western Michigan 2016
+Wyoming,2016,14,8,6,0,Wyoming 2016
+Auburn,2017,14,10,4,0,Auburn 2017
+UAB,2017,13,8,5,0,UAB 2017
+South Alabama,2017,12,4,8,0,South Alabama 2017
+Arkansas,2017,12,4,8,0,Arkansas 2017
+Arizona State,2017,13,7,6,0,Arizona State 2017
+Arizona,2017,13,7,6,0,Arizona 2017
+San Diego State,2017,13,10,3,0,San Diego State 2017
+San José State,2017,13,2,11,0,San José State 2017
+Stanford,2017,14,9,5,0,Stanford 2017
+California,2017,12,5,7,0,California 2017
+UCLA,2017,13,6,7,0,UCLA 2017
+USC,2017,14,11,3,0,USC 2017
+Colorado State,2017,13,7,6,0,Colorado State 2017
+Colorado,2017,12,5,7,0,Colorado 2017
+Connecticut,2017,12,3,9,0,Connecticut 2017
+Florida State,2017,13,7,6,0,Florida State 2017
+Florida,2017,11,4,7,0,Florida 2017
+South Florida,2017,12,10,2,0,South Florida 2017
+Georgia Tech,2017,11,5,6,0,Georgia Tech 2017
+Georgia,2017,15,13,2,0,Georgia 2017
+Hawai'i,2017,12,3,9,0,Hawai'i 2017
+Iowa State,2017,13,8,5,0,Iowa State 2017
+Boise State,2017,14,11,3,0,Boise State 2017
+Idaho,2017,12,4,8,0,Idaho 2017
+Northwestern,2017,13,10,3,0,Northwestern 2017
+Indiana,2017,12,5,7,0,Indiana 2017
+Notre Dame,2017,13,10,3,0,Notre Dame 2017
+Kentucky,2017,13,7,6,0,Kentucky 2017
+Louisville,2017,13,8,5,0,Louisville 2017
+Western Kentucky,2017,13,6,7,0,Western Kentucky 2017
+LSU,2017,13,9,4,0,LSU 2017
+Boston College,2017,13,7,6,0,Boston College 2017
+UMass,2017,12,4,8,0,UMass 2017
+Maryland,2017,12,4,8,0,Maryland 2017
+Michigan State,2017,13,10,3,0,Michigan State 2017
+Michigan,2017,13,8,5,0,Michigan 2017
+Minnesota,2017,12,5,7,0,Minnesota 2017
+Missouri,2017,13,7,6,0,Missouri 2017
+Ole Miss,2017,12,6,6,0,Ole Miss 2017
+Duke,2017,13,7,6,0,Duke 2017
+East Carolina,2017,12,3,9,0,East Carolina 2017
+NC State,2017,13,9,4,0,NC State 2017
+North Carolina,2017,12,3,9,0,North Carolina 2017
+Wake Forest,2017,13,8,5,0,Wake Forest 2017
+Nebraska,2017,12,4,8,0,Nebraska 2017
+Rutgers,2017,12,4,8,0,Rutgers 2017
+New Mexico State,2017,13,7,6,0,New Mexico State 2017
+New Mexico,2017,12,3,9,0,New Mexico 2017
+Syracuse,2017,12,4,8,0,Syracuse 2017
+Bowling Green,2017,12,2,10,0,Bowling Green 2017
+Miami (OH),2017,12,5,7,0,Miami (OH) 2017
+Ohio State,2017,14,12,2,0,Ohio State 2017
+Ohio,2017,13,9,4,0,Ohio 2017
+Oklahoma State,2017,13,10,3,0,Oklahoma State 2017
+Oklahoma,2017,14,12,2,0,Oklahoma 2017
+Tulsa,2017,12,2,10,0,Tulsa 2017
+Oregon State,2017,12,1,11,0,Oregon State 2017
+Penn State,2017,13,11,2,0,Penn State 2017
+Temple,2017,13,7,6,0,Temple 2017
+Pittsburgh,2017,12,5,7,0,Pittsburgh 2017
+Clemson,2017,14,12,2,0,Clemson 2017
+Memphis,2017,13,10,3,0,Memphis 2017
+Vanderbilt,2017,12,5,7,0,Vanderbilt 2017
+Baylor,2017,12,1,11,0,Baylor 2017
+Rice,2017,12,1,11,0,Rice 2017
+Texas A&M,2017,13,7,6,0,Texas A&M 2017
+Houston,2017,12,7,5,0,Houston 2017
+North Texas,2017,14,9,5,0,North Texas 2017
+Texas,2017,13,7,6,0,Texas 2017
+BYU,2017,13,4,9,0,BYU 2017
+Utah,2017,13,7,6,0,Utah 2017
+Virginia,2017,13,6,7,0,Virginia 2017
+Virginia Tech,2017,13,9,4,0,Virginia Tech 2017
+Washington,2017,13,10,3,0,Washington 2017
+Washington State,2017,13,9,4,0,Washington State 2017
+Wisconsin,2017,14,13,1,0,Wisconsin 2017
+Marshall,2017,13,8,5,0,Marshall 2017
+West Virginia,2017,13,7,6,0,West Virginia 2017
+Fresno State,2017,14,10,4,0,Fresno State 2017
+Georgia Southern,2017,12,2,10,0,Georgia Southern 2017
+Old Dominion,2017,12,5,7,0,Old Dominion 2017
+Louisiana,2017,12,5,7,0,Louisiana 2017
+Coastal Carolina,2017,12,3,9,0,Coastal Carolina 2017
+Texas State,2017,12,2,10,0,Texas State 2017
+Utah State,2017,13,6,7,0,Utah State 2017
+Alabama,2017,14,13,1,0,Alabama 2017
+Mississippi State,2017,13,9,4,0,Mississippi State 2017
+Army,2017,13,10,3,0,Army 2017
+Illinois,2017,12,2,10,0,Illinois 2017
+Air Force,2017,12,5,7,0,Air Force 2017
+Akron,2017,14,7,7,0,Akron 2017
+Appalachian State,2017,13,9,4,0,Appalachian State 2017
+Arkansas State,2017,12,7,5,0,Arkansas State 2017
+Ball State,2017,12,2,10,0,Ball State 2017
+Buffalo,2017,12,6,6,0,Buffalo 2017
+UCF,2017,13,13,0,0,UCF 2017
+Central Michigan,2017,13,8,5,0,Central Michigan 2017
+Cincinnati,2017,12,4,8,0,Cincinnati 2017
+Eastern Michigan,2017,12,5,7,0,Eastern Michigan 2017
+Florida Atlantic,2017,14,11,3,0,Florida Atlantic 2017
+Florida International,2017,13,8,5,0,Florida International 2017
+Georgia State,2017,12,7,5,0,Georgia State 2017
+Iowa,2017,13,8,5,0,Iowa 2017
+Kansas,2017,12,1,11,0,Kansas 2017
+Kansas State,2017,13,8,5,0,Kansas State 2017
+Kent State,2017,12,2,10,0,Kent State 2017
+Louisiana Tech,2017,13,7,6,0,Louisiana Tech 2017
+Miami,2017,13,10,3,0,Miami 2017
+Middle Tennessee,2017,13,7,6,0,Middle Tennessee 2017
+Navy,2017,13,7,6,0,Navy 2017
+Charlotte,2017,12,1,11,0,Charlotte 2017
+Louisiana Monroe,2017,12,4,8,0,Louisiana Monroe 2017
+UNLV,2017,12,5,7,0,UNLV 2017
+Nevada,2017,12,3,9,0,Nevada 2017
+Northern Illinois,2017,13,8,5,0,Northern Illinois 2017
+Oregon,2017,13,7,6,0,Oregon 2017
+Purdue,2017,13,7,6,0,Purdue 2017
+SMU,2017,13,7,6,0,SMU 2017
+Southern Mississippi,2017,13,8,5,0,Southern Mississippi 2017
+South Carolina,2017,13,9,4,0,South Carolina 2017
+TCU,2017,14,11,3,0,TCU 2017
+Tennessee,2017,12,4,8,0,Tennessee 2017
+UT San Antonio,2017,11,6,5,0,UT San Antonio 2017
+UTEP,2017,12,0,12,0,UTEP 2017
+Texas Tech,2017,13,6,7,0,Texas Tech 2017
+Toledo,2017,14,11,3,0,Toledo 2017
+Troy,2017,13,11,2,0,Troy 2017
+Tulane,2017,12,5,7,0,Tulane 2017
+Western Michigan,2017,12,6,6,0,Western Michigan 2017
+Wyoming,2017,13,8,5,0,Wyoming 2017
+Auburn,2018,13,8,5,0,Auburn 2018
+UAB,2018,14,11,3,0,UAB 2018
+South Alabama,2018,12,3,9,0,South Alabama 2018
+Arkansas,2018,12,2,10,0,Arkansas 2018
+Arizona State,2018,13,7,6,0,Arizona State 2018
+Arizona,2018,12,5,7,0,Arizona 2018
+San Diego State,2018,13,7,6,0,San Diego State 2018
+San José State,2018,12,1,11,0,San José State 2018
+Stanford,2018,13,9,4,0,Stanford 2018
+California,2018,13,7,6,0,California 2018
+UCLA,2018,12,3,9,0,UCLA 2018
+USC,2018,12,5,7,0,USC 2018
+Colorado State,2018,12,3,9,0,Colorado State 2018
+Colorado,2018,12,5,7,0,Colorado 2018
+Connecticut,2018,12,1,11,0,Connecticut 2018
+Florida State,2018,12,5,7,0,Florida State 2018
+Florida,2018,13,10,3,0,Florida 2018
+South Florida,2018,13,7,6,0,South Florida 2018
+Georgia Tech,2018,13,7,6,0,Georgia Tech 2018
+Georgia,2018,14,11,3,0,Georgia 2018
+Hawai'i,2018,14,8,6,0,Hawai'i 2018
+Iowa State,2018,13,8,5,0,Iowa State 2018
+Boise State,2018,13,10,3,0,Boise State 2018
+Northwestern,2018,14,9,5,0,Northwestern 2018
+Indiana,2018,12,5,7,0,Indiana 2018
+Notre Dame,2018,13,12,1,0,Notre Dame 2018
+Kentucky,2018,13,9,4,0,Kentucky 2018
+Louisville,2018,12,2,10,0,Louisville 2018
+Western Kentucky,2018,12,3,9,0,Western Kentucky 2018
+LSU,2018,13,10,3,0,LSU 2018
+Boston College,2018,12,7,5,0,Boston College 2018
+UMass,2018,12,4,8,0,UMass 2018
+Maryland,2018,12,5,7,0,Maryland 2018
+Michigan State,2018,13,7,6,0,Michigan State 2018
+Michigan,2018,13,10,3,0,Michigan 2018
+Minnesota,2018,13,7,6,0,Minnesota 2018
+Missouri,2018,13,9,4,0,Missouri 2018
+Ole Miss,2018,12,5,7,0,Ole Miss 2018
+Duke,2018,13,8,5,0,Duke 2018
+East Carolina,2018,12,3,9,0,East Carolina 2018
+NC State,2018,13,9,4,0,NC State 2018
+North Carolina,2018,11,2,9,0,North Carolina 2018
+Wake Forest,2018,13,7,6,0,Wake Forest 2018
+Nebraska,2018,12,4,8,0,Nebraska 2018
+Rutgers,2018,12,1,11,0,Rutgers 2018
+New Mexico State,2018,12,3,9,0,New Mexico State 2018
+New Mexico,2018,12,3,9,0,New Mexico 2018
+Syracuse,2018,13,10,3,0,Syracuse 2018
+Bowling Green,2018,12,3,9,0,Bowling Green 2018
+Miami (OH),2018,12,6,6,0,Miami (OH) 2018
+Ohio State,2018,14,13,1,0,Ohio State 2018
+Ohio,2018,13,9,4,0,Ohio 2018
+Oklahoma State,2018,13,7,6,0,Oklahoma State 2018
+Oklahoma,2018,14,12,2,0,Oklahoma 2018
+Tulsa,2018,12,3,9,0,Tulsa 2018
+Oregon State,2018,12,2,10,0,Oregon State 2018
+Penn State,2018,13,9,4,0,Penn State 2018
+Temple,2018,13,8,5,0,Temple 2018
+Pittsburgh,2018,14,7,7,0,Pittsburgh 2018
+Clemson,2018,15,15,0,0,Clemson 2018
+Memphis,2018,14,8,6,0,Memphis 2018
+Vanderbilt,2018,13,6,7,0,Vanderbilt 2018
+Baylor,2018,13,7,6,0,Baylor 2018
+Rice,2018,13,2,11,0,Rice 2018
+Texas A&M,2018,13,9,4,0,Texas A&M 2018
+Houston,2018,13,8,5,0,Houston 2018
+North Texas,2018,13,9,4,0,North Texas 2018
+Texas,2018,14,10,4,0,Texas 2018
+BYU,2018,13,7,6,0,BYU 2018
+Utah,2018,14,9,5,0,Utah 2018
+Virginia,2018,13,8,5,0,Virginia 2018
+Virginia Tech,2018,13,6,7,0,Virginia Tech 2018
+Washington,2018,14,10,4,0,Washington 2018
+Washington State,2018,13,11,2,0,Washington State 2018
+Wisconsin,2018,13,8,5,0,Wisconsin 2018
+Marshall,2018,13,9,4,0,Marshall 2018
+West Virginia,2018,12,8,4,0,West Virginia 2018
+Fresno State,2018,14,12,2,0,Fresno State 2018
+Georgia Southern,2018,13,10,3,0,Georgia Southern 2018
+Old Dominion,2018,12,4,8,0,Old Dominion 2018
+Louisiana,2018,14,7,7,0,Louisiana 2018
+Coastal Carolina,2018,12,5,7,0,Coastal Carolina 2018
+Texas State,2018,12,3,9,0,Texas State 2018
+Utah State,2018,13,11,2,0,Utah State 2018
+Alabama,2018,15,14,1,0,Alabama 2018
+Mississippi State,2018,13,8,5,0,Mississippi State 2018
+Army,2018,13,11,2,0,Army 2018
+Illinois,2018,12,4,8,0,Illinois 2018
+Air Force,2018,12,5,7,0,Air Force 2018
+Akron,2018,12,4,8,0,Akron 2018
+Appalachian State,2018,13,11,2,0,Appalachian State 2018
+Arkansas State,2018,13,8,5,0,Arkansas State 2018
+Ball State,2018,12,4,8,0,Ball State 2018
+Buffalo,2018,14,10,4,0,Buffalo 2018
+UCF,2018,13,12,1,0,UCF 2018
+Central Michigan,2018,12,1,11,0,Central Michigan 2018
+Cincinnati,2018,13,11,2,0,Cincinnati 2018
+Eastern Michigan,2018,13,7,6,0,Eastern Michigan 2018
+Florida Atlantic,2018,12,5,7,0,Florida Atlantic 2018
+Florida International,2018,13,9,4,0,Florida International 2018
+Georgia State,2018,12,2,10,0,Georgia State 2018
+Iowa,2018,13,9,4,0,Iowa 2018
+Kansas,2018,12,3,9,0,Kansas 2018
+Kansas State,2018,12,5,7,0,Kansas State 2018
+Kent State,2018,12,2,10,0,Kent State 2018
+Liberty,2018,12,6,6,0,Liberty 2018
+Louisiana Tech,2018,13,8,5,0,Louisiana Tech 2018
+Miami,2018,13,7,6,0,Miami 2018
+Middle Tennessee,2018,14,8,6,0,Middle Tennessee 2018
+Navy,2018,13,3,10,0,Navy 2018
+Charlotte,2018,12,5,7,0,Charlotte 2018
+Louisiana Monroe,2018,12,6,6,0,Louisiana Monroe 2018
+UNLV,2018,12,4,8,0,UNLV 2018
+Nevada,2018,13,8,5,0,Nevada 2018
+Northern Illinois,2018,14,8,6,0,Northern Illinois 2018
+Oregon,2018,13,9,4,0,Oregon 2018
+Purdue,2018,13,6,7,0,Purdue 2018
+SMU,2018,12,5,7,0,SMU 2018
+Southern Mississippi,2018,11,6,5,0,Southern Mississippi 2018
+South Carolina,2018,13,7,6,0,South Carolina 2018
+TCU,2018,13,7,6,0,TCU 2018
+Tennessee,2018,12,5,7,0,Tennessee 2018
+UT San Antonio,2018,12,3,9,0,UT San Antonio 2018
+UTEP,2018,12,1,11,0,UTEP 2018
+Texas Tech,2018,12,5,7,0,Texas Tech 2018
+Toledo,2018,13,7,6,0,Toledo 2018
+Troy,2018,13,10,3,0,Troy 2018
+Tulane,2018,13,7,6,0,Tulane 2018
+Western Michigan,2018,13,7,6,0,Western Michigan 2018
+Wyoming,2018,12,6,6,0,Wyoming 2018
+Auburn,2019,13,9,4,0,Auburn 2019
+UAB,2019,14,9,5,0,UAB 2019
+South Alabama,2019,12,2,10,0,South Alabama 2019
+Arkansas,2019,12,2,10,0,Arkansas 2019
+Arizona State,2019,13,8,5,0,Arizona State 2019
+Arizona,2019,12,4,8,0,Arizona 2019
+San Diego State,2019,13,10,3,0,San Diego State 2019
+San José State,2019,12,5,7,0,San José State 2019
+Stanford,2019,12,4,8,0,Stanford 2019
+California,2019,13,8,5,0,California 2019
+UCLA,2019,12,4,8,0,UCLA 2019
+USC,2019,13,8,5,0,USC 2019
+Colorado State,2019,12,4,8,0,Colorado State 2019
+Colorado,2019,12,5,7,0,Colorado 2019
+Connecticut,2019,12,2,10,0,Connecticut 2019
+Florida State,2019,13,6,7,0,Florida State 2019
+Florida,2019,13,11,2,0,Florida 2019
+South Florida,2019,12,4,8,0,South Florida 2019
+Georgia Tech,2019,12,3,9,0,Georgia Tech 2019
+Georgia,2019,14,12,2,0,Georgia 2019
+Hawai'i,2019,15,10,5,0,Hawai'i 2019
+Iowa State,2019,13,7,6,0,Iowa State 2019
+Boise State,2019,14,12,2,0,Boise State 2019
+Northwestern,2019,12,3,9,0,Northwestern 2019
+Indiana,2019,13,8,5,0,Indiana 2019
+Notre Dame,2019,13,11,2,0,Notre Dame 2019
+Kentucky,2019,13,8,5,0,Kentucky 2019
+Louisville,2019,13,8,5,0,Louisville 2019
+Western Kentucky,2019,13,9,4,0,Western Kentucky 2019
+LSU,2019,15,15,0,0,LSU 2019
+Boston College,2019,13,6,7,0,Boston College 2019
+UMass,2019,12,1,11,0,UMass 2019
+Maryland,2019,12,3,9,0,Maryland 2019
+Michigan State,2019,13,7,6,0,Michigan State 2019
+Michigan,2019,13,9,4,0,Michigan 2019
+Minnesota,2019,13,11,2,0,Minnesota 2019
+Missouri,2019,12,6,6,0,Missouri 2019
+Ole Miss,2019,12,4,8,0,Ole Miss 2019
+Duke,2019,12,5,7,0,Duke 2019
+East Carolina,2019,12,4,8,0,East Carolina 2019
+NC State,2019,12,4,8,0,NC State 2019
+North Carolina,2019,13,7,6,0,North Carolina 2019
+Wake Forest,2019,13,8,5,0,Wake Forest 2019
+Nebraska,2019,12,5,7,0,Nebraska 2019
+Rutgers,2019,12,2,10,0,Rutgers 2019
+New Mexico State,2019,12,2,10,0,New Mexico State 2019
+New Mexico,2019,12,2,10,0,New Mexico 2019
+Syracuse,2019,12,5,7,0,Syracuse 2019
+Bowling Green,2019,12,3,9,0,Bowling Green 2019
+Miami (OH),2019,14,8,6,0,Miami (OH) 2019
+Ohio State,2019,14,13,1,0,Ohio State 2019
+Ohio,2019,13,7,6,0,Ohio 2019
+Oklahoma State,2019,13,8,5,0,Oklahoma State 2019
+Oklahoma,2019,14,12,2,0,Oklahoma 2019
+Tulsa,2019,12,4,8,0,Tulsa 2019
+Oregon State,2019,12,5,7,0,Oregon State 2019
+Penn State,2019,13,11,2,0,Penn State 2019
+Temple,2019,13,8,5,0,Temple 2019
+Pittsburgh,2019,13,8,5,0,Pittsburgh 2019
+Clemson,2019,15,14,1,0,Clemson 2019
+Memphis,2019,14,12,2,0,Memphis 2019
+Vanderbilt,2019,12,3,9,0,Vanderbilt 2019
+Baylor,2019,14,11,3,0,Baylor 2019
+Rice,2019,12,3,9,0,Rice 2019
+Texas A&M,2019,13,8,5,0,Texas A&M 2019
+Houston,2019,12,4,8,0,Houston 2019
+North Texas,2019,12,4,8,0,North Texas 2019
+Texas,2019,13,8,5,0,Texas 2019
+BYU,2019,13,7,6,0,BYU 2019
+Utah,2019,14,11,3,0,Utah 2019
+Virginia,2019,14,9,5,0,Virginia 2019
+Virginia Tech,2019,13,8,5,0,Virginia Tech 2019
+Washington,2019,13,8,5,0,Washington 2019
+Washington State,2019,13,6,7,0,Washington State 2019
+Wisconsin,2019,14,10,4,0,Wisconsin 2019
+Marshall,2019,13,8,5,0,Marshall 2019
+West Virginia,2019,12,5,7,0,West Virginia 2019
+Fresno State,2019,12,4,8,0,Fresno State 2019
+Georgia Southern,2019,13,7,6,0,Georgia Southern 2019
+Old Dominion,2019,12,1,11,0,Old Dominion 2019
+Louisiana,2019,14,11,3,0,Louisiana 2019
+Coastal Carolina,2019,12,5,7,0,Coastal Carolina 2019
+Texas State,2019,12,3,9,0,Texas State 2019
+Utah State,2019,13,7,6,0,Utah State 2019
+Alabama,2019,13,11,2,0,Alabama 2019
+Mississippi State,2019,13,6,7,0,Mississippi State 2019
+Army,2019,13,5,8,0,Army 2019
+Illinois,2019,13,6,7,0,Illinois 2019
+Air Force,2019,13,11,2,0,Air Force 2019
+Akron,2019,12,0,12,0,Akron 2019
+Appalachian State,2019,14,13,1,0,Appalachian State 2019
+Arkansas State,2019,13,8,5,0,Arkansas State 2019
+Ball State,2019,12,5,7,0,Ball State 2019
+Buffalo,2019,13,8,5,0,Buffalo 2019
+UCF,2019,13,10,3,0,UCF 2019
+Central Michigan,2019,14,8,6,0,Central Michigan 2019
+Cincinnati,2019,14,11,3,0,Cincinnati 2019
+Eastern Michigan,2019,13,6,7,0,Eastern Michigan 2019
+Florida Atlantic,2019,14,11,3,0,Florida Atlantic 2019
+Florida International,2019,13,6,7,0,Florida International 2019
+Georgia State,2019,13,7,6,0,Georgia State 2019
+Iowa,2019,13,10,3,0,Iowa 2019
+Kansas,2019,12,3,9,0,Kansas 2019
+Kansas State,2019,13,8,5,0,Kansas State 2019
+Kent State,2019,13,7,6,0,Kent State 2019
+Liberty,2019,13,8,5,0,Liberty 2019
+Louisiana Tech,2019,13,10,3,0,Louisiana Tech 2019
+Miami,2019,13,6,7,0,Miami 2019
+Middle Tennessee,2019,12,4,8,0,Middle Tennessee 2019
+Navy,2019,13,11,2,0,Navy 2019
+Charlotte,2019,13,7,6,0,Charlotte 2019
+Louisiana Monroe,2019,12,5,7,0,Louisiana Monroe 2019
+UNLV,2019,12,4,8,0,UNLV 2019
+Nevada,2019,13,7,6,0,Nevada 2019
+Northern Illinois,2019,12,5,7,0,Northern Illinois 2019
+Oregon,2019,14,12,2,0,Oregon 2019
+Purdue,2019,12,4,8,0,Purdue 2019
+SMU,2019,13,10,3,0,SMU 2019
+Southern Mississippi,2019,13,7,6,0,Southern Mississippi 2019
+South Carolina,2019,12,4,8,0,South Carolina 2019
+TCU,2019,12,5,7,0,TCU 2019
+Tennessee,2019,13,8,5,0,Tennessee 2019
+UT San Antonio,2019,12,4,8,0,UT San Antonio 2019
+UTEP,2019,12,1,11,0,UTEP 2019
+Texas Tech,2019,12,4,8,0,Texas Tech 2019
+Toledo,2019,12,6,6,0,Toledo 2019
+Troy,2019,12,5,7,0,Troy 2019
+Tulane,2019,13,7,6,0,Tulane 2019
+Western Michigan,2019,13,7,6,0,Western Michigan 2019
+Wyoming,2019,13,8,5,0,Wyoming 2019
+Auburn,2020,11,6,5,0,Auburn 2020
+UAB,2020,9,6,3,0,UAB 2020
+South Alabama,2020,11,4,7,0,South Alabama 2020
+Arkansas,2020,10,3,7,0,Arkansas 2020
+Arizona State,2020,4,2,2,0,Arizona State 2020
+Arizona,2020,5,0,5,0,Arizona 2020
+San Diego State,2020,8,4,4,0,San Diego State 2020
+San José State,2020,8,7,1,0,San José State 2020
+Stanford,2020,6,4,2,0,Stanford 2020
+California,2020,4,1,3,0,California 2020
+UCLA,2020,7,3,4,0,UCLA 2020
+USC,2020,6,5,1,0,USC 2020
+Colorado State,2020,4,1,3,0,Colorado State 2020
+Colorado,2020,6,4,2,0,Colorado 2020
+Florida State,2020,9,3,6,0,Florida State 2020
+Florida,2020,12,8,4,0,Florida 2020
+South Florida,2020,9,1,8,0,South Florida 2020
+Georgia Tech,2020,10,3,7,0,Georgia Tech 2020
+Georgia,2020,10,8,2,0,Georgia 2020
+Hawai'i,2020,9,5,4,0,Hawai'i 2020
+Iowa State,2020,12,9,3,0,Iowa State 2020
+Boise State,2020,7,5,2,0,Boise State 2020
+Northwestern,2020,9,7,2,0,Northwestern 2020
+Indiana,2020,8,6,2,0,Indiana 2020
+Notre Dame,2020,12,10,2,0,Notre Dame 2020
+Kentucky,2020,11,5,6,0,Kentucky 2020
+Louisville,2020,11,4,7,0,Louisville 2020
+Western Kentucky,2020,12,5,7,0,Western Kentucky 2020
+LSU,2020,10,5,5,0,LSU 2020
+Boston College,2020,11,6,5,0,Boston College 2020
+UMass,2020,4,0,4,0,UMass 2020
+Maryland,2020,5,2,3,0,Maryland 2020
+Michigan State,2020,7,2,5,0,Michigan State 2020
+Michigan,2020,6,2,4,0,Michigan 2020
+Minnesota,2020,7,3,4,0,Minnesota 2020
+Missouri,2020,10,5,5,0,Missouri 2020
+Ole Miss,2020,10,5,5,0,Ole Miss 2020
+Duke,2020,11,2,9,0,Duke 2020
+East Carolina,2020,9,3,6,0,East Carolina 2020
+NC State,2020,12,8,4,0,NC State 2020
+North Carolina,2020,12,8,4,0,North Carolina 2020
+Wake Forest,2020,9,4,5,0,Wake Forest 2020
+Nebraska,2020,8,3,5,0,Nebraska 2020
+Rutgers,2020,9,3,6,0,Rutgers 2020
+New Mexico State,2020,2,1,1,0,New Mexico State 2020
+New Mexico,2020,7,2,5,0,New Mexico 2020
+Syracuse,2020,11,1,10,0,Syracuse 2020
+Bowling Green,2020,5,0,5,0,Bowling Green 2020
+Miami (OH),2020,3,2,1,0,Miami (OH) 2020
+Ohio State,2020,8,7,1,0,Ohio State 2020
+Ohio,2020,3,2,1,0,Ohio 2020
+Oklahoma State,2020,11,8,3,0,Oklahoma State 2020
+Oklahoma,2020,11,9,2,0,Oklahoma 2020
+Tulsa,2020,9,6,3,0,Tulsa 2020
+Oregon State,2020,7,2,5,0,Oregon State 2020
+Penn State,2020,9,4,5,0,Penn State 2020
+Temple,2020,7,1,6,0,Temple 2020
+Pittsburgh,2020,11,6,5,0,Pittsburgh 2020
+Clemson,2020,12,10,2,0,Clemson 2020
+Memphis,2020,11,8,3,0,Memphis 2020
+Vanderbilt,2020,9,0,9,0,Vanderbilt 2020
+Baylor,2020,9,2,7,0,Baylor 2020
+Rice,2020,5,2,3,0,Rice 2020
+Texas A&M,2020,10,9,1,0,Texas A&M 2020
+Houston,2020,8,3,5,0,Houston 2020
+North Texas,2020,10,4,6,0,North Texas 2020
+Texas,2020,10,7,3,0,Texas 2020
+BYU,2020,12,11,1,0,BYU 2020
+Utah,2020,5,3,2,0,Utah 2020
+Virginia,2020,10,5,5,0,Virginia 2020
+Virginia Tech,2020,11,5,6,0,Virginia Tech 2020
+Washington,2020,4,3,1,0,Washington 2020
+Washington State,2020,4,1,3,0,Washington State 2020
+Wisconsin,2020,7,4,3,0,Wisconsin 2020
+Marshall,2020,10,7,3,0,Marshall 2020
+West Virginia,2020,10,6,4,0,West Virginia 2020
+Fresno State,2020,6,3,3,0,Fresno State 2020
+Georgia Southern,2020,13,8,5,0,Georgia Southern 2020
+Louisiana,2020,11,10,1,0,Louisiana 2020
+Coastal Carolina,2020,12,11,1,0,Coastal Carolina 2020
+Texas State,2020,12,2,10,0,Texas State 2020
+Utah State,2020,6,1,5,0,Utah State 2020
+Alabama,2020,13,13,0,0,Alabama 2020
+Mississippi State,2020,11,4,7,0,Mississippi State 2020
+Army,2020,12,9,3,0,Army 2020
+Illinois,2020,8,2,6,0,Illinois 2020
+Air Force,2020,6,3,3,0,Air Force 2020
+Akron,2020,6,1,5,0,Akron 2020
+Appalachian State,2020,12,9,3,0,Appalachian State 2020
+Arkansas State,2020,11,4,7,0,Arkansas State 2020
+Ball State,2020,8,7,1,0,Ball State 2020
+Buffalo,2020,7,6,1,0,Buffalo 2020
+UCF,2020,10,6,4,0,UCF 2020
+Central Michigan,2020,6,3,3,0,Central Michigan 2020
+Cincinnati,2020,10,9,1,0,Cincinnati 2020
+Eastern Michigan,2020,6,2,4,0,Eastern Michigan 2020
+Florida Atlantic,2020,9,5,4,0,Florida Atlantic 2020
+Florida International,2020,5,0,5,0,Florida International 2020
+Georgia State,2020,10,6,4,0,Georgia State 2020
+Iowa,2020,8,6,2,0,Iowa 2020
+Kansas,2020,9,0,9,0,Kansas 2020
+Kansas State,2020,10,4,6,0,Kansas State 2020
+Kent State,2020,4,3,1,0,Kent State 2020
+Liberty,2020,11,10,1,0,Liberty 2020
+Louisiana Tech,2020,10,5,5,0,Louisiana Tech 2020
+Miami,2020,11,8,3,0,Miami 2020
+Middle Tennessee,2020,9,3,6,0,Middle Tennessee 2020
+Navy,2020,10,3,7,0,Navy 2020
+Charlotte,2020,6,2,4,0,Charlotte 2020
+Louisiana Monroe,2020,10,0,10,0,Louisiana Monroe 2020
+UNLV,2020,6,0,6,0,UNLV 2020
+Nevada,2020,9,7,2,0,Nevada 2020
+Northern Illinois,2020,6,0,6,0,Northern Illinois 2020
+Oregon,2020,7,4,3,0,Oregon 2020
+Purdue,2020,6,2,4,0,Purdue 2020
+SMU,2020,10,7,3,0,SMU 2020
+Southern Mississippi,2020,10,3,7,0,Southern Mississippi 2020
+South Carolina,2020,10,2,8,0,South Carolina 2020
+TCU,2020,10,6,4,0,TCU 2020
+Tennessee,2020,10,3,7,0,Tennessee 2020
+UT San Antonio,2020,12,7,5,0,UT San Antonio 2020
+UTEP,2020,8,3,5,0,UTEP 2020
+Texas Tech,2020,10,4,6,0,Texas Tech 2020
+Toledo,2020,6,4,2,0,Toledo 2020
+Troy,2020,11,5,6,0,Troy 2020
+Tulane,2020,12,6,6,0,Tulane 2020
+Western Michigan,2020,6,4,2,0,Western Michigan 2020
+Wyoming,2020,6,2,4,0,Wyoming 2020
+Auburn,2021,13,6,7,0,Auburn 2021
+UAB,2021,13,9,4,0,UAB 2021
+South Alabama,2021,12,5,7,0,South Alabama 2021
+Arkansas,2021,13,9,4,0,Arkansas 2021
+Arizona State,2021,13,8,5,0,Arizona State 2021
+Arizona,2021,12,1,11,0,Arizona 2021
+San Diego State,2021,14,12,2,0,San Diego State 2021
+San José State,2021,12,5,7,0,San José State 2021
+Stanford,2021,12,3,9,0,Stanford 2021
+California,2021,12,5,7,0,California 2021
+UCLA,2021,12,8,4,0,UCLA 2021
+USC,2021,12,4,8,0,USC 2021
+Colorado State,2021,12,3,9,0,Colorado State 2021
+Colorado,2021,12,4,8,0,Colorado 2021
+Connecticut,2021,12,1,11,0,Connecticut 2021
+Florida State,2021,12,5,7,0,Florida State 2021
+Florida,2021,13,6,7,0,Florida 2021
+South Florida,2021,12,2,10,0,South Florida 2021
+Georgia Tech,2021,12,3,9,0,Georgia Tech 2021
+Georgia,2021,15,14,1,0,Georgia 2021
+Hawai'i,2021,13,6,7,0,Hawai'i 2021
+Iowa State,2021,13,7,6,0,Iowa State 2021
+Boise State,2021,12,7,5,0,Boise State 2021
+Northwestern,2021,12,3,9,0,Northwestern 2021
+Indiana,2021,12,2,10,0,Indiana 2021
+Notre Dame,2021,13,11,2,0,Notre Dame 2021
+Kentucky,2021,13,10,3,0,Kentucky 2021
+Louisville,2021,13,6,7,0,Louisville 2021
+Western Kentucky,2021,14,9,5,0,Western Kentucky 2021
+LSU,2021,13,6,7,0,LSU 2021
+Boston College,2021,12,6,6,0,Boston College 2021
+UMass,2021,12,1,11,0,UMass 2021
+Maryland,2021,13,7,6,0,Maryland 2021
+Michigan State,2021,13,11,2,0,Michigan State 2021
+Michigan,2021,14,12,2,0,Michigan 2021
+Minnesota,2021,13,9,4,0,Minnesota 2021
+Missouri,2021,13,6,7,0,Missouri 2021
+Ole Miss,2021,13,10,3,0,Ole Miss 2021
+Duke,2021,12,3,9,0,Duke 2021
+East Carolina,2021,12,7,5,0,East Carolina 2021
+NC State,2021,12,9,3,0,NC State 2021
+North Carolina,2021,13,6,7,0,North Carolina 2021
+Wake Forest,2021,14,11,3,0,Wake Forest 2021
+Nebraska,2021,12,3,9,0,Nebraska 2021
+Rutgers,2021,13,5,8,0,Rutgers 2021
+New Mexico State,2021,12,2,10,0,New Mexico State 2021
+New Mexico,2021,12,3,9,0,New Mexico 2021
+Syracuse,2021,12,5,7,0,Syracuse 2021
+Bowling Green,2021,12,4,8,0,Bowling Green 2021
+Miami (OH),2021,13,7,6,0,Miami (OH) 2021
+Ohio State,2021,13,11,2,0,Ohio State 2021
+Ohio,2021,12,3,9,0,Ohio 2021
+Oklahoma State,2021,14,12,2,0,Oklahoma State 2021
+Oklahoma,2021,13,11,2,0,Oklahoma 2021
+Tulsa,2021,13,7,6,0,Tulsa 2021
+Oregon State,2021,13,7,6,0,Oregon State 2021
+Penn State,2021,13,7,6,0,Penn State 2021
+Temple,2021,12,3,9,0,Temple 2021
+Pittsburgh,2021,14,11,3,0,Pittsburgh 2021
+Clemson,2021,13,10,3,0,Clemson 2021
+Memphis,2021,12,6,6,0,Memphis 2021
+Vanderbilt,2021,12,2,10,0,Vanderbilt 2021
+Baylor,2021,14,12,2,0,Baylor 2021
+Rice,2021,12,4,8,0,Rice 2021
+Texas A&M,2021,12,8,4,0,Texas A&M 2021
+Houston,2021,14,12,2,0,Houston 2021
+North Texas,2021,13,6,7,0,North Texas 2021
+Texas,2021,12,5,7,0,Texas 2021
+BYU,2021,13,10,3,0,BYU 2021
+Utah,2021,14,10,4,0,Utah 2021
+Virginia,2021,12,6,6,0,Virginia 2021
+Virginia Tech,2021,13,6,7,0,Virginia Tech 2021
+Washington,2021,12,4,8,0,Washington 2021
+Washington State,2021,13,7,6,0,Washington State 2021
+Wisconsin,2021,13,9,4,0,Wisconsin 2021
+Marshall,2021,13,7,6,0,Marshall 2021
+West Virginia,2021,13,6,7,0,West Virginia 2021
+Fresno State,2021,13,10,3,0,Fresno State 2021
+Georgia Southern,2021,12,3,9,0,Georgia Southern 2021
+Old Dominion,2021,13,6,7,0,Old Dominion 2021
+Louisiana,2021,14,13,1,0,Louisiana 2021
+Coastal Carolina,2021,13,11,2,0,Coastal Carolina 2021
+Texas State,2021,12,4,8,0,Texas State 2021
+Utah State,2021,14,11,3,0,Utah State 2021
+Alabama,2021,15,13,2,0,Alabama 2021
+Mississippi State,2021,13,7,6,0,Mississippi State 2021
+Army,2021,13,9,4,0,Army 2021
+Illinois,2021,12,5,7,0,Illinois 2021
+Air Force,2021,13,10,3,0,Air Force 2021
+Akron,2021,12,2,10,0,Akron 2021
+Appalachian State,2021,14,10,4,0,Appalachian State 2021
+Arkansas State,2021,12,2,10,0,Arkansas State 2021
+Ball State,2021,13,6,7,0,Ball State 2021
+Buffalo,2021,12,4,8,0,Buffalo 2021
+UCF,2021,13,9,4,0,UCF 2021
+Central Michigan,2021,13,9,4,0,Central Michigan 2021
+Cincinnati,2021,14,13,1,0,Cincinnati 2021
+Eastern Michigan,2021,13,7,6,0,Eastern Michigan 2021
+Florida Atlantic,2021,12,5,7,0,Florida Atlantic 2021
+Florida International,2021,12,1,11,0,Florida International 2021
+Georgia State,2021,13,8,5,0,Georgia State 2021
+Iowa,2021,14,10,4,0,Iowa 2021
+Kansas,2021,12,2,10,0,Kansas 2021
+Kansas State,2021,13,8,5,0,Kansas State 2021
+Kent State,2021,14,7,7,0,Kent State 2021
+Liberty,2021,13,8,5,0,Liberty 2021
+Louisiana Tech,2021,12,3,9,0,Louisiana Tech 2021
+Miami,2021,12,7,5,0,Miami 2021
+Middle Tennessee,2021,13,7,6,0,Middle Tennessee 2021
+Navy,2021,12,4,8,0,Navy 2021
+Charlotte,2021,12,5,7,0,Charlotte 2021
+Louisiana Monroe,2021,12,4,8,0,Louisiana Monroe 2021
+UNLV,2021,12,2,10,0,UNLV 2021
+Nevada,2021,13,8,5,0,Nevada 2021
+Northern Illinois,2021,14,9,5,0,Northern Illinois 2021
+Oregon,2021,14,10,4,0,Oregon 2021
+Purdue,2021,13,9,4,0,Purdue 2021
+SMU,2021,12,8,4,0,SMU 2021
+Southern Mississippi,2021,12,3,9,0,Southern Mississippi 2021
+South Carolina,2021,13,7,6,0,South Carolina 2021
+TCU,2021,12,5,7,0,TCU 2021
+Tennessee,2021,13,7,6,0,Tennessee 2021
+UT San Antonio,2021,14,12,2,0,UT San Antonio 2021
+UTEP,2021,13,7,6,0,UTEP 2021
+Texas Tech,2021,13,7,6,0,Texas Tech 2021
+Toledo,2021,13,7,6,0,Toledo 2021
+Troy,2021,12,5,7,0,Troy 2021
+Tulane,2021,12,2,10,0,Tulane 2021
+Western Michigan,2021,13,8,5,0,Western Michigan 2021
+Wyoming,2021,13,7,6,0,Wyoming 2021
+Auburn,2022,12,5,7,0,Auburn 2022
+UAB,2022,13,7,6,0,UAB 2022
+South Alabama,2022,13,10,3,0,South Alabama 2022
+Arkansas,2022,13,7,6,0,Arkansas 2022
+Arizona State,2022,12,3,9,0,Arizona State 2022
+Arizona,2022,12,5,7,0,Arizona 2022
+San Diego State,2022,13,7,6,0,San Diego State 2022
+San José State,2022,12,7,5,0,San José State 2022
+Stanford,2022,12,3,9,0,Stanford 2022
+California,2022,12,4,8,0,California 2022
+UCLA,2022,13,9,4,0,UCLA 2022
+USC,2022,14,11,3,0,USC 2022
+Colorado State,2022,12,3,9,0,Colorado State 2022
+Colorado,2022,12,1,11,0,Colorado 2022
+Connecticut,2022,13,6,7,0,Connecticut 2022
+Florida State,2022,13,10,3,0,Florida State 2022
+Florida,2022,13,6,7,0,Florida 2022
+South Florida,2022,12,1,11,0,South Florida 2022
+Georgia Tech,2022,12,5,7,0,Georgia Tech 2022
+Georgia,2022,15,15,0,0,Georgia 2022
+Hawai'i,2022,13,3,10,0,Hawai'i 2022
+Iowa State,2022,12,4,8,0,Iowa State 2022
+Boise State,2022,14,10,4,0,Boise State 2022
+Northwestern,2022,12,1,11,0,Northwestern 2022
+Indiana,2022,12,4,8,0,Indiana 2022
+Notre Dame,2022,13,9,4,0,Notre Dame 2022
+Kentucky,2022,13,7,6,0,Kentucky 2022
+Louisville,2022,13,8,5,0,Louisville 2022
+Western Kentucky,2022,14,9,5,0,Western Kentucky 2022
+LSU,2022,14,10,4,0,LSU 2022
+Boston College,2022,12,3,9,0,Boston College 2022
+UMass,2022,12,1,11,0,UMass 2022
+Maryland,2022,13,8,5,0,Maryland 2022
+Michigan State,2022,12,5,7,0,Michigan State 2022
+Michigan,2022,14,13,1,0,Michigan 2022
+Minnesota,2022,13,9,4,0,Minnesota 2022
+Missouri,2022,13,6,7,0,Missouri 2022
+Ole Miss,2022,13,8,5,0,Ole Miss 2022
+Duke,2022,13,9,4,0,Duke 2022
+East Carolina,2022,13,8,5,0,East Carolina 2022
+NC State,2022,13,8,5,0,NC State 2022
+North Carolina,2022,14,9,5,0,North Carolina 2022
+Wake Forest,2022,13,8,5,0,Wake Forest 2022
+Nebraska,2022,12,4,8,0,Nebraska 2022
+Rutgers,2022,12,4,8,0,Rutgers 2022
+New Mexico State,2022,13,7,6,0,New Mexico State 2022
+New Mexico,2022,12,2,10,0,New Mexico 2022
+Syracuse,2022,13,7,6,0,Syracuse 2022
+Bowling Green,2022,13,6,7,0,Bowling Green 2022
+Miami (OH),2022,13,6,7,0,Miami (OH) 2022
+Ohio State,2022,13,11,2,0,Ohio State 2022
+Ohio,2022,14,10,4,0,Ohio 2022
+Oklahoma State,2022,13,7,6,0,Oklahoma State 2022
+Oklahoma,2022,13,6,7,0,Oklahoma 2022
+Tulsa,2022,12,5,7,0,Tulsa 2022
+Oregon State,2022,13,10,3,0,Oregon State 2022
+Penn State,2022,13,11,2,0,Penn State 2022
+Temple,2022,12,3,9,0,Temple 2022
+Pittsburgh,2022,13,9,4,0,Pittsburgh 2022
+Clemson,2022,14,11,3,0,Clemson 2022
+Memphis,2022,13,7,6,0,Memphis 2022
+Vanderbilt,2022,12,5,7,0,Vanderbilt 2022
+Baylor,2022,13,6,7,0,Baylor 2022
+Rice,2022,13,5,8,0,Rice 2022
+Texas A&M,2022,12,5,7,0,Texas A&M 2022
+Houston,2022,13,8,5,0,Houston 2022
+North Texas,2022,14,7,7,0,North Texas 2022
+Texas,2022,13,8,5,0,Texas 2022
+BYU,2022,13,8,5,0,BYU 2022
+Utah,2022,14,10,4,0,Utah 2022
+James Madison,2022,11,8,3,0,James Madison 2022
+Virginia,2022,10,3,7,0,Virginia 2022
+Virginia Tech,2022,11,3,8,0,Virginia Tech 2022
+Washington,2022,13,11,2,0,Washington 2022
+Washington State,2022,13,7,6,0,Washington State 2022
+Wisconsin,2022,13,7,6,0,Wisconsin 2022
+Marshall,2022,13,9,4,0,Marshall 2022
+West Virginia,2022,12,5,7,0,West Virginia 2022
+Fresno State,2022,14,10,4,0,Fresno State 2022
+Georgia Southern,2022,13,6,7,0,Georgia Southern 2022
+Old Dominion,2022,12,3,9,0,Old Dominion 2022
+Louisiana,2022,13,6,7,0,Louisiana 2022
+Coastal Carolina,2022,13,9,4,0,Coastal Carolina 2022
+Texas State,2022,12,4,8,0,Texas State 2022
+Utah State,2022,13,6,7,0,Utah State 2022
+Alabama,2022,13,11,2,0,Alabama 2022
+Mississippi State,2022,13,9,4,0,Mississippi State 2022
+Army,2022,12,6,6,0,Army 2022
+Illinois,2022,13,8,5,0,Illinois 2022
+Air Force,2022,13,10,3,0,Air Force 2022
+Akron,2022,12,2,10,0,Akron 2022
+Appalachian State,2022,12,6,6,0,Appalachian State 2022
+Arkansas State,2022,12,3,9,0,Arkansas State 2022
+Ball State,2022,12,5,7,0,Ball State 2022
+Buffalo,2022,13,7,6,0,Buffalo 2022
+UCF,2022,14,9,5,0,UCF 2022
+Central Michigan,2022,12,4,8,0,Central Michigan 2022
+Cincinnati,2022,13,9,4,0,Cincinnati 2022
+Eastern Michigan,2022,13,9,4,0,Eastern Michigan 2022
+Florida Atlantic,2022,12,5,7,0,Florida Atlantic 2022
+Florida International,2022,12,4,8,0,Florida International 2022
+Georgia State,2022,12,4,8,0,Georgia State 2022
+Iowa,2022,13,8,5,0,Iowa 2022
+Kansas,2022,13,6,7,0,Kansas 2022
+Kansas State,2022,14,10,4,0,Kansas State 2022
+Kent State,2022,12,5,7,0,Kent State 2022
+Liberty,2022,13,8,5,0,Liberty 2022
+Louisiana Tech,2022,12,3,9,0,Louisiana Tech 2022
+Miami,2022,12,5,7,0,Miami 2022
+Middle Tennessee,2022,13,8,5,0,Middle Tennessee 2022
+Navy,2022,12,4,8,0,Navy 2022
+Charlotte,2022,12,3,9,0,Charlotte 2022
+Louisiana Monroe,2022,12,4,8,0,Louisiana Monroe 2022
+UNLV,2022,12,5,7,0,UNLV 2022
+Nevada,2022,12,2,10,0,Nevada 2022
+Northern Illinois,2022,12,3,9,0,Northern Illinois 2022
+Oregon,2022,13,10,3,0,Oregon 2022
+Purdue,2022,14,8,6,0,Purdue 2022
+SMU,2022,13,7,6,0,SMU 2022
+Southern Mississippi,2022,13,7,6,0,Southern Mississippi 2022
+South Carolina,2022,13,8,5,0,South Carolina 2022
+TCU,2022,15,13,2,0,TCU 2022
+Tennessee,2022,13,11,2,0,Tennessee 2022
+UT San Antonio,2022,14,11,3,0,UT San Antonio 2022
+UTEP,2022,12,5,7,0,UTEP 2022
+Texas Tech,2022,13,8,5,0,Texas Tech 2022
+Toledo,2022,14,9,5,0,Toledo 2022
+Troy,2022,14,12,2,0,Troy 2022
+Tulane,2022,14,12,2,0,Tulane 2022
+Western Michigan,2022,12,5,7,0,Western Michigan 2022
+Wyoming,2022,13,7,6,0,Wyoming 2022
+Auburn,2023,13,6,7,0,Auburn 2023
+UAB,2023,12,4,8,0,UAB 2023
+South Alabama,2023,13,7,6,0,South Alabama 2023
+Arkansas,2023,12,4,8,0,Arkansas 2023
+Arizona State,2023,12,3,9,0,Arizona State 2023
+Arizona,2023,13,10,3,0,Arizona 2023
+San Diego State,2023,12,4,8,0,San Diego State 2023
+San José State,2023,13,7,6,0,San José State 2023
+Stanford,2023,12,3,9,0,Stanford 2023
+California,2023,13,6,7,0,California 2023
+UCLA,2023,13,8,5,0,UCLA 2023
+USC,2023,13,8,5,0,USC 2023
+Colorado State,2023,12,5,7,0,Colorado State 2023
+Colorado,2023,12,4,8,0,Colorado 2023
+Connecticut,2023,12,3,9,0,Connecticut 2023
+Florida State,2023,14,13,1,0,Florida State 2023
+Jacksonville State,2023,13,9,4,0,Jacksonville State 2023
+Florida,2023,12,5,7,0,Florida 2023
+South Florida,2023,13,7,6,0,South Florida 2023
+Georgia Tech,2023,13,7,6,0,Georgia Tech 2023
+Georgia,2023,14,13,1,0,Georgia 2023
+Hawai'i,2023,13,5,8,0,Hawai'i 2023
+Iowa State,2023,13,7,6,0,Iowa State 2023
+Boise State,2023,14,8,6,0,Boise State 2023
+Northwestern,2023,13,8,5,0,Northwestern 2023
+Indiana,2023,12,3,9,0,Indiana 2023
+Notre Dame,2023,13,10,3,0,Notre Dame 2023
+Kentucky,2023,13,7,6,0,Kentucky 2023
+Louisville,2023,14,10,4,0,Louisville 2023
+Western Kentucky,2023,13,8,5,0,Western Kentucky 2023
+LSU,2023,13,10,3,0,LSU 2023
+Boston College,2023,13,7,6,0,Boston College 2023
+UMass,2023,12,3,9,0,UMass 2023
+Maryland,2023,13,8,5,0,Maryland 2023
+Michigan State,2023,12,4,8,0,Michigan State 2023
+Michigan,2023,15,15,0,0,Michigan 2023
+Minnesota,2023,13,6,7,0,Minnesota 2023
+Missouri,2023,13,11,2,0,Missouri 2023
+Ole Miss,2023,13,11,2,0,Ole Miss 2023
+Duke,2023,13,8,5,0,Duke 2023
+East Carolina,2023,12,2,10,0,East Carolina 2023
+NC State,2023,13,9,4,0,NC State 2023
+North Carolina,2023,13,8,5,0,North Carolina 2023
+Wake Forest,2023,12,4,8,0,Wake Forest 2023
+Nebraska,2023,12,5,7,0,Nebraska 2023
+Rutgers,2023,13,7,6,0,Rutgers 2023
+New Mexico State,2023,15,10,5,0,New Mexico State 2023
+New Mexico,2023,12,4,8,0,New Mexico 2023
+Syracuse,2023,13,6,7,0,Syracuse 2023
+Bowling Green,2023,13,7,6,0,Bowling Green 2023
+Miami (OH),2023,14,11,3,0,Miami (OH) 2023
+Ohio State,2023,13,11,2,0,Ohio State 2023
+Ohio,2023,13,10,3,0,Ohio 2023
+Oklahoma State,2023,14,10,4,0,Oklahoma State 2023
+Oklahoma,2023,13,10,3,0,Oklahoma 2023
+Tulsa,2023,12,4,8,0,Tulsa 2023
+Oregon State,2023,13,8,5,0,Oregon State 2023
+Penn State,2023,13,10,3,0,Penn State 2023
+Temple,2023,12,3,9,0,Temple 2023
+Pittsburgh,2023,12,3,9,0,Pittsburgh 2023
+Clemson,2023,13,9,4,0,Clemson 2023
+Memphis,2023,13,10,3,0,Memphis 2023
+Vanderbilt,2023,12,2,10,0,Vanderbilt 2023
+Baylor,2023,12,3,9,0,Baylor 2023
+Rice,2023,13,6,7,0,Rice 2023
+Texas A&M,2023,13,7,6,0,Texas A&M 2023
+Houston,2023,12,4,8,0,Houston 2023
+North Texas,2023,12,5,7,0,North Texas 2023
+Texas,2023,14,12,2,0,Texas 2023
+BYU,2023,12,5,7,0,BYU 2023
+Utah,2023,13,8,5,0,Utah 2023
+James Madison,2023,13,11,2,0,James Madison 2023
+Virginia,2023,12,3,9,0,Virginia 2023
+Virginia Tech,2023,13,7,6,0,Virginia Tech 2023
+Washington,2023,15,14,1,0,Washington 2023
+Washington State,2023,12,5,7,0,Washington State 2023
+Wisconsin,2023,13,7,6,0,Wisconsin 2023
+Marshall,2023,13,6,7,0,Marshall 2023
+West Virginia,2023,13,9,4,0,West Virginia 2023
+Fresno State,2023,13,9,4,0,Fresno State 2023
+Georgia Southern,2023,13,6,7,0,Georgia Southern 2023
+Old Dominion,2023,13,6,7,0,Old Dominion 2023
+Louisiana,2023,13,6,7,0,Louisiana 2023
+Coastal Carolina,2023,13,8,5,0,Coastal Carolina 2023
+Texas State,2023,13,8,5,0,Texas State 2023
+Utah State,2023,13,6,7,0,Utah State 2023
+Alabama,2023,14,12,2,0,Alabama 2023
+Mississippi State,2023,12,5,7,0,Mississippi State 2023
+Army,2023,12,6,6,0,Army 2023
+Illinois,2023,12,5,7,0,Illinois 2023
+Air Force,2023,13,9,4,0,Air Force 2023
+Akron,2023,12,2,10,0,Akron 2023
+Appalachian State,2023,14,9,5,0,Appalachian State 2023
+Arkansas State,2023,13,6,7,0,Arkansas State 2023
+Ball State,2023,12,4,8,0,Ball State 2023
+Buffalo,2023,12,3,9,0,Buffalo 2023
+UCF,2023,13,6,7,0,UCF 2023
+Central Michigan,2023,12,5,7,0,Central Michigan 2023
+Cincinnati,2023,12,3,9,0,Cincinnati 2023
+Eastern Michigan,2023,13,6,7,0,Eastern Michigan 2023
+Florida Atlantic,2023,12,4,8,0,Florida Atlantic 2023
+Florida International,2023,12,4,8,0,Florida International 2023
+Georgia State,2023,13,7,6,0,Georgia State 2023
+Iowa,2023,14,10,4,0,Iowa 2023
+Kansas,2023,13,9,4,0,Kansas 2023
+Kansas State,2023,13,9,4,0,Kansas State 2023
+Kent State,2023,12,1,11,0,Kent State 2023
+Liberty,2023,14,13,1,0,Liberty 2023
+Louisiana Tech,2023,12,3,9,0,Louisiana Tech 2023
+Miami,2023,13,7,6,0,Miami 2023
+Middle Tennessee,2023,12,4,8,0,Middle Tennessee 2023
+Navy,2023,12,5,7,0,Navy 2023
+Charlotte,2023,12,3,9,0,Charlotte 2023
+Louisiana Monroe,2023,12,2,10,0,Louisiana Monroe 2023
+UNLV,2023,14,9,5,0,UNLV 2023
+Nevada,2023,12,2,10,0,Nevada 2023
+Northern Illinois,2023,13,7,6,0,Northern Illinois 2023
+Oregon,2023,14,12,2,0,Oregon 2023
+Purdue,2023,12,4,8,0,Purdue 2023
+Sam Houston State,2023,12,3,9,0,Sam Houston State 2023
+SMU,2023,14,11,3,0,SMU 2023
+Southern Mississippi,2023,12,3,9,0,Southern Mississippi 2023
+South Carolina,2023,12,5,7,0,South Carolina 2023
+TCU,2023,12,5,7,0,TCU 2023
+Tennessee,2023,13,9,4,0,Tennessee 2023
+UT San Antonio,2023,13,9,4,0,UT San Antonio 2023
+UTEP,2023,12,3,9,0,UTEP 2023
+Texas Tech,2023,13,7,6,0,Texas Tech 2023
+Toledo,2023,14,11,3,0,Toledo 2023
+Troy,2023,14,11,3,0,Troy 2023
+Tulane,2023,14,11,3,0,Tulane 2023
+Western Michigan,2023,12,4,8,0,Western Michigan 2023
+Wyoming,2023,13,9,4,0,Wyoming 2023
