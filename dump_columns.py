@@ -53,6 +53,7 @@ def main():
         'o_passing_plays_ppa': 'PPA/Pass',
         #'o_plays/drive': 'Plays/Drive' # maybe bad play and drive data
         'o_points_per_opportunity': 'Points Per Opportunity', # bad data < 2014
+        'o_field_position_average_start': 'Avg. Yards to Goal at Drive Start'
     }
 
     with open('static/o_advanced_columns.pkl', 'wb') as f:
@@ -110,6 +111,7 @@ def main():
         'd_passing_plays_ppa': 'Opp. PPA/Pass',
         #'d_plays/drive': 'Opp. Plays/Drive' # maybe bad play and drive data
         'd_points_per_opportunity': 'Opp. Points Per Opportunity', # bad data < 2014
+        'd_field_position_average_start': 'Opp. Avg. Yards to Goal at Drive Start'
     }
 
     with open('static/d_advanced_columns.pkl', 'wb') as f:
