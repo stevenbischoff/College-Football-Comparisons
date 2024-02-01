@@ -6,13 +6,13 @@ def main():
     first_year = 2014
     last_year = 2023
 
-    team_df = pd.read_csv('../static/fbs_teams_2004_2023.csv')
+    team_df = pd.read_csv('static/fbs_teams_2004_2023.csv')
     team_ids = team_df['team_id'].values
     distance_dict = {}
 
     ### ALL
     ## Adv
-    df_transformed = pd.read_csv('../static/transformed_team_stats_{}_{}.csv'.format(first_year, last_year),
+    df_transformed = pd.read_csv('static/transformed_team_stats_{}_{}.csv'.format(first_year, last_year),
                                  index_col='team_id')
     n_comps = len(df_transformed)
     nn = NearestNeighbors(n_neighbors=n_comps).fit(df_transformed.values)
@@ -29,7 +29,7 @@ def main():
     print('Combined:', max_distance)
 
     ## No Adv
-    df_transformed = pd.read_csv('../static/transformed_no_adv_team_stats_{}_{}.csv'.format(first_year, last_year),
+    df_transformed = pd.read_csv('static/transformed_no_adv_team_stats_{}_{}.csv'.format(first_year, last_year),
                                  index_col='team_id')
     n_comps = len(df_transformed)
     nn = NearestNeighbors(n_neighbors=n_comps).fit(df_transformed.values)
@@ -47,7 +47,7 @@ def main():
 
     ### Offense
     ## Adv
-    df_transformed = pd.read_csv('../static/transformed_offense_team_stats_{}_{}.csv'.format(first_year, last_year),
+    df_transformed = pd.read_csv('static/transformed_offense_team_stats_{}_{}.csv'.format(first_year, last_year),
                                  index_col='team_id')
     n_comps = len(df_transformed)
     nn = NearestNeighbors(n_neighbors=n_comps).fit(df_transformed.values)
@@ -64,7 +64,7 @@ def main():
     print('Offense:', max_distance)
 
     ## No Adv
-    df_transformed = pd.read_csv('../static/transformed_offense_no_adv_team_stats_{}_{}.csv'.format(first_year, last_year),
+    df_transformed = pd.read_csv('static/transformed_offense_no_adv_team_stats_{}_{}.csv'.format(first_year, last_year),
                                  index_col='team_id')
     n_comps = len(df_transformed)
     nn = NearestNeighbors(n_neighbors=n_comps).fit(df_transformed.values)
@@ -82,7 +82,7 @@ def main():
 
     ### Defense
     ## Adv
-    df_transformed = pd.read_csv('../static/transformed_defense_team_stats_{}_{}.csv'.format(first_year, last_year),
+    df_transformed = pd.read_csv('static/transformed_defense_team_stats_{}_{}.csv'.format(first_year, last_year),
                                  index_col='team_id')
     n_comps = len(df_transformed)
     nn = NearestNeighbors(n_neighbors=n_comps).fit(df_transformed.values)
@@ -99,7 +99,7 @@ def main():
     print('Defense:', max_distance)
 
     ## No Adv
-    df_transformed = pd.read_csv('../static/transformed_defense_no_adv_team_stats_{}_{}.csv'.format(first_year, last_year),
+    df_transformed = pd.read_csv('static/transformed_defense_no_adv_team_stats_{}_{}.csv'.format(first_year, last_year),
                                  index_col='team_id')
     n_comps = len(df_transformed)
     nn = NearestNeighbors(n_neighbors=n_comps).fit(df_transformed.values)
@@ -115,7 +115,7 @@ def main():
     distance_dict['Defense No Adv'] = max_distance
     print('Defense No Adv:', max_distance)
 
-    with open('../static/max_distance.pkl', 'wb') as f:
+    with open('static/max_distance.pkl', 'wb') as f:
         pickle.dump(distance_dict, f)
 
 if __name__ == '__main__':
