@@ -36,5 +36,5 @@ for year in range(first_year, last_year+1):
     df_list.append(df)
     
 df_tot = pd.concat(df_list).reset_index(drop=True)
-df_tot.to_csv('static/game_info_{}_{}.csv'.format(first_year, last_year),
+df_tot.to_csv('../static/game_info_{}_{}.csv'.format(first_year, last_year),
               index=False)

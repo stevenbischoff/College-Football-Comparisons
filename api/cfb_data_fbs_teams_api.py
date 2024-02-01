@@ -22,5 +22,5 @@ for year in range(first_year, last_year+1):
 
 df_tot = pd.concat(df_list).reset_index(drop=True)
 df_tot['team_id'] = df_tot['school'] + ' ' + df_tot['season'].astype(str)
-df_tot.to_csv('static/fbs_teams_{}_{}.csv'.format(first_year, last_year),
+df_tot.to_csv('../static/fbs_teams_{}_{}.csv'.format(first_year, last_year),
               index=False)

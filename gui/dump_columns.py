@@ -28,7 +28,7 @@ def main():
         #'passingYards/completion': 'Yards per Pass Completion'
     }
 
-    with open('static/o_normal_columns.pkl', 'wb') as f:
+    with open('../static/o_normal_columns.pkl', 'wb') as f:
         pickle.dump(o_normal_columns, f)
 
     o_advanced_columns = {
@@ -55,7 +55,7 @@ def main():
         'o_points_per_opportunity': 'Points Per Opportunity', # bad data < 2014
     }
 
-    with open('static/o_advanced_columns.pkl', 'wb') as f:
+    with open('../static/o_advanced_columns.pkl', 'wb') as f:
         pickle.dump(o_advanced_columns, f)
 
     d_normal_columns = {
@@ -85,7 +85,7 @@ def main():
         #'passingYards/completion_opp': 'Opp. Yards per Pass Completion',
     }
 
-    with open('static/d_normal_columns.pkl', 'wb') as f:
+    with open('../static/d_normal_columns.pkl', 'wb') as f:
         pickle.dump(d_normal_columns, f)
 
     d_advanced_columns = {
@@ -112,7 +112,7 @@ def main():
         'd_points_per_opportunity': 'Opp. Points Per Opportunity', # bad data < 2014
     }
 
-    with open('static/d_advanced_columns.pkl', 'wb') as f:
+    with open('../static/d_advanced_columns.pkl', 'wb') as f:
         pickle.dump(d_advanced_columns, f)
         
     other_columns = {
@@ -121,13 +121,13 @@ def main():
         'possessionTime/game': 'Possession Rate',
     }
 
-    with open('static/other_columns.pkl', 'wb') as f:
+    with open('../static/other_columns.pkl', 'wb') as f:
         pickle.dump(other_columns, f)
 
     X_columns = {**o_normal_columns, **o_advanced_columns,
                  **d_normal_columns, **d_advanced_columns, **other_columns}
 
-    with open('static/X_columns.pkl', 'wb') as f:
+    with open('../static/X_columns.pkl', 'wb') as f:
         pickle.dump(X_columns, f)
 
 if __name__ == '__main__':

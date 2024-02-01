@@ -61,10 +61,5 @@ for year in range(first_year, last_year+1):
         preprocess_data(api_games, year, week, season_type, df_list, df_season_list)
         
     df_season_tot = pd.concat(df_season_list).reset_index(drop=True)
-    df_season_tot.to_csv('static/team_game_stats_{}.csv'.format(year),
-              index=False)
-    
-#df_tot = pd.concat(df_list).reset_index(drop=True)
-#df_tot.to_csv('static/team_game_stats_{}_{}.csv'.format(first_year, last_year),
- #             index=False)
-          
+    df_season_tot.to_csv('../static/team_game_stats_{}.csv'.format(year),
+              index=False)         

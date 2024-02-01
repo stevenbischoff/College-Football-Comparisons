@@ -12,11 +12,11 @@ def main():
     last_year = 2023
 
     ### Teams
-    team_df = pd.read_csv('static/fbs_teams_{}_{}.csv'.format(first_year, last_year))
+    team_df = pd.read_csv('../static/fbs_teams_{}_{}.csv'.format(first_year, last_year))
     team_df = team_df[team_df['season'] >= first_year].reset_index(drop=True)
 
     ### Game Info
-    games_df = pd.read_csv('static/game_info_{}_{}.csv'.format(first_year, last_year), low_memory=False)
+    games_df = pd.read_csv('../static/game_info_{}_{}.csv'.format(first_year, last_year), low_memory=False)
     games_df = games_df[games_df['season'] >= first_year].reset_index(drop=True)
     games_df['home_team_id'] = games_df['home_team'] + ' ' + games_df['season'].astype(str)
     games_df['away_team_id'] = games_df['away_team'] + ' ' + games_df['season'].astype(str)
@@ -24,7 +24,7 @@ def main():
     ### Game Stats
     game_stats_df = pd.DataFrame()
     for year in range(first_year, last_year+1):
-        game_stats_df_year = pd.read_csv('static/team_game_stats_{}.csv'.format(year), low_memory=False)
+        game_stats_df_year = pd.read_csv('../static/team_game_stats_{}.csv'.format(year), low_memory=False)
         last_reg_week = game_stats_df_year.loc[game_stats_df_year['season_type']=='regular', 'week'].max()
         game_stats_df_year.loc[game_stats_df_year['season_type']=='postseason', 'week'] += last_reg_week
         game_stats_df = pd.concat([game_stats_df, game_stats_df_year]).reset_index(drop=True)
@@ -101,7 +101,7 @@ def main():
     ##### Drives #####
     # To fix possessionTime 2004-2011
 
-    """drives_df = pd.read_csv('static/drives_2004_2011.csv')
+    """drives_df = pd.read_csv('../static/drives_2004_2011.csv')
 
     drives_df['offense_team_id'] = drives_df['offense'] + ' ' + drives_df['season'].astype(str)
     drives_df['defense_team_id'] = drives_df['defense'] + ' ' + drives_df['season'].astype(str)
@@ -111,7 +111,7 @@ def main():
     print(team_ToP_means)"""
 
     ##### Season Stats #####
-    season_df = pd.read_csv('static/team_season_stats_{}_{}.csv'.format(first_year, last_year))
+    season_df = pd.read_csv('../static/team_season_stats_{}_{}.csv'.format(first_year, last_year))
     season_df = season_df[season_df['season'] >= first_year].reset_index(drop=True)
 
     season_df['team_id'] = season_df['team'] + ' ' + season_df['season'].astype(str)
@@ -182,7 +182,7 @@ def main():
     pg_df['possessionTime/game'] /= 3600
 
     ##### Advanced Stats #####
-    advanced_stats_df = pd.read_csv('static/team_advanced_season_stats_{}_{}.csv'.format(first_year, last_year))
+    advanced_stats_df = pd.read_csv('../static/team_advanced_season_stats_{}_{}.csv'.format(first_year, last_year))
     advanced_stats_df = advanced_stats_df[advanced_stats_df['season'] >= first_year].reset_index(drop=True)
 
     advanced_stats_df['team_id'] = advanced_stats_df['team'] + ' ' + advanced_stats_df['season'].astype(str)
@@ -207,19 +207,19 @@ def main():
     df_combined = df_combined.join(opp_df, how='inner')
 
     # All
-    df_combined[list(X_columns.keys())].to_csv('static/raw_team_stats_{}_{}.csv'.format(first_year, last_year))
+    df_combined[list(X_columns.keys())].to_csv('../static/raw_team_stats_{}_{}.csv'.format(first_year, last_year))
     df_combined[list({**o_normal_columns, **d_normal_columns, **other_columns}.keys())
-                ].to_csv('static/raw_no_adv_team_stats_{}_{}.csv'.format(first_year, last_year))
+                ].to_csv('../static/raw_no_adv_team_stats_{}_{}.csv'.format(first_year, last_year))
     # Offense
     df_combined[list({**o_normal_columns, **o_advanced_columns}.keys())
-                ].to_csv('static/raw_offense_team_stats_{}_{}.csv'.format(first_year, last_year))
+                ].to_csv('../static/raw_offense_team_stats_{}_{}.csv'.format(first_year, last_year))
     df_combined[list(o_normal_columns.keys())
-                ].to_csv('static/raw_offense_no_adv_team_stats_{}_{}.csv'.format(first_year, last_year))
+                ].to_csv('../static/raw_offense_no_adv_team_stats_{}_{}.csv'.format(first_year, last_year))
     # Defense
     df_combined[list({**d_normal_columns, **d_advanced_columns}.keys())
-                ].to_csv('static/raw_defense_team_stats_{}_{}.csv'.format(first_year, last_year))
+                ].to_csv('../static/raw_defense_team_stats_{}_{}.csv'.format(first_year, last_year))
     df_combined[list(d_normal_columns.keys())
-                ].to_csv('static/raw_defense_no_adv_team_stats_{}_{}.csv'.format(first_year, last_year))
+                ].to_csv('../static/raw_defense_no_adv_team_stats_{}_{}.csv'.format(first_year, last_year))
 
 if __name__ == '__main__':
     main()
