@@ -164,7 +164,7 @@ class GUI:
         go = builder.build()
         
         selection = AgGrid(display_df, fit_columns_on_grid_load=True,
-               #enable_enterprise_modules=True,
+                           enable_enterprise_modules=False,
                            gridOptions=go, update_mode=GridUpdateMode.MODEL_CHANGED)       
         if len(selection.selected_rows) > 0:
             st.session_state['row_selected'] = True
