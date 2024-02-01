@@ -221,10 +221,12 @@ class GUI:
                  ]}]}
         
         with st.expander('**Similarities**', expanded=True):
-            AgGrid(similar_stats_df, fit_columns_on_grid_load=True, gridOptions=go)              
+            AgGrid(similar_stats_df, fit_columns_on_grid_load=True, 
+                           enable_enterprise_modules=False, gridOptions=go)              
     
         with st.expander('**Dissimilarities**'):
-            AgGrid(different_stats_df, fit_columns_on_grid_load=True, gridOptions=go)
+            AgGrid(different_stats_df, fit_columns_on_grid_load=True, 
+                           enable_enterprise_modules=False, gridOptions=go)
             
         st.caption('*Statistics are per-game unless otherwise specified.')
         st.caption('**Pctl. columns give the percentile of the statistic across all years in the dataset.')
