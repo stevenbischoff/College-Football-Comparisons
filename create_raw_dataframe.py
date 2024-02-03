@@ -188,7 +188,7 @@ def main():
     advanced_stats_df['team_id'] = advanced_stats_df['team'] + ' ' + advanced_stats_df['season'].astype(str)
     advanced_stats_df = advanced_stats_df.set_index(['team_id'])
 
-    # limit to 2004-2023 FBS teams
+    # limit to 2014-2023 FBS teams
     advanced_stats_df = advanced_stats_df.loc[advanced_stats_df.index.isin(team_df['team_id'])]
 
     # some teams have advanced stats from few games in earlier seasons
@@ -201,6 +201,8 @@ def main():
     # Calculate some additional stats
     advanced_stats_df['o_plays/drive'] = advanced_stats_df['o_plays']/advanced_stats_df['o_drives']
     advanced_stats_df['d_plays/drive'] = advanced_stats_df['d_plays']/advanced_stats_df['d_drives']
+    advanced_stats_df['o_field_position_average_start'] = 100 - advanced_stats_df['o_field_position_average_start']
+    advanced_stats_df['d_field_position_average_start'] = 100 - advanced_stats_df['d_field_position_average_start']
 
     ### Join and store
     df_combined = pg_df.join(advanced_stats_df, how='inner').drop(columns=['team', 'season', 'conference'])
