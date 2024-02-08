@@ -171,7 +171,7 @@ class GUI:
             st.session_state['row_selected'] = True
             st.session_state['selected_rows'] = selection.selected_rows
         # Footnote
-        st.caption('*SSS, or Statistical Similarity Score, is a measure from 0 to 1 of the statistical similarity between two teams.')
+        st.caption('*SSS, or Statistical Similarity Score, is a measure from 0 to 1 of the statistical similarity between two teams. See the README: https://github.com/stevenbischoff/College-Football-Comparisons/tree/main')
         
     def display_comparisons(self):
         self.comparisons_header()
@@ -238,7 +238,7 @@ class GUI:
                            enable_enterprise_modules=False, gridOptions=go)
         # Footnotes    
         st.caption('*Statistics are per-game unless otherwise specified.')
-        st.caption('**Pctl. columns give the percentile of the statistic across all years in the dataset.')
+        st.caption('**Pctl. columns give the percentile of the statistic across all teams in the dataset.')
         
     def body(self):
         left_column, right_column = st.columns([0.4, 0.6])
