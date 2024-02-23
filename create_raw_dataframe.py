@@ -1,3 +1,11 @@
+"""
+This module gathers the relevant data from where it's been stored after API
+access, cleans it a bit, transforms it to get end-of-season per-game stats,
+and then stores it as "raw" dataframes.
+Should be cleaned up
+
+Author: Steve Bischoff
+"""
 import pandas as pd
 from sklearn.impute import SimpleImputer
 from load_columns import *
@@ -193,10 +201,8 @@ def main():
 
     # some teams have advanced stats from few games in earlier seasons
     # minimum plays was 45*8 = 360
-    # !!!!!!!!
     #advanced_stats_df = advanced_stats_df[advanced_stats_df['o_plays']>advanced_stats_df['o_plays'].min()*6.67]
     # Use only if going back to 2004
-    # !!!!!!!!
 
     # Calculate some additional stats
     advanced_stats_df['o_plays/drive'] = advanced_stats_df['o_plays']/advanced_stats_df['o_drives']

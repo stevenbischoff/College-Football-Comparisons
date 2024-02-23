@@ -1,3 +1,8 @@
+"""
+This module runs every data processing module after the APIs have been accessed.
+
+Author: Steve Bischoff
+"""
 import dump_columns
 import create_raw_dataframe
 import create_standardized_dataframe

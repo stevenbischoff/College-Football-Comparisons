@@ -1,3 +1,15 @@
+"""
+This module defines and stores 5 dicts of team features:
+ - Regular offensive stats
+ - Advanced offensive stats
+ - Regular defensive stats
+ - Advanced defensive stats
+ - Other stats
+Dict keys are feature names from the API and prepare_data.py.
+Dict values are features names as displayed in the app.
+
+Author: Steve Bischoff
+"""
 import pickle
 
 def main():

@@ -1,3 +1,10 @@
+"""
+This module is a helper script for the create_ modules, get_max_distance.py,
+and gui.py modules that loads the feature dict definitions from dump_columns.py
+into the namespace.
+
+Author: Steve Bischoff
+"""
 import pickle
 
 with open('static/o_normal_columns.pkl', 'rb') as f:

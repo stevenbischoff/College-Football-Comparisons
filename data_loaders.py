@@ -1,3 +1,15 @@
+"""
+This module contains helper functions for gui.py that load and cache the dataframes
+required to calculate SSS and display similar stats.
+ - load_max_distance
+ - load_raw_data
+ - load_standardized_data
+ - load_transformed_data
+Each function takes a data_type argument that is one of these 6 strings:
+Combined, Combined No Adv, Offense, Offense No Adv, Defense, Defense No Adv
+
+Author: Steve Bischoff
+"""
 import streamlit as st
 import pandas as pd
 import pickle

@@ -1,3 +1,9 @@
+"""
+This module runs the app through the GUI class.
+Accessed by streamlit.
+
+Author: Steve Bischoff
+"""
 import streamlit as st
 st.set_page_config(layout='wide')
 from st_aggrid import AgGrid, GridOptionsBuilder, ColumnsAutoSizeMode
