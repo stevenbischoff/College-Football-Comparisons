@@ -1,5 +1,7 @@
 # College Football Comparisons
 
+**3/29/24: Currently broken due to Streamlit and Streamlit-Aggrid updates. Working on a fix.**
+
 This package creates a streamlit app that can be found here: https://college-football-comparisons.streamlit.app/.
 
 ## Using the App
