@@ -1,8 +1,8 @@
 # College Football Comparisons
 
-**3/29/24: Currently broken due to Streamlit and Streamlit-Aggrid updates. Working on a fix.**
-
 This package creates a streamlit app that can be found here: https://college-football-comparisons.streamlit.app/.
+
+**4/17/2024: The requirements pin Streamlit and Streamlit-Aggrid to older versions for it to work. Streamlit-Aggrid is undergoing significant updates, and the app is broken with current versions. I plan to update compatibility once the updates reach a stable state.**
 
 ## Using the App
 
@@ -11,4 +11,4 @@ The app asks the user to select an FBS school and a season (currently 2014-2023)
 By default, SSS takes both offensive and defensive stats into account, as well as both regular box score and advanced stats. The user can change the app settings to compare just offenses or defenses and remove advanced stats from consideration.
 
 ## Statistical Similarity Score
- 
+
