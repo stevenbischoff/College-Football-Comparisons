@@ -21,6 +21,11 @@ def load_max_distance(data_type):
         return distance_dict[data_type]
 
 @st.cache_data
+def load_records():
+    return pd.read_csv('static/team_records_2014_2023.csv',
+                index_col='team_id')
+    
+@st.cache_data
 def load_raw_data(data_type):
     if data_type == 'Combined':
         return pd.read_csv('static/raw_team_stats_2014_2023.csv',

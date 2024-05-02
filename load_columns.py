@@ -24,3 +24,16 @@ with open('static/other_columns.pkl', 'rb') as f:
 
 with open('static/X_columns.pkl', 'rb') as f:
     X_columns = pickle.load(f)
+
+high_bad = [
+    'Turnovers',
+    'Interceptions Thrown',
+    'Stuff Rate',
+    'Penalties'
+    ] + [
+    col for col in list(d_normal_columns.values())+list(d_advanced_columns.values())
+    if col not in ['Opp. Turnovers','Opp. Interceptions Thrown',
+                   'Opp. Stuff Rate','Opp. Penalties']
+    ]
+    
+        

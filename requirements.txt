@@ -1,5 +1,5 @@
-streamlit
-streamlit-aggrid
+streamlit==1.30
+streamlit-aggrid==0.3.4.post3
 pandas
 scikit-learn
 scipy

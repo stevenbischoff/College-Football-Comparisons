@@ -32,8 +32,8 @@ def main():
         #'fourthDownPercent',
         'interceptions/game': 'Interceptions Thrown',
         'thirdDownPct': '3rd Down Conversion Rate',
-        'rushingPct': 'Rushing Plays / Total',
-        'rushingYardsPct': 'Rushing Yards / Total',
+        'rushingPct': 'Rushing Plays / Total Plays',
+        'rushingYardsPct': 'Rushing Yards / Total Yards',
         'completionPct': 'Pass Completion Rate',
         'rushingYards/attempt': 'Yards per Rush',
         'passingYards/attempt': 'Yards per Pass Attempt',
@@ -59,10 +59,10 @@ def main():
         #'o_passing_downs_explosiveness',
         'o_rushing_plays_success_rate': 'Rushing Success Rate',
         'o_rushing_plays_explosiveness': 'Rushing Explosiveness',
-        'o_rushing_plays_ppa': 'PPA/Rush',
+        'o_rushing_plays_ppa': 'PPA per Rush',
         'o_passing_plays_success_rate': 'Passing Success Rate',
         'o_passing_plays_explosiveness': 'Passing Explosiveness',
-        'o_passing_plays_ppa': 'PPA/Pass',
+        'o_passing_plays_ppa': 'PPA per Pass',
         #'o_plays/drive': 'Plays/Drive' # maybe bad play and drive data
         'o_points_per_opportunity': 'Points Per Opportunity', # bad data < 2014
         'o_field_position_average_start': 'Avg. Drive Start (Yard Line)'
@@ -90,8 +90,8 @@ def main():
         #'fourthDownPercent',
         'interceptions_opp/game': 'Opp. Interceptions Thrown',
         'thirdDownPct_opp': 'Opp. 3rd Down Conversion Rate',
-        'rushingPct_opp': 'Opp. Rushing Plays / Total',
-        'rushingYardsPct_opp': 'Opp. Rushing Yards / Total',
+        'rushingPct_opp': 'Opp. Rushing Plays / Total Plays',
+        'rushingYardsPct_opp': 'Opp. Rushing Yards / Total Yards',
         'completionPct_opp': 'Opp. Pass Completion Rate',
         'rushingYards/attempt_opp': 'Opp. Yards per Rush',
         'passingYards/attempt_opp': 'Opp. Yards per Pass Attempt',
@@ -117,10 +117,10 @@ def main():
         #'d_passing_downs_explosiveness',
         'd_rushing_plays_success_rate': 'Opp. Rushing Success Rate',
         'd_rushing_plays_explosiveness': 'Opp. Rushing Explosiveness',
-        'd_rushing_plays_ppa': 'Opp. PPA/Rush',
+        'd_rushing_plays_ppa': 'Opp. PPA per Rush',
         'd_passing_plays_success_rate': 'Opp. Passing Success Rate',
         'd_passing_plays_explosiveness': 'Opp. Passing Explosiveness',
-        'd_passing_plays_ppa': 'Opp. PPA/Pass',
+        'd_passing_plays_ppa': 'Opp. PPA per Pass',
         #'d_plays/drive': 'Opp. Plays/Drive' # maybe bad play and drive data
         'd_points_per_opportunity': 'Opp. Points Per Opportunity', # bad data < 2014
         'd_field_position_average_start': 'Opp. Avg. Drive Start (Yard Line)'

@@ -9,17 +9,28 @@ st.set_page_config(layout='wide')
 from st_aggrid import AgGrid, GridOptionsBuilder, ColumnsAutoSizeMode
 from st_aggrid.shared import GridUpdateMode
 
+import matplotlib.pyplot as plt
+from matplotlib.colorbar import ColorbarBase
+from matplotlib.colors import Normalize
+import numpy as np
 import pandas as pd
-from sklearn.neighbors import NearestNeighbors
 import scipy.stats as stats
+from sklearn.neighbors import NearestNeighbors
 
 from load_columns import *
-import data_loaders
-import widget_helpers
+import comparison_functions as cf
+import data_loaders as dl
+import style_functions as sf
+import widget_helpers as wh
+
+# Set app style
+sf.set_markdown_style()
 
 class GUI:
+    
     def __init__(self):
         self.set_session_state()
+
 
     def set_session_state(self):
         if 'off_def' not in st.session_state:
@@ -28,140 +39,95 @@ class GUI:
         if 'adv' not in st.session_state:
             st.session_state['adv'] = True
 
-        widget_helpers.set_data_type()
+        wh.set_data_type()
 
         if 'row_selected' not in st.session_state:
             st.session_state['row_selected'] = False
             st.session_state['selected_rows'] = []
-
         if 'n_comparisons' not in st.session_state:
             st.session_state['n_comparisons'] = 8
-
         if 'n_similar_stats' not in st.session_state:
             st.session_state['n_similar_stats'] = 8
-
         if 'n_dissimilar_stats' not in st.session_state:
-            st.session_state['n_dissimilar_stats'] = 5        
+            st.session_state['n_dissimilar_stats'] = 6               
 
-    def get_comparison_results(self):
-        results = self.nn.kneighbors(st.session_state['df_transformed'].loc[st.session_state.team_id].values.reshape(1,-1),
-                                     st.session_state['n_comparisons']+1, return_distance=True)
-        indices = results[1][0][1:]
-        distances = results[0][0][1:]
-        return st.session_state['df_transformed'].index[indices], distances
 
-    def comparisons_to_display_df(self, comparisons, distances):
-        schools = comparisons.str[:-5]
-        seasons = comparisons.str[-4:]
-        sss = 1 - distances/st.session_state['max_distance'] # Statistical Similarity Score
-        return pd.DataFrame({'Rank': range(1, st.session_state['n_comparisons']+1), 'School': schools,
-                             'Season': seasons, 'SSS*': sss.round(4)}, index=range(1, st.session_state['n_comparisons']+1))
-
-    def get_similar_stats(self, pctl_threshold=15):
-        stat_diffs = (st.session_state['df_standardized'].loc[st.session_state['team_id'], list(st.session_state['X_columns'].keys())
-            ] - st.session_state['df_standardized'].loc[st.session_state['team_id_comp'], list(st.session_state['X_columns'].keys())]).abs().sort_values()
-        return_df = pd.DataFrame(columns=['Statistic*', st.session_state['team_id'], 'pctl1',
-                                          st.session_state['team_id_comp'], 'pctl2'])
-
-        counter = 0
-        for stat in stat_diffs.index:
-            if counter >= st.session_state['n_similar_stats']:
-                break
-            pctl1 = stats.percentileofscore(st.session_state['df_raw'][stat], st.session_state['df_raw'].loc[st.session_state['team_id'], stat])
-            if pctl1 < pctl_threshold or pctl1 > 100 - pctl_threshold: 
-                pctl2 = stats.percentileofscore(st.session_state['df_raw'][stat], st.session_state['df_raw'].loc[st.session_state['team_id_comp'], stat])
-                if abs(pctl1 - pctl2) <= 8: 
-                    return_df.loc[counter] = [st.session_state['X_columns'][stat],
-                                              '%s' % float('%.4g' % round(st.session_state['df_raw'].loc[st.session_state['team_id'], stat],3)),
-                                              round(pctl1, 2),
-                                              '%s' % float('%.4g' % round(st.session_state['df_raw'].loc[st.session_state['team_id_comp'], stat],3)),
-                                              round(pctl2, 2)]
-                    counter += 1
-        for stat in stat_diffs.index:
-            if counter >= st.session_state['n_similar_stats']:
-                break
-            if stat in return_df['Statistic*'].values:
-                continue
-            pctl1 = stats.percentileofscore(st.session_state['df_raw'][stat], st.session_state['df_raw'].loc[st.session_state['team_id'], stat])
-            pctl2 = stats.percentileofscore(st.session_state['df_raw'][stat], st.session_state['df_raw'].loc[st.session_state['team_id_comp'], stat])
-            return_df.loc[counter] = [st.session_state['X_columns'][stat],
-                                      '%s' % float('%.4g' % round(st.session_state['df_raw'].loc[st.session_state['team_id'], stat],3)),
-                                      round(pctl1, 2),
-                                      '%s' % float('%.4g' % round(st.session_state['df_raw'].loc[st.session_state['team_id_comp'], stat],3)),
-                                      round(pctl2, 2)]
-            counter += 1
-        return return_df
-
-    def get_different_stats(self):
-        stat_diffs = (st.session_state['df_standardized'].loc[st.session_state['team_id'], list(st.session_state['X_columns'].keys())
-            ] - st.session_state['df_standardized'].loc[st.session_state['team_id_comp'], list(st.session_state['X_columns'].keys())]).abs().sort_values()
-        return_df = pd.DataFrame(columns=['Statistic*', st.session_state['team_id'], 'pctl1',
-                                          st.session_state['team_id_comp'], 'pctl2'])
-        for stat in stat_diffs.index[-st.session_state['n_dissimilar_stats']:]:
-            pctl1 = stats.percentileofscore(st.session_state['df_raw'][stat], st.session_state['df_raw'].loc[st.session_state['team_id'], stat])
-            pctl2 = stats.percentileofscore(st.session_state['df_raw'][stat], st.session_state['df_raw'].loc[st.session_state['team_id_comp'], stat])
-            return_df.loc[len(return_df)] = [st.session_state['X_columns'][stat],
-                                                   '%s' % float('%.4g' % round(st.session_state['df_raw'].loc[st.session_state['team_id'], stat],3)),
-                                                   round(pctl1, 2),
-                                                   '%s' % float('%.4g' % round(st.session_state['df_raw'].loc[st.session_state['team_id_comp'], stat],3)),
-                                                   round(pctl2, 2)]
-        return return_df.iloc[::-1]
-
-    def header(self):
+    def header(self): # Parent: self.main()
         st.header('College Football: Statistically Similar FBS Teams 2014-2023')
-        st.write("Select a school and a year to view the team's closest statistical comparisons")
+        st.write("Select a school and a year to view the team's closest statistical comparisons.")
+
         
-    def team_selection(self):        
+    def team_selection(self): # Parent: self.main()       
         left_column, mid_column, right_column = st.columns([0.2, 0.2, 0.6])
         with left_column:
-            st.selectbox(label='**School**', options=st.session_state['schools'], index=None,
-                         placeholder='Choose a school', key='school_selectbox')
+            st.selectbox(label='**School**',
+                         options=st.session_state['schools'],
+                         index=None,
+                         placeholder='Choose a school',
+                         key='school_selectbox')
             st.session_state['school'] = st.session_state['school_selectbox']
         with mid_column:
-            st.session_state['year'] = st.selectbox(label='**Year**', options=st.session_state['years'], index=None,
-                                     placeholder='Choose a year', key='year_selectbox')        
+            st.session_state['year'] = st.selectbox(label='**Year**',
+                                                    options=st.session_state['years'],
+                                                    index=None,
+                                                    placeholder='Choose a year',
+                                                    key='year_selectbox')        
 
-    def settings_expander(self):
+
+    def settings_expander(self): # Parent: self.body_left_column()
         with st.expander('**Settings**'):
             left_column, right_column = st.columns(2)
             with left_column: # Display settings
-                st.slider(label='No. of team comparisons to display', min_value=1, max_value=20,
-                          value=st.session_state['n_comparisons'], key='n_comparisons_slider',
-                          on_change=widget_helpers.change_n_comparisons_slider)
-                st.slider(label='No. of similar stats to display', min_value=1, max_value=20,
-                          value=st.session_state['n_similar_stats'], key='n_similar_stats_slider',
-                          on_change=widget_helpers.change_n_similar_stats_slider)
-                st.slider(label='No. of dissimilar stats to display', min_value=1, max_value=20,
-                          value=st.session_state['n_dissimilar_stats'], key='n_dissimilar_stats_slider',
-                          on_change=widget_helpers.change_n_dissimilar_stats_slider)
+                st.slider(label='\# of team comparisons',
+                          min_value=1, max_value=20,
+                          value=st.session_state['n_comparisons'],
+                          key='n_comparisons_slider',
+                          on_change=wh.change_n_comparisons_slider)
+                st.slider(label='\# of similar stats',
+                          min_value=1, max_value=20,
+                          value=st.session_state['n_similar_stats'],
+                          key='n_similar_stats_slider',
+                          on_change=wh.change_n_similar_stats_slider)
+                st.slider(label='\# of dissimilar stats',
+                          min_value=1, max_value=20,
+                          value=st.session_state['n_dissimilar_stats'],
+                          key='n_dissimilar_stats_slider',
+                          on_change=wh.change_n_dissimilar_stats_slider)
             with right_column: # Data settings
-                st.radio(label='Compare offense, defense, or combined?', options=['Offense', 'Defense', 'Combined'],
-                     key='off_def_radio', index=self.off_def_radio_index,
-                         on_change=widget_helpers.change_off_def_radio)
-                st.toggle(label='Include Advanced Stats', value=st.session_state['adv'], key='adv_toggle',
-                          on_change=widget_helpers.change_adv_toggle)
+                st.radio(label='Compare offense, defense, or combined?',
+                         options=['Offense', 'Defense', 'Combined'],
+                         key='off_def_radio',
+                         index=self.off_def_radio_index,
+                         on_change=wh.change_off_def_radio)
+                st.toggle(label='Include Advanced Stats',
+                          value=st.session_state['adv'],
+                          key='adv_toggle',
+                          on_change=wh.change_adv_toggle)
                 st.write('Advanced stat explanations: https://collegefootballdata.com/glossary')
 
-    def comparisons_header(self):
+
+    def comparisons_header(self):  # Parent: self.display_comparisons()
+        # Get team record
+        record_string = '('+st.session_state['team_records'].loc[st.session_state['team_id']].item()+')'
         # Team ( / Offense / Defense)
         if st.session_state['data_type'].startswith('Combined'):
-            subheader_string = st.session_state['team_id']
+            subheader_string = st.session_state['team_id']+' '+record_string
         elif st.session_state['data_type'].startswith('Offense'):
-            subheader_string = st.session_state['school'] + ' Offense ' + str(st.session_state['year'])
+            subheader_string = st.session_state['school']+' Offense '+str(st.session_state['year'])+' '+record_string
         elif st.session_state['data_type'].startswith('Defense'):
-            subheader_string = st.session_state['school'] + ' Defense ' + str(st.session_state['year'])
+            subheader_string = st.session_state['school']+' Defense '+str(st.session_state['year'])+' '+record_string
         st.subheader(subheader_string)
         # User instructions
         st.write('Select a row for a detailed comparison!')
 
-    def comparisons_grid(self):
+
+    def comparisons_grid(self): # Parent: self.display_comparisons()
         # Get the closest comparisons to team_id
-        comparisons, distances = self.get_comparison_results()
-        display_df = self.comparisons_to_display_df(comparisons, distances)
-        # Grid options
-        builder = GridOptionsBuilder.from_dataframe(
-            display_df, enableRowGroup=True, enableValue=True
-            )
+        comparisons, distances = cf.get_comparison_results(self.nn)
+        # Prepare dataframe for AgGrid
+        display_df = cf.comparisons_to_display_df(comparisons, distances) 
+        # Set grid options
+        builder = GridOptionsBuilder.from_dataframe(display_df, enableRowGroup=True, enableValue=True)
         builder.configure_selection('single')
         builder.configure_default_column(resizable=False)
         builder.configure_column('Rank', headerName='', width=50)
@@ -169,84 +135,108 @@ class GUI:
         builder.configure_column('SSS*', width=130)
         go = builder.build()
         # Display grid
-        selection = AgGrid(display_df, fit_columns_on_grid_load=True,
+        selection = AgGrid(display_df,
+                           fit_columns_on_grid_load=True,
                            enable_enterprise_modules=False,
-                           gridOptions=go, update_mode=GridUpdateMode.MODEL_CHANGED)
+                           gridOptions=go,
+                           update_mode=GridUpdateMode.MODEL_CHANGED)
         # On row selection
         if len(selection.selected_rows) > 0:
             st.session_state['row_selected'] = True
             st.session_state['selected_rows'] = selection.selected_rows
         # Footnote
         st.caption('*SSS, or Statistical Similarity Score, is a measure from 0 to 1 of the statistical similarity between two teams. See the README: https://github.com/stevenbischoff/College-Football-Comparisons/tree/main')
+
         
-    def display_comparisons(self):
+    def display_comparisons(self): # Parent: self.body_left_column()
         self.comparisons_header()
         self.comparisons_grid()        
+
         
-    def body_left_column(self):
+    def body_left_column(self): # Parent: self.body()
         if st.session_state['team_id'] in st.session_state['team_ids']: # If valid team_id selected
             self.display_comparisons()
         self.settings_expander()
 
-    def stats_header(self):
+
+    def stats_header(self): # Parent: self.body_right_column()
+        # Get team_comp record
+        record_string = '('+st.session_state['team_records'].loc[st.session_state['team_id_comp']].item()+')'
         # Comparison team ( / Offense / Defense)
         if st.session_state['data_type'].startswith('Combined'):
-            subheader_string = st.session_state['team_id_comp']
+            subheader_string = st.session_state['team_id_comp'] + ' ' + record_string
         elif st.session_state['data_type'].startswith('Offense'):
-            subheader_string = st.session_state['school_comp'] + ' Offense ' + str(st.session_state['year_comp'])
+            subheader_string = st.session_state['school_comp'] + ' Offense ' + str(st.session_state['year_comp']) + ' ' + record_string
         elif st.session_state['data_type'].startswith('Defense'):
-            subheader_string = st.session_state['school_comp'] + ' Defense ' + str(st.session_state['year_comp'])
+            subheader_string = st.session_state['school_comp'] + ' Defense ' + str(st.session_state['year_comp']) + ' ' + record_string
         st.subheader('Comparison with {}'.format(subheader_string))
+
+
+    def similar_stats_expander(self, similar_stats_df): # Parent: self.body_right_column()
+        with st.expander('**Similarities**', expanded=True):
+            # Similar offensive stats
+            o_similar_stats_df = similar_stats_df[similar_stats_df.index.isin(
+                list(o_normal_columns.values()) + list(o_advanced_columns.values()) + list(other_columns.values()))]
+            if len(o_similar_stats_df) > 0:
+                o_html = sf.stats_df_to_html(o_similar_stats_df, high_bad, uuid='1').replace('Statistic*', 'Off. Statistic*')
+                st.write(o_html, unsafe_allow_html=True)
+            # Similar defensive stats
+            d_similar_stats_df = similar_stats_df[similar_stats_df.index.isin(
+                list(d_normal_columns.values()) + list(d_advanced_columns.values()))]
+            if len(d_similar_stats_df) > 0:
+                d_html = sf.stats_df_to_html(d_similar_stats_df, high_bad, uuid='2').replace('Statistic*', 'Def. Statistic*')
+                st.write(d_html, unsafe_allow_html=True)
+            st.write('') # Empty space
+
+
+    def dissimilar_stats_expander(self, dissimilar_stats_df): # Parent: self.body_right_column()
+        with st.expander('**Dissimilarities**'):
+            # Dissimilar offensive stats
+            o_dissimilar_stats_df = dissimilar_stats_df[dissimilar_stats_df.index.isin(
+                list(o_normal_columns.values()) + list(o_advanced_columns.values()) + list(other_columns.values()))]
+            if len(o_dissimilar_stats_df) > 0:
+                o_dis_html = sf.stats_df_to_html(o_dissimilar_stats_df, high_bad, uuid='3').replace('Statistic*', 'Off. Statistic*')
+                st.write(o_dis_html, unsafe_allow_html=True)
+            # Dissimilar defensive stats
+            d_dissimilar_stats_df = dissimilar_stats_df[dissimilar_stats_df.index.isin(
+                list(d_normal_columns.values()) + list(d_advanced_columns.values()))]
+            if len(d_dissimilar_stats_df) > 0:
+                d_dis_html = sf.stats_df_to_html(d_dissimilar_stats_df, high_bad, uuid='4').replace('Statistic*', 'Def. Statistic*')
+                st.write(d_dis_html, unsafe_allow_html=True)
+            st.write('') # Empty space
+
+
+    def color_legend(self): # Parent: self.body_right_column()
+        fig, ax = plt.subplots(figsize=(2, 0.06))
+        norm = Normalize(vmin=0, vmax=1)
+        cb = ColorbarBase(ax, cmap='RdBu', norm=norm, orientation='horizontal')
+        cb.set_ticks([0,1])
+        cb.set_ticklabels(['Bad', 'Good***'])
+        cb.ax.tick_params(labelsize=4, size=0)
+        st.pyplot(fig, use_container_width=False)
+
         
-    def body_right_column(self):
+    def body_right_column(self): # Parent: self.body()
         # Change settings to fit selection
         selected_row = st.session_state['selected_rows'][0]
         st.session_state['school_comp'] = selected_row['School']
         st.session_state['year_comp'] = selected_row['Season']
         st.session_state['team_id_comp'] = st.session_state['school_comp'] + ' ' + st.session_state['year_comp']
         # Get similar / dissimilar statistics
-        similar_stats_df = self.get_similar_stats()
-        different_stats_df = self.get_different_stats()
-        
-        self.stats_header()
-        # Grid options
-        go = {'columnDefs': [
-                {'field': 'Statistic*'},
-                {'headerName': st.session_state['team_id'],
-                 'children': [
-                 {'headerName': 'Value',
-                  'field': st.session_state['team_id'],
-                  'width': 100,
-                  'type': 'rightAligned'},
-                 {'headerName': 'Pctl.**',
-                  'field': 'pctl1',
-                  'width': 100,
-                  'type': 'rightAligned'}
-                 ]},
-                {'headerName': st.session_state['team_id_comp'],
-                 'children': [
-                 {'headerName': 'Value',
-                  'field': st.session_state['team_id_comp'],
-                  'width': 100,
-                  'type': 'rightAligned'},
-                 {'headerName': 'Pctl.',
-                  'field': 'pctl2',
-                  'width': 100,
-                  'type': 'rightAligned'}
-                 ]}]}
-        # Similar stats expander
-        with st.expander('**Similarities**', expanded=True):
-            AgGrid(similar_stats_df, fit_columns_on_grid_load=True, 
-                           enable_enterprise_modules=False, gridOptions=go)              
-        # Dissimilar stats expander
-        with st.expander('**Dissimilarities**'):
-            AgGrid(different_stats_df, fit_columns_on_grid_load=True, 
-                           enable_enterprise_modules=False, gridOptions=go)
-        # Footnotes    
+        similar_stats_df = cf.get_similar_stats() 
+        dissimilar_stats_df = cf.get_dissimilar_stats()
+        # Display components
+        self.stats_header()      
+        self.similar_stats_expander(similar_stats_df)       
+        self.dissimilar_stats_expander(dissimilar_stats_df)
+        self.color_legend()
+        # Display footnotes
         st.caption('*Statistics are per-game unless otherwise specified.')
         st.caption('**Pctl. columns give the percentile of the statistic across all teams in the dataset.')
+        st.caption("***Color labels don't apply well for some stats (e.g. Rushing Yards / Total Yards).")
+
         
-    def body(self):
+    def body(self): # Parent: self.main()
         left_column, right_column = st.columns([0.4, 0.6])
 
         if (st.session_state['school'] != None) & (st.session_state['year'] != None): # If team_id selected
@@ -267,13 +257,15 @@ class GUI:
         else: # If team_id not selected
             with left_column:
                 self.settings_expander()
+
             
     def main(self):
         # Load data
-        st.session_state['max_distance'] = data_loaders.load_max_distance(st.session_state['data_type'])
-        st.session_state['df_raw'] = data_loaders.load_raw_data(st.session_state['data_type'])
-        st.session_state['df_standardized'] = data_loaders.load_standardized_data(st.session_state['data_type'])
-        st.session_state['df_transformed'] = data_loaders.load_transformed_data(st.session_state['data_type'])
+        st.session_state['max_distance'] = dl.load_max_distance(st.session_state['data_type'])
+        st.session_state['df_raw'] = dl.load_raw_data(st.session_state['data_type'])
+        st.session_state['df_standardized'] = dl.load_standardized_data(st.session_state['data_type'])
+        st.session_state['df_transformed'] = dl.load_transformed_data(st.session_state['data_type'])
+        st.session_state['team_records'] = dl.load_records()
         # Set columns given data type
         if st.session_state['data_type'].startswith('Combined'):
             if st.session_state['data_type'] == 'Combined No Adv':
@@ -299,19 +291,6 @@ class GUI:
         st.session_state['years'] = sorted(st.session_state['df_transformed'].index.str[-4:].unique(), reverse=True)
         # Fit Nearest Neighbors
         self.nn = NearestNeighbors(n_neighbors=st.session_state['n_comparisons']+1).fit(st.session_state['df_transformed'].values)
-        # Style settings
-        st.markdown("""
-            <style>
-            [data-testid=stVerticalBlock]{
-                gap: 0.5rem;
-                padding-top: 0rem;
-            }
-            [data-testid=header]{
-                gap: 0rem;
-                padding-top: 0rem;
-            }
-            </style>
-            """, unsafe_allow_html=True)
         # Run app
         self.header()
         self.team_selection()
