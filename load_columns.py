@@ -30,10 +30,10 @@ high_bad = [
     'Interceptions Thrown',
     'Stuff Rate',
     'Penalties'
-    ] + [
+    ] + \
+    [
     col for col in list(d_normal_columns.values())+list(d_advanced_columns.values())
-    if col not in ['Opp. Turnovers','Opp. Interceptions Thrown',
-                   'Opp. Stuff Rate','Opp. Penalties']
+    if col not in ['Opp. Turnovers','Opp. Interceptions Thrown','Opp. Stuff Rate','Opp. Penalties']
     ]
     
         

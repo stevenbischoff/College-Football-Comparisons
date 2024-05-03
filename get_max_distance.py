@@ -9,6 +9,10 @@ import pandas as pd
 from sklearn.neighbors import NearestNeighbors
 import pickle
 
+# Globals
+FIRST_YEAR = 2014
+LAST_YEAR = 2023
+
 def get_max_distance(df_transformed, team_ids):
     """
     This function gets the max distance in df_transformed between two teams in
@@ -31,37 +35,35 @@ def get_max_distance(df_transformed, team_ids):
     return max_distance
 
 def main():
-    first_year = 2014
-    last_year = 2023
 
-    team_df = pd.read_csv('static/fbs_teams_{}_{}.csv'.format(first_year, last_year))
+    team_df = pd.read_csv('static/fbs_teams_{}_{}.csv'.format(FIRST_YEAR, LAST_YEAR))
     team_ids = team_df['team_id'].values
     distance_dict = {}
 
     ### ALL
     ## Adv
-    df_transformed = pd.read_csv('static/transformed_team_stats_{}_{}.csv'.format(first_year, last_year),
+    df_transformed = pd.read_csv('static/transformed_team_stats_{}_{}.csv'.format(FIRST_YEAR, LAST_YEAR),
                                  index_col='team_id')
     max_distance = get_max_distance(df_transformed, team_ids)
     distance_dict['Combined'] = max_distance
     print('Combined:', max_distance)
 
     ## No Adv
-    df_transformed = pd.read_csv('static/transformed_no_adv_team_stats_{}_{}.csv'.format(first_year, last_year),
+    df_transformed = pd.read_csv('static/transformed_no_adv_team_stats_{}_{}.csv'.format(FIRST_YEAR, LAST_YEAR),
                                  index_col='team_id')
     distance_dict['Combined No Adv'] = get_max_distance(df_transformed, team_ids)
     print('Combined No Adv:', max_distance)
 
     ### Offense
     ## Adv
-    df_transformed = pd.read_csv('static/transformed_offense_team_stats_{}_{}.csv'.format(first_year, last_year),
+    df_transformed = pd.read_csv('static/transformed_offense_team_stats_{}_{}.csv'.format(FIRST_YEAR, LAST_YEAR),
                                  index_col='team_id')
     max_distance = get_max_distance(df_transformed, team_ids)
     distance_dict['Offense'] = max_distance
     print('Offense:', max_distance)
 
     ## No Adv
-    df_transformed = pd.read_csv('static/transformed_offense_no_adv_team_stats_{}_{}.csv'.format(first_year, last_year),
+    df_transformed = pd.read_csv('static/transformed_offense_no_adv_team_stats_{}_{}.csv'.format(FIRST_YEAR, LAST_YEAR),
                                  index_col='team_id')
     max_distance = get_max_distance(df_transformed, team_ids)
     distance_dict['Offense No Adv'] = max_distance
@@ -69,14 +71,14 @@ def main():
 
     ### Defense
     ## Adv
-    df_transformed = pd.read_csv('static/transformed_defense_team_stats_{}_{}.csv'.format(first_year, last_year),
+    df_transformed = pd.read_csv('static/transformed_defense_team_stats_{}_{}.csv'.format(FIRST_YEAR, LAST_YEAR),
                                  index_col='team_id')
     max_distance = get_max_distance(df_transformed, team_ids)
     distance_dict['Defense'] = max_distance
     print('Defense:', max_distance)
 
     ## No Adv
-    df_transformed = pd.read_csv('static/transformed_defense_no_adv_team_stats_{}_{}.csv'.format(first_year, last_year),
+    df_transformed = pd.read_csv('static/transformed_defense_no_adv_team_stats_{}_{}.csv'.format(FIRST_YEAR, LAST_YEAR),
                                  index_col='team_id')
     max_distance = get_max_distance(df_transformed, team_ids)
     distance_dict['Defense No Adv'] = max_distance

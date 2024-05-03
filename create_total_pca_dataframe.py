@@ -12,6 +12,10 @@ import pickle
 
 from load_columns import *
 
+# Globals
+FIRST_YEAR = 2014 # 2014 is first year advanced stats are good. 2004 otherwise (except ToP)
+LAST_YEAR = 2023
+    
 def get_n_components(pca, threshold=0.9):
     """
     Gets the number of components that explains an input ratio of total variance in the data
@@ -41,12 +45,11 @@ def get_transformed_df(df, n_components):
     return df_transformed
 
 def main():
-    first_year = 2014 # 2014 is first year advanced stats are good. 2004 otherwise (except ToP)
-    last_year = 2023
+    
 
     ### All
     ## Adv
-    df_standardized = pd.read_csv('static/standardized_team_stats_{}_{}.csv'.format(first_year, last_year),
+    df_standardized = pd.read_csv('static/standardized_team_stats_{}_{}.csv'.format(FIRST_YEAR, LAST_YEAR),
                                   index_col='team_id')
     df = df_standardized[list(X_columns.keys())]
     # Fit PCA
@@ -57,10 +60,10 @@ def main():
     # Apply transformation and selection first n components
     df_transformed = get_transformed_df(df, n_components)
     # Store transformed data
-    df_transformed.to_csv('static/transformed_team_stats_{}_{}.csv'.format(first_year, last_year))
+    df_transformed.to_csv('static/transformed_team_stats_{}_{}.csv'.format(FIRST_YEAR, LAST_YEAR))
 
     ## No Adv
-    df_standardized = pd.read_csv('static/standardized_no_adv_team_stats_{}_{}.csv'.format(first_year, last_year),
+    df_standardized = pd.read_csv('static/standardized_no_adv_team_stats_{}_{}.csv'.format(FIRST_YEAR, LAST_YEAR),
                                   index_col='team_id')
     df = df_standardized[list({**o_normal_columns, **d_normal_columns, **other_columns}.keys())]
     # Fit PCA
@@ -71,11 +74,11 @@ def main():
     # Apply transformation and selection first n components
     df_transformed = get_transformed_df(df, n_components)
     # Store transformed data
-    df_transformed.to_csv('static/transformed_no_adv_team_stats_{}_{}.csv'.format(first_year, last_year))
+    df_transformed.to_csv('static/transformed_no_adv_team_stats_{}_{}.csv'.format(FIRST_YEAR, LAST_YEAR))
 
     ### Offense
     ## Adv
-    df_standardized = pd.read_csv('static/standardized_offense_team_stats_{}_{}.csv'.format(first_year, last_year),
+    df_standardized = pd.read_csv('static/standardized_offense_team_stats_{}_{}.csv'.format(FIRST_YEAR, LAST_YEAR),
                                   index_col='team_id')
     df = df_standardized[list({**o_normal_columns, **o_advanced_columns}.keys())]
     # Fit PCA
@@ -86,10 +89,10 @@ def main():
     # Apply transformation and selection first n components
     df_transformed = get_transformed_df(df, n_components)
     # Store transformed data
-    df_transformed.to_csv('static/transformed_offense_team_stats_{}_{}.csv'.format(first_year, last_year))
+    df_transformed.to_csv('static/transformed_offense_team_stats_{}_{}.csv'.format(FIRST_YEAR, LAST_YEAR))
 
     ## No Adv
-    df_standardized = pd.read_csv('static/standardized_offense_no_adv_team_stats_{}_{}.csv'.format(first_year, last_year),
+    df_standardized = pd.read_csv('static/standardized_offense_no_adv_team_stats_{}_{}.csv'.format(FIRST_YEAR, LAST_YEAR),
                                   index_col='team_id')
     df = df_standardized[list(o_normal_columns.keys())]
     # Fit PCA
@@ -100,11 +103,11 @@ def main():
     # Apply transformation and selection first n components
     df_transformed = get_transformed_df(df, n_components)
     # Store transformed data
-    df_transformed.to_csv('static/transformed_offense_no_adv_team_stats_{}_{}.csv'.format(first_year, last_year))
+    df_transformed.to_csv('static/transformed_offense_no_adv_team_stats_{}_{}.csv'.format(FIRST_YEAR, LAST_YEAR))
 
     ### Defense
     ## Adv
-    df_standardized = pd.read_csv('static/standardized_defense_team_stats_{}_{}.csv'.format(first_year, last_year),
+    df_standardized = pd.read_csv('static/standardized_defense_team_stats_{}_{}.csv'.format(FIRST_YEAR, LAST_YEAR),
                                   index_col='team_id')
     df = df_standardized[list({**d_normal_columns, **d_advanced_columns}.keys())]
     # Fit PCA
@@ -115,10 +118,10 @@ def main():
     # Apply transformation and selection first n components
     df_transformed = get_transformed_df(df, n_components)
     # Store transformed data
-    df_transformed.to_csv('static/transformed_defense_team_stats_{}_{}.csv'.format(first_year, last_year))
+    df_transformed.to_csv('static/transformed_defense_team_stats_{}_{}.csv'.format(FIRST_YEAR, LAST_YEAR))
 
     ## No Adv
-    df_standardized = pd.read_csv('static/standardized_defense_no_adv_team_stats_{}_{}.csv'.format(first_year, last_year),
+    df_standardized = pd.read_csv('static/standardized_defense_no_adv_team_stats_{}_{}.csv'.format(FIRST_YEAR, LAST_YEAR),
                                   index_col='team_id')
     df = df_standardized[list(d_normal_columns.keys())]
     # Fit PCA
@@ -129,7 +132,7 @@ def main():
     # Apply transformation and selection first n components
     df_transformed = get_transformed_df(df, n_components)
     # Store transformed data
-    df_transformed.to_csv('static/transformed_defense_no_adv_team_stats_{}_{}.csv'.format(first_year, last_year))
+    df_transformed.to_csv('static/transformed_defense_no_adv_team_stats_{}_{}.csv'.format(FIRST_YEAR, LAST_YEAR))
 
 if __name__ == '__main__':
     main()    

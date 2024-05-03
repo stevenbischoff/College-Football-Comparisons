@@ -35,7 +35,6 @@ class GUI:
     def set_session_state(self):
         if 'off_def' not in st.session_state:
             st.session_state['off_def'] = 'Combined'
-
         if 'adv' not in st.session_state:
             st.session_state['adv'] = True
 
@@ -59,6 +58,7 @@ class GUI:
         
     def team_selection(self): # Parent: self.main()       
         left_column, mid_column, right_column = st.columns([0.2, 0.2, 0.6])
+        # School selection
         with left_column:
             st.selectbox(label='**School**',
                          options=st.session_state['schools'],
@@ -66,6 +66,7 @@ class GUI:
                          placeholder='Choose a school',
                          key='school_selectbox')
             st.session_state['school'] = st.session_state['school_selectbox']
+        # Year selection
         with mid_column:
             st.session_state['year'] = st.selectbox(label='**Year**',
                                                     options=st.session_state['years'],
@@ -77,7 +78,8 @@ class GUI:
     def settings_expander(self): # Parent: self.body_left_column()
         with st.expander('**Settings**'):
             left_column, right_column = st.columns(2)
-            with left_column: # Display settings
+            # User display settings
+            with left_column:
                 st.slider(label='\# of team comparisons',
                           min_value=1, max_value=20,
                           value=st.session_state['n_comparisons'],
@@ -93,7 +95,8 @@ class GUI:
                           value=st.session_state['n_dissimilar_stats'],
                           key='n_dissimilar_stats_slider',
                           on_change=wh.change_n_dissimilar_stats_slider)
-            with right_column: # Data settings
+            # User data settings
+            with right_column:
                 st.radio(label='Compare offense, defense, or combined?',
                          options=['Offense', 'Defense', 'Combined'],
                          key='off_def_radio',
@@ -246,14 +249,16 @@ class GUI:
                     st.session_state['selected_rows'] = []
                     st.session_state['row_selected'] = False
             st.session_state['saved_team_id'] = st.session_state['team_id']
+            
             with left_column:
                 self.body_left_column()
-            if st.session_state['team_id'] in st.session_state['team_ids']:
+                
+            if st.session_state['team_id'] in st.session_state['team_ids']: # Valid school / year combination
                 with right_column:
-                    if st.session_state['row_selected']:                
+                    if st.session_state['row_selected']:              
                         self.body_right_column()
             else: # If team_id not in st.session_state['team_ids']
-                st.write('Sorry, comparisons for ' + st.session_state['team_id'] + ' are unavailable. Make another selection!')
+                st.write('Sorry, comparisons for ' + st.session_state['team_id'] + ' are unavailable. Make another selection!')           
         else: # If team_id not selected
             with left_column:
                 self.settings_expander()
@@ -266,7 +271,7 @@ class GUI:
         st.session_state['df_standardized'] = dl.load_standardized_data(st.session_state['data_type'])
         st.session_state['df_transformed'] = dl.load_transformed_data(st.session_state['data_type'])
         st.session_state['team_records'] = dl.load_records()
-        # Set columns given data type
+        # Choose columns given data type
         if st.session_state['data_type'].startswith('Combined'):
             if st.session_state['data_type'] == 'Combined No Adv':
                 st.session_state['X_columns'] = {**o_normal_columns, **d_normal_columns, **other_columns}
