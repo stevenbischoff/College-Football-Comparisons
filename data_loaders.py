@@ -15,8 +15,8 @@ import pandas as pd
 import pickle
 
 # Globals
-FIRST_YEAR = {}
-LAST_YEAR = {}
+FIRST_YEAR = 2014
+LAST_YEAR = 2023
 
 @st.cache_data
 def load_max_distance(data_type):
