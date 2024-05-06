@@ -1,13 +1,12 @@
 """
-This module ...
+This module loads each dataset created by create_total_pca_dataframe.py,
+fits K-Nearest Neighbors models to the data, and pickles the models.
 
 Author: Steve Bischoff
 """
 import pandas as pd
 import pickle
 from sklearn.neighbors import NearestNeighbors
-
-from load_columns import *
 
 # Globals
 FIRST_YEAR = 2014 # 2014 is first year advanced stats are good. 2004 otherwise (except ToP)
