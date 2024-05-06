@@ -14,8 +14,7 @@ from matplotlib.colorbar import ColorbarBase
 from matplotlib.colors import Normalize
 import numpy as np
 import pandas as pd
-import scipy.stats as stats
-from sklearn.neighbors import NearestNeighbors
+#from sklearn.neighbors import NearestNeighbors
 
 from load_columns import *
 import comparison_functions as cf
@@ -23,8 +22,14 @@ import data_loaders as dl
 import style_functions as sf
 import widget_helpers as wh
 
+# style_functions.stats_df_to_html() multiindex performance warning
+import warnings
+warnings.simplefilter(action='ignore', category=pd.errors.PerformanceWarning) 
+
 # Set app style
 sf.set_markdown_style()
+
+import time # !!!
 
 class GUI:
     
@@ -126,9 +131,15 @@ class GUI:
 
     def comparisons_grid(self): # Parent: self.display_comparisons()
         # Get the closest comparisons to team_id
+        print('comparisons_grid')
+        a=time.time()# !!!
         comparisons, distances = cf.get_comparison_results(self.nn)
+        b=time.time()# !!!
         # Prepare dataframe for AgGrid
-        display_df = cf.comparisons_to_display_df(comparisons, distances) 
+        display_df = cf.comparisons_to_display_df(comparisons, distances)
+        c=time.time()# !!!
+        print(b-a)
+        print(c-b)
         # Set grid options
         builder = GridOptionsBuilder.from_dataframe(display_df, enableRowGroup=True, enableValue=True)
         builder.configure_selection('single')
@@ -153,7 +164,7 @@ class GUI:
         
     def display_comparisons(self): # Parent: self.body_left_column()
         self.comparisons_header()
-        self.comparisons_grid()        
+        self.comparisons_grid()
 
         
     def body_left_column(self): # Parent: self.body()
@@ -226,8 +237,14 @@ class GUI:
         st.session_state['year_comp'] = selected_row['Season']
         st.session_state['team_id_comp'] = st.session_state['school_comp'] + ' ' + st.session_state['year_comp']
         # Get similar / dissimilar statistics
-        similar_stats_df = cf.get_similar_stats() 
+        print('body_right_column')
+        a=time.time() # !!!
+        similar_stats_df = cf.get_similar_stats()
+        b=time.time() # !!!
         dissimilar_stats_df = cf.get_dissimilar_stats()
+        c=time.time() # !!!
+        print(b-a)
+        print(c-b)
         # Display components
         self.stats_header()      
         self.similar_stats_expander(similar_stats_df)       
@@ -295,7 +312,8 @@ class GUI:
         st.session_state['schools'] = sorted(st.session_state['df_transformed'].index.str[:-5].unique())
         st.session_state['years'] = sorted(st.session_state['df_transformed'].index.str[-4:].unique(), reverse=True)
         # Fit Nearest Neighbors
-        self.nn = NearestNeighbors(n_neighbors=st.session_state['n_comparisons']+1).fit(st.session_state['df_transformed'].values)
+        #self.nn = NearestNeighbors(n_neighbors=st.session_state['n_comparisons']+1).fit(st.session_state['df_transformed'].values)
+        self.nn = dl.load_knn(st.session_state['data_type'])
         # Run app
         self.header()
         self.team_selection()

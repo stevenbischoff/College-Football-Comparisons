@@ -30,6 +30,7 @@ def get_n_components(pca, threshold=0.9):
     n_components = len(cum_ev) - len(cum_ev[cum_ev >= threshold]) + 1
     return n_components
 
+
 def get_transformed_df(df, n_components):
     """
     Fits an sklearn PCA object to a dataframe and returns the first n principal components
@@ -44,9 +45,8 @@ def get_transformed_df(df, n_components):
     df_transformed = pd.DataFrame(X_n_components, index=df.index)
     return df_transformed
 
-def main():
-    
 
+def main():
     ### All
     ## Adv
     df_standardized = pd.read_csv('static/standardized_team_stats_{}_{}.csv'.format(FIRST_YEAR, LAST_YEAR),

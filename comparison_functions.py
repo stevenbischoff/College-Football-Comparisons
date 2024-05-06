@@ -3,8 +3,8 @@ import scipy.stats as stats
 import streamlit as st
 
 def get_comparison_results(nn):
-    results = nn.kneighbors(st.session_state['df_transformed'].loc[st.session_state.team_id].values.reshape(1,-1),
-                            st.session_state['n_comparisons']+1,
+    results = nn.kneighbors(st.session_state['df_transformed'].loc[st.session_state['team_id']].values.reshape(1,-1),
+                            n_neighbors=st.session_state['n_comparisons']+1, # +1 since team_id is returned as closest with dist. 0
                             return_distance=True)
     indices = results[1][0][1:]
     distances = results[0][0][1:]
@@ -16,9 +16,12 @@ def comparisons_to_display_df(comparisons, distances):
     seasons = comparisons.str[-4:]
     records = st.session_state['team_records'].loc[comparisons, 'record_string'].values
     sss = 1 - distances/st.session_state['max_distance'] # Statistical Similarity Score
-    df = pd.DataFrame({'Rank': range(1, st.session_state['n_comparisons']+1), 'School': schools,
-                       'Season': seasons, 'Record': records,
-                       'SSS*': sss.round(4)}, index=range(1, st.session_state['n_comparisons']+1))
+    df = pd.DataFrame({'Rank': range(1, st.session_state['n_comparisons']+1),
+                       'School': schools,
+                       'Season': seasons,
+                       'Record': records,
+                       'SSS*': sss.round(4)},
+                      index=range(1, st.session_state['n_comparisons']+1))
     return df
 
 
