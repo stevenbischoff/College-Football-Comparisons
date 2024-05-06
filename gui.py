@@ -80,17 +80,17 @@ class GUI:
             left_column, right_column = st.columns(2)
             # User display settings
             with left_column:
-                st.slider(label='\# of team comparisons',
+                st.slider(label='\# of teams to display', # '\# of listed teams'
                           min_value=1, max_value=20,
                           value=st.session_state['n_comparisons'],
                           key='n_comparisons_slider',
                           on_change=wh.change_n_comparisons_slider)
-                st.slider(label='\# of similar stats',
+                st.slider(label='\# of similar stats to display',
                           min_value=1, max_value=20,
                           value=st.session_state['n_similar_stats'],
                           key='n_similar_stats_slider',
                           on_change=wh.change_n_similar_stats_slider)
-                st.slider(label='\# of dissimilar stats',
+                st.slider(label='\# of dissimilar stats to display',
                           min_value=1, max_value=20,
                           value=st.session_state['n_dissimilar_stats'],
                           key='n_dissimilar_stats_slider',

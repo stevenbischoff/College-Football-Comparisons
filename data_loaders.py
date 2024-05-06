@@ -1,11 +1,13 @@
 """
-This module contains helper functions for gui.py that load and cache the dataframes
-required to calculate SSS and display similar stats.
+This module contains helper functions for gui.py that load and cache the
+dataframes required to calculate SSS and display similar stats.
+ - load_records
  - load_max_distance
  - load_raw_data
  - load_standardized_data
  - load_transformed_data
-Each function takes a data_type argument that is one of these 6 strings:
+Besides load_records, each function takes a data_type argument that is one of
+these 6 strings:
 Combined, Combined No Adv, Offense, Offense No Adv, Defense, Defense No Adv
 
 Author: Steve Bischoff
@@ -19,15 +21,15 @@ FIRST_YEAR = 2014
 LAST_YEAR = 2023
 
 @st.cache_data
+def load_records():
+    return pd.read_csv('static/team_records_{}_{}.csv'.format(FIRST_YEAR, LAST_YEAR),
+                index_col='team_id')
+
+@st.cache_data
 def load_max_distance(data_type):
     with open('static/max_distance.pkl', 'rb') as f:
         distance_dict = pickle.load(f)
         return distance_dict[data_type]
-
-@st.cache_data
-def load_records():
-    return pd.read_csv('static/team_records_{}_{}.csv'.format(FIRST_YEAR, LAST_YEAR),
-                index_col='team_id')
     
 @st.cache_data
 def load_raw_data(data_type):

@@ -1,3 +1,7 @@
+# Data Files
+team_game_stats_*.csv
+game_PBP_*.csv
+
 # Jupyter Notebooks
 *.ipynb
 
