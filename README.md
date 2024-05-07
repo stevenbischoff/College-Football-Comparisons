@@ -13,6 +13,7 @@ The app asks the user to select an FBS school and a season (currently 2014-2023)
 By default, SSS takes both offensive and defensive stats into account, as well as both regular box score and advanced stats. The user can change the app settings to compare just offenses or defenses and remove advanced stats from consideration.
 
 ## Statistical Similarity Score
+
 ### Overview
 
 The SSS between teams $a$ and $b$ is defined as:
@@ -24,8 +25,11 @@ where $D$ is a Euclidean distance measure and $T$ is the set of all teams. The r
 ### Defining a space
 
  * Use the collegefootballdata.com APIs to gather data
- * Preprocess the data to create the columns in dump_columns.py
+ * Preprocess the data to create a clean dataset with a set of columns from dump_columns.py
  * Standardize each column to have zero mean and unit variance
- * For each column subset:
-   * Transform the data using Principal Component Analysis (PCA)
-   * Keep just enough components to explain 90% of the variance in the data
+ * Transform the standardized dataset using Principal Component Analysis (PCA)
+ * Keep just enough components to explain 90% of the variance in the data
+
+Distances among teams are measured in this PCA subspace.
+
+Note that the user can choose among 6 combinations of data they’d like the app to consider: [offense, defense, combined] $x$ [advanced, no advanced]. The above process is actually completed 6 times, since each user-chosen data combination corresponds to a different subset of columns from dump_columns.py. In a sense, then, there are actually 6 different Statistical Similarity Scores defined in different spaces.
