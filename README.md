@@ -18,7 +18,9 @@ By default, SSS takes both offensive and defensive stats into account, as well a
 
 The SSS between teams $a$ and $b$ is defined as:
 
-$$ 1 - \frac{D(a, b)}{max_{x, y \in T} D(x, y)}.$$
+$$ 1 - \frac{D(a, b)}{max_{x, y \in T} D(x, y)},$$
+
+where $D$ is a Euclidean distance measure and $T$ is the set of all teams. 
 
 ### Defining a space
 
@@ -28,5 +30,6 @@ $$ 1 - \frac{D(a, b)}{max_{x, y \in T} D(x, y)}.$$
  * For each column subset:
    * Transform the data using Principal Component Analysis (PCA)
    * Keep just enough components to explain 90% of the variance in the data
+
 
 
