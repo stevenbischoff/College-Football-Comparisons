@@ -35,3 +35,5 @@ Distances among teams are measured in this PCA subspace.
 Note that the user can choose among 6 combinations of data they’d like the app to consider: [offense, defense, combined] x [advanced, no advanced]. The above process is actually completed 6 times, since each user-chosen data combination corresponds to a different subset of columns from dump_columns.py. In a sense, then, there are actually 6 different Statistical Similarity Scores defined in different spaces.
 
 ### Advantages
+
+IN PROGRESS
