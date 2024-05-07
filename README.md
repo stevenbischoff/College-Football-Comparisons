@@ -18,7 +18,7 @@ By default, SSS takes both offensive and defensive stats into account, as well a
 
 The SSS between teams $a$ and $b$ is defined as:
 
-$$ 1 - \frac{D(a, b)}{M}, M = max_{x, y \in T} D(x, y)$$
+$$ 1 - \frac{D(a, b)}{max_{x, y \in T} D(x, y)}.$$
 
 ### Defining a space
 
