@@ -13,14 +13,13 @@ The app asks the user to select an FBS school and a season (currently 2014-2023)
 By default, SSS takes both offensive and defensive stats into account, as well as both regular box score and advanced stats. The user can change the app settings to compare just offenses or defenses and remove advanced stats from consideration.
 
 ## Statistical Similarity Score
-
 ### Overview
 
 The SSS between teams $a$ and $b$ is defined as:
 
-$$ 1 - \frac{D(a, b)}{max_{x, y \in T} D(x, y)},$$
+$$ SSS(a, b) = 1 - \frac{D(a, b)}{max_{x, y \in T} D(x, y)},$$
 
-where $D$ is a Euclidean distance measure and $T$ is the set of all teams. 
+where $D$ is a Euclidean distance measure and $T$ is the set of all teams. The real work goes into defining a space where distances among teams can be measured.
 
 ### Defining a space
 
@@ -30,6 +29,3 @@ where $D$ is a Euclidean distance measure and $T$ is the set of all teams.
  * For each column subset:
    * Transform the data using Principal Component Analysis (PCA)
    * Keep just enough components to explain 90% of the variance in the data
-
-
-
