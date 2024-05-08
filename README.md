@@ -48,4 +48,6 @@ WIP
 
 ### Disadvantages
 
+ * Opaque
+   
 WIP
