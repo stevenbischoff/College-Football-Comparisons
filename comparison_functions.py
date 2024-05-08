@@ -32,6 +32,7 @@ def get_similar_stats(pctl_threshold=15):
         columns=['Statistic*', st.session_state['team_id'], 'pctl1', st.session_state['team_id_comp'], 'pctl2'])
     # Get "interesting" (i.e. extreme) similarities first
     counter = 0
+    used_stats = []
     for stat in stat_diffs.index:
         if counter >= st.session_state['n_similar_stats']:
             break
@@ -44,12 +45,13 @@ def get_similar_stats(pctl_threshold=15):
                                           round(pctl1, 2),
                                           st.session_state['df_raw'].loc[st.session_state['team_id_comp'], stat],
                                           round(pctl2, 2)]
+                used_stats.append(stat)
                 counter += 1
                 
     for stat in stat_diffs.index:
         if counter >= st.session_state['n_similar_stats']:
             break
-        if stat in return_df['Statistic*'].values:
+        if stat in used_stats:
             continue
         pctl1 = stats.percentileofscore(st.session_state['df_raw'][stat], st.session_state['df_raw'].loc[st.session_state['team_id'], stat])
         pctl2 = stats.percentileofscore(st.session_state['df_raw'][stat], st.session_state['df_raw'].loc[st.session_state['team_id_comp'], stat])
@@ -58,6 +60,7 @@ def get_similar_stats(pctl_threshold=15):
                                   round(pctl1, 2),
                                   st.session_state['df_raw'].loc[st.session_state['team_id_comp'], stat],
                                   round(pctl2, 2)]
+        used_stats.append(stat)
         counter += 1
 
     return_df.set_index('Statistic*', inplace=True)

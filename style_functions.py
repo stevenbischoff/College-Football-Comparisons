@@ -38,6 +38,9 @@ def stats_df_to_html(stats_df, high_bad, uuid='1'):
     stats_df = stats_df.style \
                .set_uuid(uuid) \
                .format(precision=2) \
+               .set_properties(subset=[(st.session_state['team_id'], 'Value'), (st.session_state['team_id'], 'Pctl.**'),
+                                       (st.session_state['team_id_comp'], 'Value'), (st.session_state['team_id_comp'], 'Pctl.**')],
+                               **{'text-align': 'right'}) \
                .background_gradient(
                     'RdBu',
                     subset=[(st.session_state['team_id'], 'Pctl.**')],
@@ -68,6 +71,10 @@ def stats_df_to_html(stats_df, high_bad, uuid='1'):
     html = html.replace('<table', '<table style="font-size: 10pt; width: 100%; margin-bottom: 8px;"') \
         .replace('<td', '<td style="padding:2px 8px;"') \
         .replace('<th id="T_'+uuid+'_level0_col0"', '<th id="T_'+uuid+'_level0_col0" style="width: 38%"') \
-        .replace('<th id="T_'+uuid+'_level0_col1"', '<th id="T_'+uuid+'_level0_col1" style="width: 31%"') \
-        .replace('<th id="T_'+uuid+'_level0_col2"', '<th id="T_'+uuid+'_level0_col2" style="width: 31%"')
+        .replace('<th id="T_'+uuid+'_level0_col1"', '<th id="T_'+uuid+'_level0_col1" style="width: 31%; text-align:right"') \
+        .replace('<th id="T_'+uuid+'_level0_col3"', '<th id="T_'+uuid+'_level0_col3" style="width: 31%; text-align:right"')
+
+    for i in range(1, 5): # right-align subheader labels
+        html = html.replace('<th id="T_'+uuid+'_level1_col{}"'.format(i),  '<th id="T_'+uuid+'_level1_col{}" style="text-align:right"'.format(i))
+
     return html
