@@ -15,6 +15,7 @@ Author: Steve Bischoff
 import streamlit as st
 import pandas as pd
 import pickle
+import sklearn
 
 # Globals
 FIRST_YEAR = 2014
