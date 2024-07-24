@@ -38,7 +38,7 @@ The process of defining this space follows these steps:
 
 Distances among teams are measured in this principal component subspace.
 
-Note that the user can choose among 6 combinations of data they’d like the app to consider: [offense, defense, combined] x [advanced, no advanced]. The above process is actually completed 6 times, since each user-chosen data combination corresponds to a different subset of columns from dump_columns.py. In a sense, then, there are actually 6 different Statistical Similarity Scores defined in different spaces.
+Note that the user can choose among 6 combinations of variable types they’d like the app to consider: [offense, defense, combined] x [advanced, no advanced]. The above process is actually completed 6 times, since each user-chosen variable combination corresponds to a different subset of columns from dump_columns.py. In a sense, then, there are actually 6 different Statistical Similarity Scores defined in different spaces.
 
 ### Advantages
 
