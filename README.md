@@ -16,7 +16,7 @@ By default, SSS takes both offensive and defensive stats into account, as well a
 
 ### Overview
 
-SSS takes a bunch of team statistics (see dump_columns.py), runs them through a PCA transformation to find the most important dimensions of variation in the data, and measures statistical similarity using distances between teams in this space.
+SSS takes a bunch of team statistics (see dump_columns.py), runs them through a PCA transformation to find the most important dimensions of variation in the data, and measures statistical similarity using distances between teams in this lower-dimensional space.
 
 ### Formula
 
